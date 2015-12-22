@@ -1,0 +1,13 @@
+#ifndef _CURVE_CONFIG_H
+#define _CURVE_CONFIG_H
+
+//Project: CURVE
+//Major Version: @CURVE_VERSION_MAJOR@
+//Minor Version: @CURVE_VERSION_MINOR@
+
+#define VERSION "@CURVE_VERSION_MAJOR@.@CURVE_VERSION_MINOR@"
+#define _WIN32
+
+#cmakedefine MYDEBUG
+
+#endif /*_CURVE_CONFIG_H*/

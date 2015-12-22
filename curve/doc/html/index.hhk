@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML><HEAD></HEAD><BODY>
+<OBJECT type="text/site properties">
+<param name="FrameName" value="right">
+</OBJECT>
+<UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1_curve.html#a8dd7465e7d10f18002cdeb9bb9494606"><param name="Name" value="Clear"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1_curve.html#a1bd6c84def4d1e7fabdce04e5e293dcb"><param name="Name" value="Coeff"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1_curve.html#a2cf707affb7ec6fcbdebc0d8efeedaff"><param name="Name" value="CreateAT"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1_curve.html#a2cf707affb7ec6fcbdebc0d8efeedaff"><param name="Name" value="math::Curve"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_exponential.html#a17befef0fb0bae494d80c18f3c6b7347"><param name="Name" value="math::curve::Exponential"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_polynomial.html#a666dd8c2a4f9c438ce62fe2c6a4b66c4"><param name="Name" value="math::curve::Polynomial"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_power.html#a66d7331eb0c3189bf920e582efc6680e"><param name="Name" value="math::curve::Power"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1_curve.html#a0e6a7a0a829f44349047f9e736284445"><param name="Name" value="Deriv1"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1_curve.html#a0e6a7a0a829f44349047f9e736284445"><param name="Name" value="math::Curve"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_hermite_spline.html#a3be49e9fad144a0114b5372c7f641482"><param name="Name" value="math::curve::HermiteSpline"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_polynomial.html#a90aed36561d1065085f980a2a1ab1c3a"><param name="Name" value="math::curve::Polynomial"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1_curve.html#af79ad9950cb742367008748c90ca97b4"><param name="Name" value="Deriv2"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1_curve.html#af79ad9950cb742367008748c90ca97b4"><param name="Name" value="math::Curve"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_polynomial.html#a2342429f8bc0acec1304bc1f28362351"><param name="Name" value="math::curve::Polynomial"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1_curve.html#aa72b26355385bb277e1d8902c60f73ea"><param name="Name" value="Error"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1_curve.html#a0aa6a804b56e6eadedd6d09a3cf0f509"><param name="Name" value="ErrorEuclidian"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1_curve.html#a3cd41857450754953aaeccb22e535a8a"><param name="Name" value="Fit"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1_curve.html#a3cd41857450754953aaeccb22e535a8a"><param name="Name" value="math::Curve"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_exponential.html#ad2269c6f78a470e5b6384746c31aa55e"><param name="Name" value="math::curve::Exponential"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_hermite_spline.html#a25509835f4f6c7caf005f3a6fb2f5813"><param name="Name" value="math::curve::HermiteSpline"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_polynomial.html#a287f091a6a3e1677bd5cdaf4a926b6ff"><param name="Name" value="math::curve::Polynomial"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_power.html#a18fd8842125834178f0116dd1d3a1614"><param name="Name" value="math::curve::Power"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1_curve.html#aa16171bb69f100c3671965d2c895bb7f"><param name="Name" value="Init"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1_curve.html#ab33ea207f46c3f80b627108f9ec0d0be"><param name="Name" value="m_coeff"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1_curve.html#aaf02e10e0d3a226b01ed2a42595bf86e"><param name="Name" value="m_deltaX"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1_curve.html#a342d895f673a5d76a03d7f1871a28f51"><param name="Name" value="m_error"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_hermite_spline.html#aaf7656b97ed854acb82a9116e83ba753"><param name="Name" value="m_x"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_hermite_spline.html#ad8a1951781bb75bf9e47301aead844ac"><param name="Name" value="m_y"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1_curve.html"><param name="Name" value="math::Curve"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_exponential.html"><param name="Name" value="math::curve::Exponential"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_exponential.html#a17befef0fb0bae494d80c18f3c6b7347"><param name="Name" value="CreateAT"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_exponential.html#ad2269c6f78a470e5b6384746c31aa55e"><param name="Name" value="Fit"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_exponential.html#a151de0262c800ab539b34d4c2c66cedf"><param name="Name" value="operator()"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_exponential.html#aac9529a966f2ea85884418ace7c65ea0"><param name="Name" value="operator<<"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_hermite_spline.html"><param name="Name" value="math::curve::HermiteSpline"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_hermite_spline.html#a3be49e9fad144a0114b5372c7f641482"><param name="Name" value="Deriv1"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_hermite_spline.html#a25509835f4f6c7caf005f3a6fb2f5813"><param name="Name" value="Fit"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_hermite_spline.html#aaf7656b97ed854acb82a9116e83ba753"><param name="Name" value="m_x"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_hermite_spline.html#ad8a1951781bb75bf9e47301aead844ac"><param name="Name" value="m_y"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_hermite_spline.html#a71edd61c4363e291eac41193c395ce89"><param name="Name" value="operator()"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_hermite_spline.html#a2a72eecd5fbc8751bd15831a20ebad5f"><param name="Name" value="UpperBoundIdx"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_polynomial.html"><param name="Name" value="math::curve::Polynomial"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_polynomial.html#a666dd8c2a4f9c438ce62fe2c6a4b66c4"><param name="Name" value="CreateAT"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_polynomial.html#a90aed36561d1065085f980a2a1ab1c3a"><param name="Name" value="Deriv1"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_polynomial.html#a2342429f8bc0acec1304bc1f28362351"><param name="Name" value="Deriv2"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_polynomial.html#a287f091a6a3e1677bd5cdaf4a926b6ff"><param name="Name" value="Fit"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_polynomial.html#a52ada0e195ba091de47ccf1ffa1a8e39"><param name="Name" value="operator()"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_polynomial.html#af1fdf53b29100b084772816cb9ecc8ac"><param name="Name" value="operator<<"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_polynomial.html#a9857f98e389d73113a9f612c77c52195"><param name="Name" value="Order"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_polynomial.html#ae25d952725e44d04a539c4f5e90d3aea"><param name="Name" value="Polynomial"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_power.html"><param name="Name" value="math::curve::Power"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_power.html#a66d7331eb0c3189bf920e582efc6680e"><param name="Name" value="CreateAT"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_power.html#a18fd8842125834178f0116dd1d3a1614"><param name="Name" value="Fit"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_power.html#a04c2166d78c1b3fa5ca0468b733b22f3"><param name="Name" value="operator()"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_power.html#aa5814952fdf0361834bd134b95f91bc6"><param name="Name" value="operator<<"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1_curve.html"><param name="Name" value="math::Curve"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1_curve.html#a8dd7465e7d10f18002cdeb9bb9494606"><param name="Name" value="Clear"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1_curve.html#a1bd6c84def4d1e7fabdce04e5e293dcb"><param name="Name" value="Coeff"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1_curve.html#a2cf707affb7ec6fcbdebc0d8efeedaff"><param name="Name" value="CreateAT"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1_curve.html#a0e6a7a0a829f44349047f9e736284445"><param name="Name" value="Deriv1"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1_curve.html#af79ad9950cb742367008748c90ca97b4"><param name="Name" value="Deriv2"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1_curve.html#aa72b26355385bb277e1d8902c60f73ea"><param name="Name" value="Error"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1_curve.html#a0aa6a804b56e6eadedd6d09a3cf0f509"><param name="Name" value="ErrorEuclidian"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1_curve.html#a3cd41857450754953aaeccb22e535a8a"><param name="Name" value="Fit"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1_curve.html#aa16171bb69f100c3671965d2c895bb7f"><param name="Name" value="Init"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1_curve.html#ab33ea207f46c3f80b627108f9ec0d0be"><param name="Name" value="m_coeff"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1_curve.html#aaf02e10e0d3a226b01ed2a42595bf86e"><param name="Name" value="m_deltaX"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1_curve.html#a342d895f673a5d76a03d7f1871a28f51"><param name="Name" value="m_error"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1_curve.html#a3a24c4c8b4a893e8ef6e7451fc94cf24"><param name="Name" value="operator()"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1_curve.html#a3a24c4c8b4a893e8ef6e7451fc94cf24"><param name="Name" value="operator()"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1_curve.html#a3a24c4c8b4a893e8ef6e7451fc94cf24"><param name="Name" value="math::Curve"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_exponential.html#a151de0262c800ab539b34d4c2c66cedf"><param name="Name" value="math::curve::Exponential"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_hermite_spline.html#a71edd61c4363e291eac41193c395ce89"><param name="Name" value="math::curve::HermiteSpline"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_polynomial.html#a52ada0e195ba091de47ccf1ffa1a8e39"><param name="Name" value="math::curve::Polynomial"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_power.html#a04c2166d78c1b3fa5ca0468b733b22f3"><param name="Name" value="math::curve::Power"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_exponential.html#aac9529a966f2ea85884418ace7c65ea0"><param name="Name" value="operator<<"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_exponential.html#aac9529a966f2ea85884418ace7c65ea0"><param name="Name" value="math::curve::Exponential"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_polynomial.html#af1fdf53b29100b084772816cb9ecc8ac"><param name="Name" value="math::curve::Polynomial"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_power.html#aa5814952fdf0361834bd134b95f91bc6"><param name="Name" value="math::curve::Power"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_polynomial.html#a9857f98e389d73113a9f612c77c52195"><param name="Name" value="Order"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_polynomial.html#ae25d952725e44d04a539c4f5e90d3aea"><param name="Name" value="Polynomial"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1curve_1_1_hermite_spline.html#a2a72eecd5fbc8751bd15831a20ebad5f"><param name="Name" value="UpperBoundIdx"></OBJECT>
+</UL>
+</BODY>
+</HTML>

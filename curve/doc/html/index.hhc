@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML><HEAD></HEAD><BODY>
+<OBJECT type="text/site properties">
+<param name="FrameName" value="right">
+</OBJECT>
+<UL>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="Classes"><param name="ImageNumber" value="1"></OBJECT>
+  <UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Class List"><param name="Local" value="annotated.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="math"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="curve"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Exponential"><param name="Local" value="classmath_1_1curve_1_1_exponential.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="CreateAT"><param name="Local" value="classmath_1_1curve_1_1_exponential.html#a17befef0fb0bae494d80c18f3c6b7347"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="Fit"><param name="Local" value="classmath_1_1curve_1_1_exponential.html#ad2269c6f78a470e5b6384746c31aa55e"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="operator()"><param name="Local" value="classmath_1_1curve_1_1_exponential.html#a151de0262c800ab539b34d4c2c66cedf"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="operator<<"><param name="Local" value="classmath_1_1curve_1_1_exponential.html#aac9529a966f2ea85884418ace7c65ea0"><param name="ImageNumber" value="11"></OBJECT>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="HermiteSpline"><param name="Local" value="classmath_1_1curve_1_1_hermite_spline.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="HermiteSpline"><param name="Local" value="classmath_1_1curve_1_1_hermite_spline.html#a6e07682bfe39b2a50685ce9f7954ff85"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="Deriv1"><param name="Local" value="classmath_1_1curve_1_1_hermite_spline.html#a3be49e9fad144a0114b5372c7f641482"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="Fit"><param name="Local" value="classmath_1_1curve_1_1_hermite_spline.html#a25509835f4f6c7caf005f3a6fb2f5813"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="operator()"><param name="Local" value="classmath_1_1curve_1_1_hermite_spline.html#a71edd61c4363e291eac41193c395ce89"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="UpperBoundIdx"><param name="Local" value="classmath_1_1curve_1_1_hermite_spline.html#a2a72eecd5fbc8751bd15831a20ebad5f"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="m_x"><param name="Local" value="classmath_1_1curve_1_1_hermite_spline.html#aaf7656b97ed854acb82a9116e83ba753"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="m_y"><param name="Local" value="classmath_1_1curve_1_1_hermite_spline.html#ad8a1951781bb75bf9e47301aead844ac"><param name="ImageNumber" value="11"></OBJECT>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Polynomial"><param name="Local" value="classmath_1_1curve_1_1_polynomial.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="Polynomial"><param name="Local" value="classmath_1_1curve_1_1_polynomial.html#a0bf8383127287902232f3e27034649fc"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="Polynomial"><param name="Local" value="classmath_1_1curve_1_1_polynomial.html#ae25d952725e44d04a539c4f5e90d3aea"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="CreateAT"><param name="Local" value="classmath_1_1curve_1_1_polynomial.html#a666dd8c2a4f9c438ce62fe2c6a4b66c4"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="Deriv1"><param name="Local" value="classmath_1_1curve_1_1_polynomial.html#a90aed36561d1065085f980a2a1ab1c3a"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="Deriv2"><param name="Local" value="classmath_1_1curve_1_1_polynomial.html#a2342429f8bc0acec1304bc1f28362351"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="Fit"><param name="Local" value="classmath_1_1curve_1_1_polynomial.html#a287f091a6a3e1677bd5cdaf4a926b6ff"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="operator()"><param name="Local" value="classmath_1_1curve_1_1_polynomial.html#a52ada0e195ba091de47ccf1ffa1a8e39"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="Order"><param name="Local" value="classmath_1_1curve_1_1_polynomial.html#a9857f98e389d73113a9f612c77c52195"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="Order"><param name="Local" value="classmath_1_1curve_1_1_polynomial.html#af941313f5ba7763d701342b8fa531969"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="operator<<"><param name="Local" value="classmath_1_1curve_1_1_polynomial.html#af1fdf53b29100b084772816cb9ecc8ac"><param name="ImageNumber" value="11"></OBJECT>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Power"><param name="Local" value="classmath_1_1curve_1_1_power.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="CreateAT"><param name="Local" value="classmath_1_1curve_1_1_power.html#a66d7331eb0c3189bf920e582efc6680e"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="Fit"><param name="Local" value="classmath_1_1curve_1_1_power.html#a18fd8842125834178f0116dd1d3a1614"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="operator()"><param name="Local" value="classmath_1_1curve_1_1_power.html#a04c2166d78c1b3fa5ca0468b733b22f3"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="operator<<"><param name="Local" value="classmath_1_1curve_1_1_power.html#aa5814952fdf0361834bd134b95f91bc6"><param name="ImageNumber" value="11"></OBJECT>
+          </UL>
+        </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="Curve"><param name="Local" value="classmath_1_1_curve.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Curve"><param name="Local" value="classmath_1_1_curve.html#a4637c050ee09fed9bf7b5852c4576f73"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Clear"><param name="Local" value="classmath_1_1_curve.html#a8dd7465e7d10f18002cdeb9bb9494606"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Coeff"><param name="Local" value="classmath_1_1_curve.html#a1bd6c84def4d1e7fabdce04e5e293dcb"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="CreateAT"><param name="Local" value="classmath_1_1_curve.html#a2cf707affb7ec6fcbdebc0d8efeedaff"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Deriv1"><param name="Local" value="classmath_1_1_curve.html#a0e6a7a0a829f44349047f9e736284445"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Deriv2"><param name="Local" value="classmath_1_1_curve.html#af79ad9950cb742367008748c90ca97b4"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Error"><param name="Local" value="classmath_1_1_curve.html#aa72b26355385bb277e1d8902c60f73ea"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="ErrorEuclidian"><param name="Local" value="classmath_1_1_curve.html#a0aa6a804b56e6eadedd6d09a3cf0f509"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Fit"><param name="Local" value="classmath_1_1_curve.html#a3cd41857450754953aaeccb22e535a8a"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Fit"><param name="Local" value="classmath_1_1_curve.html#aeb14e8ddcaa61ace011eb78723ba7d1a"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Fit"><param name="Local" value="classmath_1_1_curve.html#a8701560aeff04b83d75d3b1e14237622"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Init"><param name="Local" value="classmath_1_1_curve.html#aa16171bb69f100c3671965d2c895bb7f"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="operator()"><param name="Local" value="classmath_1_1_curve.html#a3a24c4c8b4a893e8ef6e7451fc94cf24"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="m_coeff"><param name="Local" value="classmath_1_1_curve.html#ab33ea207f46c3f80b627108f9ec0d0be"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="m_deltaX"><param name="Local" value="classmath_1_1_curve.html#aaf02e10e0d3a226b01ed2a42595bf86e"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="m_error"><param name="Local" value="classmath_1_1_curve.html#a342d895f673a5d76a03d7f1871a28f51"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
+      </UL>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Class Index"><param name="Local" value="classes.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Class Hierarchy"><param name="Local" value="hierarchy.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::Curve"><param name="Local" value="classmath_1_1_curve.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::curve::Exponential"><param name="Local" value="classmath_1_1curve_1_1_exponential.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::curve::HermiteSpline"><param name="Local" value="classmath_1_1curve_1_1_hermite_spline.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::curve::Polynomial"><param name="Local" value="classmath_1_1curve_1_1_polynomial.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::curve::Power"><param name="Local" value="classmath_1_1curve_1_1_power.html"><param name="ImageNumber" value="11"></OBJECT>
+      </UL>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="Class Members"><param name="Local" value="functions.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="All"><param name="Local" value="functions.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="Functions"><param name="Local" value="functions_func.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="Related Functions"><param name="Local" value="functions_rela.html"><param name="ImageNumber" value="11"></OBJECT>
+    </UL>
+  </UL>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="Files"><param name="ImageNumber" value="1"></OBJECT>
+  <UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="File List"><param name="Local" value="files.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="src"><param name="Local" value="dir_68267d1309a1af8e8297ef4c3efbcdba.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="impl"><param name="Local" value="dir_3808e3f8fe545b07b1d2715928fb0eea.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="curveConfig.h"><param name="Local" value="curve_config_8h_source.html"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="curve.h"><param name="Local" value="curve_8h_source.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="exponential.h"><param name="Local" value="exponential_8h_source.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="hermiteSpline.h"><param name="Local" value="hermite_spline_8h_source.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="polynomial.h"><param name="Local" value="polynomial_8h_source.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="power.h"><param name="Local" value="power_8h_source.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="typedefs.h"><param name="Local" value="typedefs_8h_source.html"><param name="ImageNumber" value="11"></OBJECT>
+      </UL>
+    </UL>
+  </UL>
+</UL>
+</BODY>
+</HTML>

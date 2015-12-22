@@ -1,0 +1,7 @@
+linFrac 8 0.000189245
+invQuad 8 0.000176728
+secant 8 0.000182241
+newton 8 0.000175864
+bisection 7 0.00111328
+fixedPoint 6 0.00022467
+---

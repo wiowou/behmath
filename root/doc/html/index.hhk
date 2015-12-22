@@ -1,0 +1,152 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML><HEAD></HEAD><BODY>
+<OBJECT type="text/site properties">
+<param name="FrameName" value="right">
+</OBJECT>
+<UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_bisection.html#a301b3b1c503d42c914423f5a87538166"><param name="Name" value="Calc"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_bisection.html#a301b3b1c503d42c914423f5a87538166"><param name="Name" value="math::root::Bisection"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_fixed_point.html#aa0a08dfff979a2c45706de5e80e9eebb"><param name="Name" value="math::root::FixedPoint"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_inv_quad.html#a4ab9f46d3c8ffe0cd8f82678d3c71384"><param name="Name" value="math::root::InvQuad"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_lin_frac.html#a2b21b6270eb742760f272664235a2948"><param name="Name" value="math::root::LinFrac"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_newton.html#a12f6b558f0a12441253fc09bed94e057"><param name="Name" value="math::root::Newton"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_newton_ex.html#a0b9a57265b3df3be44670244d0838245"><param name="Name" value="math::root::NewtonEx"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_secant.html#a039291a1b2390cb5bd93a6b3c346db1d"><param name="Name" value="math::root::Secant"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#aeeafc5c00eb6a901f855cb67b5421665"><param name="Name" value="ExpandRange"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_newton.html#ae2700da0984645a3d0c487975c52a1bb"><param name="Name" value="FPrime"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_newton.html#ae2700da0984645a3d0c487975c52a1bb"><param name="Name" value="math::root::Newton"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_newton_ex.html#aef03c1ef1009698b243644872845de1d"><param name="Name" value="math::root::NewtonEx"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_bisection.html#aef7614c2791476e5ff4674167748bd44"><param name="Name" value="Function"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_bisection.html#aef7614c2791476e5ff4674167748bd44"><param name="Name" value="math::root::Bisection"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#a75550cc40ae6f3d93249ff5744195b0a"><param name="Name" value="math::root::RootFinder"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_fixed_point.html#ad4807ed095bcbae3ee34f0c41b76cbc0"><param name="Name" value="G"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#acf2b2f19cbb9cfb633918feb707dedb5"><param name="Name" value="Iter"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_inv_quad.html#a83d41fe9080b24fd3e8ddb70e763fbac"><param name="Name" value="m_A"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_inv_quad.html#a83d41fe9080b24fd3e8ddb70e763fbac"><param name="Name" value="math::root::InvQuad"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_lin_frac.html#a8c5b4edcd7fc24abe8230c7b336f5fb5"><param name="Name" value="math::root::LinFrac"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_inv_quad.html#a018159ababae1431c521aa24e2fa8fd8"><param name="Name" value="m_b"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_inv_quad.html#a018159ababae1431c521aa24e2fa8fd8"><param name="Name" value="math::root::InvQuad"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_lin_frac.html#a7eb4dd3798c1e21ee06b76e5aeaaa1ee"><param name="Name" value="math::root::LinFrac"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#a4c463405ed60c7cd5cbe97eb6c0fd7ad"><param name="Name" value="m_f"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_newton_ex.html#a228cd34ddd606dd01e827297a59e0150"><param name="Name" value="m_fprime"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_bisection.html#ac7c01e305ac83dce02c70cfa270d6fb0"><param name="Name" value="m_fracTarget"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#ad40543fffd0f7700e75d16d018fc40c0"><param name="Name" value="m_high"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#aa44f3e49a942afa60735b914e214e14e"><param name="Name" value="m_iter"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#a1839923d1dff87171e14ca2e8202a5ce"><param name="Name" value="m_low"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#a7ac0c3dc495cb6a808978ff71d8ea28f"><param name="Name" value="m_maxIter"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_bisection.html#a6d90630823ae144ccb704d9a14dd32bb"><param name="Name" value="m_mid"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#a064784fa6e36c80ee0f26395f7d26ec1"><param name="Name" value="m_root"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#ad838724e02996776fc2f59d50e85d0cc"><param name="Name" value="m_rootFound"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#a6d38d2515021f35d00c1bc417b4b597f"><param name="Name" value="m_runCalc"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_bisection.html#ac447231bbca79ae4d545b86a0b3ab3ab"><param name="Name" value="m_switch"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#a19102d1a811cfb96c73d0b4607fdf321"><param name="Name" value="m_tolerance"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_bisection.html#a048c780c869af9b134906373fade486a"><param name="Name" value="m_useHybrid"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#af8bc4af048d43f98f937424449571e5d"><param name="Name" value="m_x"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_bisection.html"><param name="Name" value="math::root::Bisection"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_bisection.html#a301b3b1c503d42c914423f5a87538166"><param name="Name" value="Calc"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_bisection.html#aef7614c2791476e5ff4674167748bd44"><param name="Name" value="Function"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_bisection.html#ac7c01e305ac83dce02c70cfa270d6fb0"><param name="Name" value="m_fracTarget"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_bisection.html#a6d90630823ae144ccb704d9a14dd32bb"><param name="Name" value="m_mid"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_bisection.html#ac447231bbca79ae4d545b86a0b3ab3ab"><param name="Name" value="m_switch"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_bisection.html#a048c780c869af9b134906373fade486a"><param name="Name" value="m_useHybrid"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_bisection.html#a1a28d48261e5f73039a23e1b9b7f4f18"><param name="Name" value="Root"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_bisection_midpoint.html"><param name="Name" value="math::root::BisectionMidpoint"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_bisection_midpoint.html#aa5c5e0ec8ff299db4d6ce701d93836cd"><param name="Name" value="Root"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_fixed_point.html"><param name="Name" value="math::root::FixedPoint"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_fixed_point.html#aa0a08dfff979a2c45706de5e80e9eebb"><param name="Name" value="Calc"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_fixed_point.html#ad4807ed095bcbae3ee34f0c41b76cbc0"><param name="Name" value="G"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_fixed_point.html#a94886f93e58be72978622d3ea5727a8f"><param name="Name" value="Root"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_inv_quad.html"><param name="Name" value="math::root::InvQuad"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_inv_quad.html#a4ab9f46d3c8ffe0cd8f82678d3c71384"><param name="Name" value="Calc"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_inv_quad.html#a83d41fe9080b24fd3e8ddb70e763fbac"><param name="Name" value="m_A"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_inv_quad.html#a018159ababae1431c521aa24e2fa8fd8"><param name="Name" value="m_b"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_inv_quad.html#ae5bedcdbff0800f1d085b7e0b5db7104"><param name="Name" value="Root"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_lin_frac.html"><param name="Name" value="math::root::LinFrac"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_lin_frac.html#a2b21b6270eb742760f272664235a2948"><param name="Name" value="Calc"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_lin_frac.html#a8c5b4edcd7fc24abe8230c7b336f5fb5"><param name="Name" value="m_A"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_lin_frac.html#a7eb4dd3798c1e21ee06b76e5aeaaa1ee"><param name="Name" value="m_b"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_lin_frac.html#a3a8a8dd51dde49fe5638bd8ca602d815"><param name="Name" value="Root"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_newton.html"><param name="Name" value="math::root::Newton"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_newton.html#a12f6b558f0a12441253fc09bed94e057"><param name="Name" value="Calc"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_newton.html#ae2700da0984645a3d0c487975c52a1bb"><param name="Name" value="FPrime"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_newton.html#a508d0f13830eeec29aa984f62b299583"><param name="Name" value="Root"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_newton_ex.html"><param name="Name" value="math::root::NewtonEx"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_newton_ex.html#a0b9a57265b3df3be44670244d0838245"><param name="Name" value="Calc"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_newton_ex.html#aef03c1ef1009698b243644872845de1d"><param name="Name" value="FPrime"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_newton_ex.html#a228cd34ddd606dd01e827297a59e0150"><param name="Name" value="m_fprime"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_newton_ex.html#a287a00f424fd4f95f2dce7f6fc7fdf4f"><param name="Name" value="Root"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html"><param name="Name" value="math::root::RootFinder"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#aeeafc5c00eb6a901f855cb67b5421665"><param name="Name" value="ExpandRange"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#a75550cc40ae6f3d93249ff5744195b0a"><param name="Name" value="Function"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#acf2b2f19cbb9cfb633918feb707dedb5"><param name="Name" value="Iter"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#a4c463405ed60c7cd5cbe97eb6c0fd7ad"><param name="Name" value="m_f"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#ad40543fffd0f7700e75d16d018fc40c0"><param name="Name" value="m_high"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#aa44f3e49a942afa60735b914e214e14e"><param name="Name" value="m_iter"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#a1839923d1dff87171e14ca2e8202a5ce"><param name="Name" value="m_low"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#a7ac0c3dc495cb6a808978ff71d8ea28f"><param name="Name" value="m_maxIter"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#a064784fa6e36c80ee0f26395f7d26ec1"><param name="Name" value="m_root"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#ad838724e02996776fc2f59d50e85d0cc"><param name="Name" value="m_rootFound"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#a6d38d2515021f35d00c1bc417b4b597f"><param name="Name" value="m_runCalc"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#a19102d1a811cfb96c73d0b4607fdf321"><param name="Name" value="m_tolerance"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#af8bc4af048d43f98f937424449571e5d"><param name="Name" value="m_x"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#a50e04e0686816c56e39136827d563c90"><param name="Name" value="MaxIter"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#a39da3e3f91e3f54fdd28a45c0c7fd4b9"><param name="Name" value="Range"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#a26c613a6961e5b5b4f3bc36373f89cd1"><param name="Name" value="RootFound"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#a2faf25120917c0dc90dd2768e94c455d"><param name="Name" value="RootInRange"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#abcc30a0c7c78ef14439101c1ff0abb7d"><param name="Name" value="Tolerance"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#a845f323f420ad0a106a43100dc52c658"><param name="Name" value="X0"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#aa577cd7020e855f8c29b372e9814dd96"><param name="Name" value="X1"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#afb266dcaa0ca44d51e6c44a0944da414"><param name="Name" value="X2"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_secant.html"><param name="Name" value="math::root::Secant"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_secant.html#a039291a1b2390cb5bd93a6b3c346db1d"><param name="Name" value="Calc"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_secant.html#ad4a21ff0720d8b24c080fb4898143622"><param name="Name" value="Root"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#a50e04e0686816c56e39136827d563c90"><param name="Name" value="MaxIter"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#a39da3e3f91e3f54fdd28a45c0c7fd4b9"><param name="Name" value="Range"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_bisection.html#a1a28d48261e5f73039a23e1b9b7f4f18"><param name="Name" value="Root"></OBJECT>
+  <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_bisection.html#a1a28d48261e5f73039a23e1b9b7f4f18"><param name="Name" value="math::root::Bisection"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_bisection_midpoint.html#aa5c5e0ec8ff299db4d6ce701d93836cd"><param name="Name" value="math::root::BisectionMidpoint"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_fixed_point.html#a94886f93e58be72978622d3ea5727a8f"><param name="Name" value="math::root::FixedPoint"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_inv_quad.html#ae5bedcdbff0800f1d085b7e0b5db7104"><param name="Name" value="math::root::InvQuad"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_lin_frac.html#a3a8a8dd51dde49fe5638bd8ca602d815"><param name="Name" value="math::root::LinFrac"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_newton.html#a508d0f13830eeec29aa984f62b299583"><param name="Name" value="math::root::Newton"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_newton_ex.html#a287a00f424fd4f95f2dce7f6fc7fdf4f"><param name="Name" value="math::root::NewtonEx"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_secant.html#ad4a21ff0720d8b24c080fb4898143622"><param name="Name" value="math::root::Secant"></OBJECT>
+  </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#a26c613a6961e5b5b4f3bc36373f89cd1"><param name="Name" value="RootFound"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#a2faf25120917c0dc90dd2768e94c455d"><param name="Name" value="RootInRange"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#abcc30a0c7c78ef14439101c1ff0abb7d"><param name="Name" value="Tolerance"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#a845f323f420ad0a106a43100dc52c658"><param name="Name" value="X0"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#aa577cd7020e855f8c29b372e9814dd96"><param name="Name" value="X1"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Local" value="classmath_1_1root_1_1_root_finder.html#afb266dcaa0ca44d51e6c44a0944da414"><param name="Name" value="X2"></OBJECT>
+</UL>
+</BODY>
+</HTML>

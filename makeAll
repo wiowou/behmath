@@ -1,0 +1,42 @@
+#!/usr/bin/sh
+
+cd matrix
+cmake .
+make
+sudo make install
+
+cd ..
+cd interp
+cmake .
+make
+sudo make install
+
+cd ..
+cd curve
+cmake .
+make
+sudo make install
+
+cd ..
+cd optim
+cmake .
+make 
+sudo make install
+
+cd ..
+cd root
+cmake .
+make
+sudo make install
+
+cd ..
+cd surface
+cmake .
+make
+sudo make install
+
+cd ..
+cd ode
+cmake .
+make
+sudo make install

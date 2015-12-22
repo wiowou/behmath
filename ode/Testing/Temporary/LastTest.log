@@ -1,0 +1,54 @@
+Start testing: Dec 21 20:54 EST
+----------------------------------------------------------
+1/3 Testing: eulerExpl
+1/3 Test: eulerExpl
+Command: "/home/bk/googleDrive/prog/proj/math/ode/UnitTests/eulerExpl_test"
+Directory: /home/bk/googleDrive/prog/proj/math/ode
+"eulerExpl" start time: Dec 21 20:54 EST
+Output:
+----------------------------------------------------------
+37
+0.500005
+0.0367941
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"eulerExpl" end time: Dec 21 20:54 EST
+"eulerExpl" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/3 Testing: fehlberg
+2/3 Test: fehlberg
+Command: "/home/bk/googleDrive/prog/proj/math/ode/UnitTests/fehlberg_test"
+Directory: /home/bk/googleDrive/prog/proj/math/ode
+"fehlberg" start time: Dec 21 20:54 EST
+Output:
+----------------------------------------------------------
+3
+0.500005
+0.0367864
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"fehlberg" end time: Dec 21 20:54 EST
+"fehlberg" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/3 Testing: solver
+3/3 Test: solver
+Command: "/home/bk/googleDrive/prog/proj/math/ode/UnitTests/solver_test"
+Directory: /home/bk/googleDrive/prog/proj/math/ode
+"solver" start time: Dec 21 20:54 EST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"solver" end time: Dec 21 20:54 EST
+"solver" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Dec 21 20:54 EST
