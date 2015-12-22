@@ -7,4 +7,4 @@ This project is currently a loose collection of numerical methods algorithms wri
   numerical integration of ODE's
 
 # notes
-CMake has been used extensively in this project. The CMakeLists.txt files are not polished. Much work can be done to improve the unit tests, especially along the lines of coverage. The basics are, however, in place. 
+CMake has been used extensively in this project. The CMakeLists.txt files are not polished. Much work can be done to improve the unit tests, especially along the lines of coverage. The basics are, however, in place. Please use the .cpp files in the UnitTests folder as a guide to figure out how the classes should be used.
