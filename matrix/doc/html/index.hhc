@@ -12,6 +12,17 @@
       <UL>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="solver"><param name="ImageNumber" value="1"></OBJECT>
         <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Cholesky"><param name="Local" value="classmath_1_1solver_1_1_cholesky.html"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Cholesky&lt; SparseVect, T &gt;"><param name="Local" value="classmath_1_1solver_1_1_cholesky_3_01_sparse_vect_00_01_t_01_4.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="Factorize"><param name="Local" value="classmath_1_1solver_1_1_cholesky_3_01_sparse_vect_00_01_t_01_4.html#a7b00d1b9e40a133d3adf470bcee150ed"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="Solve"><param name="Local" value="classmath_1_1solver_1_1_cholesky_3_01_sparse_vect_00_01_t_01_4.html#a5897ef664d4b48ebdbfca61689a62bc8"><param name="ImageNumber" value="11"></OBJECT>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Cholesky&lt; Vect, T &gt;"><param name="Local" value="classmath_1_1solver_1_1_cholesky_3_01_vect_00_01_t_01_4.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="Factorize"><param name="Local" value="classmath_1_1solver_1_1_cholesky_3_01_vect_00_01_t_01_4.html#a8b9818025cc4c9952f0787a3ccf28ec2"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="Solve"><param name="Local" value="classmath_1_1solver_1_1_cholesky_3_01_vect_00_01_t_01_4.html#a8974a74dee7c0e52214dc13042720735"><param name="ImageNumber" value="11"></OBJECT>
+          </UL>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="CholeskyBase"><param name="Local" value="classmath_1_1solver_1_1_cholesky_base.html"><param name="ImageNumber" value="1"></OBJECT>
           <UL>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="CholeskyBase"><param name="Local" value="classmath_1_1solver_1_1_cholesky_base.html#a192b294c41358c9cd62770dd01e6cbda"><param name="ImageNumber" value="11"></OBJECT>
@@ -26,17 +37,6 @@
           <LI><OBJECT type="text/sitemap"><param name="Name" value="m_factorized"><param name="Local" value="classmath_1_1solver_1_1_cholesky_base.html#a1fc5b9c20aff6f10f11ee413acc91d12"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="m_L"><param name="Local" value="classmath_1_1solver_1_1_cholesky_base.html#a212518a3ff39cd44139528e4f5341502"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="m_x"><param name="Local" value="classmath_1_1solver_1_1_cholesky_base.html#a59214b2218feb947a1db0f38abd9aaf1"><param name="ImageNumber" value="11"></OBJECT>
-          </UL>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="Cholesky"><param name="Local" value="classmath_1_1solver_1_1_cholesky.html"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="Cholesky< SparseVect, T >"><param name="Local" value="classmath_1_1solver_1_1_cholesky_3_01_sparse_vect_00_01_t_01_4.html"><param name="ImageNumber" value="1"></OBJECT>
-          <UL>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="Factorize"><param name="Local" value="classmath_1_1solver_1_1_cholesky_3_01_sparse_vect_00_01_t_01_4.html#a7b00d1b9e40a133d3adf470bcee150ed"><param name="ImageNumber" value="11"></OBJECT>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="Solve"><param name="Local" value="classmath_1_1solver_1_1_cholesky_3_01_sparse_vect_00_01_t_01_4.html#a5897ef664d4b48ebdbfca61689a62bc8"><param name="ImageNumber" value="11"></OBJECT>
-          </UL>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="Cholesky< Vect, T >"><param name="Local" value="classmath_1_1solver_1_1_cholesky_3_01_vect_00_01_t_01_4.html"><param name="ImageNumber" value="1"></OBJECT>
-          <UL>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="Factorize"><param name="Local" value="classmath_1_1solver_1_1_cholesky_3_01_vect_00_01_t_01_4.html#a8b9818025cc4c9952f0787a3ccf28ec2"><param name="ImageNumber" value="11"></OBJECT>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="Solve"><param name="Local" value="classmath_1_1solver_1_1_cholesky_3_01_vect_00_01_t_01_4.html#a8974a74dee7c0e52214dc13042720735"><param name="ImageNumber" value="11"></OBJECT>
           </UL>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="Cyclic"><param name="Local" value="classmath_1_1solver_1_1_cyclic.html"><param name="ImageNumber" value="1"></OBJECT>
           <UL>
@@ -168,21 +168,21 @@
           <LI><OBJECT type="text/sitemap"><param name="Name" value="Exec"><param name="Local" value="classmath_1_1solver_1_1_jacobi_row.html#a88ecc423e1e22bfa1451e35684a1e38c"><param name="ImageNumber" value="11"></OBJECT>
           </UL>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="LU"><param name="Local" value="classmath_1_1solver_1_1_l_u.html"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="LU< Vect, T >"><param name="Local" value="classmath_1_1solver_1_1_l_u_3_01_vect_00_01_t_01_4.html"><param name="ImageNumber" value="1"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="LU&lt; SparseVect, T &gt;"><param name="Local" value="classmath_1_1solver_1_1_l_u_3_01_sparse_vect_00_01_t_01_4.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="Factorize"><param name="Local" value="classmath_1_1solver_1_1_l_u_3_01_sparse_vect_00_01_t_01_4.html#ace12d54fbe5f8fd0e9aab834eb886446"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="InverseTranspose"><param name="Local" value="classmath_1_1solver_1_1_l_u_3_01_sparse_vect_00_01_t_01_4.html#a87e3cca781462095489024732ca7a2b9"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="Solve"><param name="Local" value="classmath_1_1solver_1_1_l_u_3_01_sparse_vect_00_01_t_01_4.html#abee6789774aa950d4a84c160551e7b9f"><param name="ImageNumber" value="11"></OBJECT>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="LU&lt; Vect, T &gt;"><param name="Local" value="classmath_1_1solver_1_1_l_u_3_01_vect_00_01_t_01_4.html"><param name="ImageNumber" value="1"></OBJECT>
           <UL>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="Factorize"><param name="Local" value="classmath_1_1solver_1_1_l_u_3_01_vect_00_01_t_01_4.html#ac81b514ada380e7e7f39e50110007c19"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="InverseTranspose"><param name="Local" value="classmath_1_1solver_1_1_l_u_3_01_vect_00_01_t_01_4.html#a71cdfe295aaefc2296ab16279ffff98e"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="LInvB"><param name="Local" value="classmath_1_1solver_1_1_l_u_3_01_vect_00_01_t_01_4.html#aea652cda1e74b0a42431bf0ac28847e3"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="Solve"><param name="Local" value="classmath_1_1solver_1_1_l_u_3_01_vect_00_01_t_01_4.html#a89d0f5cec902c744cb963f3946dfc6ac"><param name="ImageNumber" value="11"></OBJECT>
           </UL>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="LU< SparseVect, T >"><param name="Local" value="classmath_1_1solver_1_1_l_u_3_01_sparse_vect_00_01_t_01_4.html"><param name="ImageNumber" value="1"></OBJECT>
-          <UL>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="Factorize"><param name="Local" value="classmath_1_1solver_1_1_l_u_3_01_sparse_vect_00_01_t_01_4.html#ace12d54fbe5f8fd0e9aab834eb886446"><param name="ImageNumber" value="11"></OBJECT>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="InverseTranspose"><param name="Local" value="classmath_1_1solver_1_1_l_u_3_01_sparse_vect_00_01_t_01_4.html#a87e3cca781462095489024732ca7a2b9"><param name="ImageNumber" value="11"></OBJECT>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="Solve"><param name="Local" value="classmath_1_1solver_1_1_l_u_3_01_sparse_vect_00_01_t_01_4.html#abee6789774aa950d4a84c160551e7b9f"><param name="ImageNumber" value="11"></OBJECT>
-          </UL>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="QR"><param name="Local" value="classmath_1_1solver_1_1_q_r.html"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="QR< Vect, T >"><param name="Local" value="classmath_1_1solver_1_1_q_r_3_01_vect_00_01_t_01_4.html"><param name="ImageNumber" value="1"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="QR&lt; Vect, T &gt;"><param name="Local" value="classmath_1_1solver_1_1_q_r_3_01_vect_00_01_t_01_4.html"><param name="ImageNumber" value="1"></OBJECT>
           <UL>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="QR"><param name="Local" value="classmath_1_1solver_1_1_q_r_3_01_vect_00_01_t_01_4.html#ac981c2b77121087d2632a6eb3e71aa0e"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="A"><param name="Local" value="classmath_1_1solver_1_1_q_r_3_01_vect_00_01_t_01_4.html#a647feaa49fa683d8a8a3e63c83013255"><param name="ImageNumber" value="11"></OBJECT>
@@ -328,13 +328,6 @@
           <LI><OBJECT type="text/sitemap"><param name="Name" value="operator()"><param name="Local" value="classmath_1_1vops_1_1_mult.html#afffb94620b5cdc46c026c688f6b5ee73"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="operator()"><param name="Local" value="classmath_1_1vops_1_1_mult.html#a64132c4b2498795295d96b36ddf9500d"><param name="ImageNumber" value="11"></OBJECT>
           </UL>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="Sum"><param name="Local" value="classmath_1_1vops_1_1_sum.html"><param name="ImageNumber" value="1"></OBJECT>
-          <UL>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="operator()"><param name="Local" value="classmath_1_1vops_1_1_sum.html#abd46ff01fc44088402a49ec0f5cda59e"><param name="ImageNumber" value="11"></OBJECT>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="operator()"><param name="Local" value="classmath_1_1vops_1_1_sum.html#a05166d8f29395eb6a943f0cd6cecf629"><param name="ImageNumber" value="11"></OBJECT>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="operator()"><param name="Local" value="classmath_1_1vops_1_1_sum.html#abeea795c2815e832c8194acdf801ffae"><param name="ImageNumber" value="11"></OBJECT>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="operator()"><param name="Local" value="classmath_1_1vops_1_1_sum.html#a78dffa6f3f8f77185ea6ad67c11b83b7"><param name="ImageNumber" value="11"></OBJECT>
-          </UL>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="Subtr"><param name="Local" value="classmath_1_1vops_1_1_subtr.html"><param name="ImageNumber" value="1"></OBJECT>
           <UL>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="operator()"><param name="Local" value="classmath_1_1vops_1_1_subtr.html#a2691168d32d781a216bb67a6cec949bb"><param name="ImageNumber" value="11"></OBJECT>
@@ -346,8 +339,14 @@
           <LI><OBJECT type="text/sitemap"><param name="Name" value="operator()"><param name="Local" value="classmath_1_1vops_1_1_subtr.html#a9c197537630a4de31cddfc20864e55c3"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="operator()"><param name="Local" value="classmath_1_1vops_1_1_subtr.html#ac9f651e18c826386b444278730313f5f"><param name="ImageNumber" value="11"></OBJECT>
           </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Sum"><param name="Local" value="classmath_1_1vops_1_1_sum.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="operator()"><param name="Local" value="classmath_1_1vops_1_1_sum.html#abd46ff01fc44088402a49ec0f5cda59e"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="operator()"><param name="Local" value="classmath_1_1vops_1_1_sum.html#a05166d8f29395eb6a943f0cd6cecf629"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="operator()"><param name="Local" value="classmath_1_1vops_1_1_sum.html#abeea795c2815e832c8194acdf801ffae"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="operator()"><param name="Local" value="classmath_1_1vops_1_1_sum.html#a78dffa6f3f8f77185ea6ad67c11b83b7"><param name="ImageNumber" value="11"></OBJECT>
+          </UL>
         </UL>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="Singular"><param name="Local" value="structmath_1_1_singular.html"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="Matrix"><param name="Local" value="classmath_1_1_matrix.html"><param name="ImageNumber" value="1"></OBJECT>
         <UL>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="Matrix"><param name="Local" value="classmath_1_1_matrix.html#a7b112c4ff2b776b974807d1c73da2dd6"><param name="ImageNumber" value="11"></OBJECT>
@@ -376,11 +375,12 @@
         <LI><OBJECT type="text/sitemap"><param name="Name" value="Set"><param name="Local" value="classmath_1_1_matrix.html#a2ff471ea86b4a7020d182e2d1a9ddcc6"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="Swap"><param name="Local" value="classmath_1_1_matrix.html#a7470576ee1608d7f306c5a552c9bceee"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="Transpose"><param name="Local" value="classmath_1_1_matrix.html#a9449b804688de958aabc767547d0b824"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="operator<<"><param name="Local" value="classmath_1_1_matrix.html#a86a20cce5f784aaf4b6f2b30d5e2f95d"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="operator&lt;&lt;"><param name="Local" value="classmath_1_1_matrix.html#a86a20cce5f784aaf4b6f2b30d5e2f95d"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="m_isTransposed"><param name="Local" value="classmath_1_1_matrix.html#ace04a6a88440ee7832145c71dc66dc53"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="m_row"><param name="Local" value="classmath_1_1_matrix.html#a55a88d1caf21e06c2c9a4f005f0e91fc"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="m_size"><param name="Local" value="classmath_1_1_matrix.html#a26d52bc4bc275cf348f1f58a24de7028"><param name="ImageNumber" value="11"></OBJECT>
         </UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="Singular"><param name="Local" value="structmath_1_1_singular.html"><param name="ImageNumber" value="11"></OBJECT>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="Solver"><param name="Local" value="classmath_1_1_solver.html"><param name="ImageNumber" value="1"></OBJECT>
         <UL>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="BackSolveDown"><param name="Local" value="classmath_1_1_solver.html#a7d0d860d3806f4e007b90edb88166e52"><param name="ImageNumber" value="11"></OBJECT>
@@ -421,13 +421,13 @@
         <LI><OBJECT type="text/sitemap"><param name="Name" value="Size"><param name="Local" value="classmath_1_1_sparse_vect.html#ae713c7784be0df42888f387b42011ad9"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="Swap"><param name="Local" value="classmath_1_1_sparse_vect.html#af52237c21e8dba15528b1461406f8a5f"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="UpperBoundIdx"><param name="Local" value="classmath_1_1_sparse_vect.html#a3e02c1f1c9a29d6e4dfcb649f1c04ba5"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="operator<<"><param name="Local" value="classmath_1_1_sparse_vect.html#a9e5d417c2e987a89bbaccef75a768b79"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="vops::Add< T >"><param name="Local" value="classmath_1_1_sparse_vect.html#a08de65606e80cae19fa0c2cd77e667d1"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="vops::Axpy< T >"><param name="Local" value="classmath_1_1_sparse_vect.html#a6debe54ce9892f7b959342607983f50d"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="vops::Dot< T >"><param name="Local" value="classmath_1_1_sparse_vect.html#ac11c4c285e1753bdb869b209a3bd9070"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="vops::Mult< T >"><param name="Local" value="classmath_1_1_sparse_vect.html#a489f20f7d75f503486e113e1086e454a"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="vops::Subtr< T >"><param name="Local" value="classmath_1_1_sparse_vect.html#aa73600ea6ab01dfd56fbc0775348e107"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="vops::Sum< T >"><param name="Local" value="classmath_1_1_sparse_vect.html#aac4c109cc955f625390a22f7245bd398"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="operator&lt;&lt;"><param name="Local" value="classmath_1_1_sparse_vect.html#a9e5d417c2e987a89bbaccef75a768b79"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="vops::Add&lt; T &gt;"><param name="Local" value="classmath_1_1_sparse_vect.html#a08de65606e80cae19fa0c2cd77e667d1"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="vops::Axpy&lt; T &gt;"><param name="Local" value="classmath_1_1_sparse_vect.html#a6debe54ce9892f7b959342607983f50d"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="vops::Dot&lt; T &gt;"><param name="Local" value="classmath_1_1_sparse_vect.html#ac11c4c285e1753bdb869b209a3bd9070"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="vops::Mult&lt; T &gt;"><param name="Local" value="classmath_1_1_sparse_vect.html#a489f20f7d75f503486e113e1086e454a"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="vops::Subtr&lt; T &gt;"><param name="Local" value="classmath_1_1_sparse_vect.html#aa73600ea6ab01dfd56fbc0775348e107"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="vops::Sum&lt; T &gt;"><param name="Local" value="classmath_1_1_sparse_vect.html#aac4c109cc955f625390a22f7245bd398"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="m_allocSize"><param name="Local" value="classmath_1_1_sparse_vect.html#a1501633a37195e1b7ed1886e842c7284"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="m_data"><param name="Local" value="classmath_1_1_sparse_vect.html#a0b565ad3862145459fadf3b7244082a2"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="m_default"><param name="Local" value="classmath_1_1_sparse_vect.html#afa4764c018f5bdf685a0e3339c552a7f"><param name="ImageNumber" value="11"></OBJECT>
@@ -462,13 +462,13 @@
         <LI><OBJECT type="text/sitemap"><param name="Name" value="Set"><param name="Local" value="classmath_1_1_vect.html#ad152daa879143088259fdf9512fbebcc"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="Size"><param name="Local" value="classmath_1_1_vect.html#ac9f373ef9bd5cbac80c6f482e6a54314"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="Swap"><param name="Local" value="classmath_1_1_vect.html#a386141d9e8f9af0e07a86596c8a601d9"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="operator<<"><param name="Local" value="classmath_1_1_vect.html#a1b9c2d1e74b9407a908c04ceea1b1fd2"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="vops::Add< T >"><param name="Local" value="classmath_1_1_vect.html#a08de65606e80cae19fa0c2cd77e667d1"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="vops::Axpy< T >"><param name="Local" value="classmath_1_1_vect.html#a6debe54ce9892f7b959342607983f50d"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="vops::Dot< T >"><param name="Local" value="classmath_1_1_vect.html#ac11c4c285e1753bdb869b209a3bd9070"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="vops::Mult< T >"><param name="Local" value="classmath_1_1_vect.html#a489f20f7d75f503486e113e1086e454a"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="vops::Subtr< T >"><param name="Local" value="classmath_1_1_vect.html#aa73600ea6ab01dfd56fbc0775348e107"><param name="ImageNumber" value="11"></OBJECT>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="vops::Sum< T >"><param name="Local" value="classmath_1_1_vect.html#aac4c109cc955f625390a22f7245bd398"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="operator&lt;&lt;"><param name="Local" value="classmath_1_1_vect.html#a1b9c2d1e74b9407a908c04ceea1b1fd2"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="vops::Add&lt; T &gt;"><param name="Local" value="classmath_1_1_vect.html#a08de65606e80cae19fa0c2cd77e667d1"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="vops::Axpy&lt; T &gt;"><param name="Local" value="classmath_1_1_vect.html#a6debe54ce9892f7b959342607983f50d"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="vops::Dot&lt; T &gt;"><param name="Local" value="classmath_1_1_vect.html#ac11c4c285e1753bdb869b209a3bd9070"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="vops::Mult&lt; T &gt;"><param name="Local" value="classmath_1_1_vect.html#a489f20f7d75f503486e113e1086e454a"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="vops::Subtr&lt; T &gt;"><param name="Local" value="classmath_1_1_vect.html#aa73600ea6ab01dfd56fbc0775348e107"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="vops::Sum&lt; T &gt;"><param name="Local" value="classmath_1_1_vect.html#aac4c109cc955f625390a22f7245bd398"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="m_allocSize"><param name="Local" value="classmath_1_1_vect.html#ae22213d8ebcc3bb1041e16b3f5ee667f"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="m_data"><param name="Local" value="classmath_1_1_vect.html#ad333329c0a01ae7e78ba73b328a44672"><param name="ImageNumber" value="11"></OBJECT>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="m_size"><param name="Local" value="classmath_1_1_vect.html#ac8ec8fa922ac1ad356b3d13e10fc5afc"><param name="ImageNumber" value="11"></OBJECT>
@@ -478,72 +478,72 @@
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Class Index"><param name="Local" value="classes.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Class Hierarchy"><param name="Local" value="hierarchy.html"><param name="ImageNumber" value="1"></OBJECT>
     <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::vops::Add< T >"><param name="Local" value="classmath_1_1vops_1_1_add.html"><param name="ImageNumber" value="11"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::vops::Axpy< T >"><param name="Local" value="classmath_1_1vops_1_1_axpy.html"><param name="ImageNumber" value="11"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::Cholesky< Storage, T >"><param name="Local" value="classmath_1_1solver_1_1_cholesky.html"><param name="ImageNumber" value="11"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::CholeskyBase< Storage, T >"><param name="Local" value="classmath_1_1solver_1_1_cholesky_base.html"><param name="ImageNumber" value="11"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::CholeskyBase< SparseVect, T >"><param name="Local" value="classmath_1_1solver_1_1_cholesky_base.html"><param name="ImageNumber" value="1"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::vops::Add&lt; T &gt;"><param name="Local" value="classmath_1_1vops_1_1_add.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::vops::Axpy&lt; T &gt;"><param name="Local" value="classmath_1_1vops_1_1_axpy.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::Cholesky&lt; Storage, T &gt;"><param name="Local" value="classmath_1_1solver_1_1_cholesky.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::CholeskyBase&lt; Storage, T &gt;"><param name="Local" value="classmath_1_1solver_1_1_cholesky_base.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::CholeskyBase&lt; SparseVect, T &gt;"><param name="Local" value="classmath_1_1solver_1_1_cholesky_base.html"><param name="ImageNumber" value="1"></OBJECT>
       <UL>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::Cholesky< SparseVect, T >"><param name="Local" value="classmath_1_1solver_1_1_cholesky_3_01_sparse_vect_00_01_t_01_4.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::Cholesky&lt; SparseVect, T &gt;"><param name="Local" value="classmath_1_1solver_1_1_cholesky_3_01_sparse_vect_00_01_t_01_4.html"><param name="ImageNumber" value="11"></OBJECT>
       </UL>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::CholeskyBase< Vect, T >"><param name="Local" value="classmath_1_1solver_1_1_cholesky_base.html"><param name="ImageNumber" value="1"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::CholeskyBase&lt; Vect, T &gt;"><param name="Local" value="classmath_1_1solver_1_1_cholesky_base.html"><param name="ImageNumber" value="1"></OBJECT>
       <UL>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::Cholesky< Vect, T >"><param name="Local" value="classmath_1_1solver_1_1_cholesky_3_01_vect_00_01_t_01_4.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::Cholesky&lt; Vect, T &gt;"><param name="Local" value="classmath_1_1solver_1_1_cholesky_3_01_vect_00_01_t_01_4.html"><param name="ImageNumber" value="11"></OBJECT>
       </UL>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::vops::Dot< T >"><param name="Local" value="classmath_1_1vops_1_1_dot.html"><param name="ImageNumber" value="11"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::Eigen< Sol, Storage, T >"><param name="Local" value="classmath_1_1solver_1_1_eigen.html"><param name="ImageNumber" value="11"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::EigenValSolver< Storage, T >"><param name="Local" value="classmath_1_1solver_1_1_eigen_val_solver.html"><param name="ImageNumber" value="1"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::vops::Dot&lt; T &gt;"><param name="Local" value="classmath_1_1vops_1_1_dot.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::Eigen&lt; Sol, Storage, T &gt;"><param name="Local" value="classmath_1_1solver_1_1_eigen.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::EigenValSolver&lt; Storage, T &gt;"><param name="Local" value="classmath_1_1solver_1_1_eigen_val_solver.html"><param name="ImageNumber" value="1"></OBJECT>
       <UL>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::EigJacobi< Storage, T >"><param name="Local" value="classmath_1_1solver_1_1_eig_jacobi.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::EigJacobi&lt; Storage, T &gt;"><param name="Local" value="classmath_1_1solver_1_1_eig_jacobi.html"><param name="ImageNumber" value="11"></OBJECT>
       </UL>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::EigenValSolver< Vect, T >"><param name="Local" value="classmath_1_1solver_1_1_eigen_val_solver.html"><param name="ImageNumber" value="1"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::EigenValSolver&lt; Vect, T &gt;"><param name="Local" value="classmath_1_1solver_1_1_eigen_val_solver.html"><param name="ImageNumber" value="1"></OBJECT>
       <UL>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::QR< Vect, T >"><param name="Local" value="classmath_1_1solver_1_1_q_r_3_01_vect_00_01_t_01_4.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::QR&lt; Vect, T &gt;"><param name="Local" value="classmath_1_1solver_1_1_q_r_3_01_vect_00_01_t_01_4.html"><param name="ImageNumber" value="11"></OBJECT>
       </UL>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::Iterative< Storage, T >"><param name="Local" value="classmath_1_1solver_1_1_iterative.html"><param name="ImageNumber" value="1"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::Iterative&lt; Storage, T &gt;"><param name="Local" value="classmath_1_1solver_1_1_iterative.html"><param name="ImageNumber" value="1"></OBJECT>
       <UL>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::Cyclic< Storage, T >"><param name="Local" value="classmath_1_1solver_1_1_cyclic.html"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::Jacobi< Storage, T >"><param name="Local" value="classmath_1_1solver_1_1_jacobi.html"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::Seidel< Storage, T >"><param name="Local" value="classmath_1_1solver_1_1_seidel.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::Cyclic&lt; Storage, T &gt;"><param name="Local" value="classmath_1_1solver_1_1_cyclic.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::Jacobi&lt; Storage, T &gt;"><param name="Local" value="classmath_1_1solver_1_1_jacobi.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::Seidel&lt; Storage, T &gt;"><param name="Local" value="classmath_1_1solver_1_1_seidel.html"><param name="ImageNumber" value="11"></OBJECT>
       </UL>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::LU< Storage, T >"><param name="Local" value="classmath_1_1solver_1_1_l_u.html"><param name="ImageNumber" value="11"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::Matrix< Storage, T >"><param name="Local" value="classmath_1_1_matrix.html"><param name="ImageNumber" value="11"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::Matrix< math::SparseVect, T >"><param name="Local" value="classmath_1_1_matrix.html"><param name="ImageNumber" value="11"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::Matrix< math::Vect, T >"><param name="Local" value="classmath_1_1_matrix.html"><param name="ImageNumber" value="11"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::Matrix< SparseVect, T >"><param name="Local" value="classmath_1_1_matrix.html"><param name="ImageNumber" value="11"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::Matrix< Vect, T >"><param name="Local" value="classmath_1_1_matrix.html"><param name="ImageNumber" value="11"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::vops::Mult< T >"><param name="Local" value="classmath_1_1vops_1_1_mult.html"><param name="ImageNumber" value="11"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::QR< Storage, T >"><param name="Local" value="classmath_1_1solver_1_1_q_r.html"><param name="ImageNumber" value="11"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::Rectangular< Sol, Storage, T >"><param name="Local" value="classmath_1_1solver_1_1_rectangular.html"><param name="ImageNumber" value="11"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::RowSolver< Storage, T >"><param name="Local" value="classmath_1_1solver_1_1_row_solver.html"><param name="ImageNumber" value="1"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::LU&lt; Storage, T &gt;"><param name="Local" value="classmath_1_1solver_1_1_l_u.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::Matrix&lt; Storage, T &gt;"><param name="Local" value="classmath_1_1_matrix.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::Matrix&lt; math::SparseVect, T &gt;"><param name="Local" value="classmath_1_1_matrix.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::Matrix&lt; math::Vect, T &gt;"><param name="Local" value="classmath_1_1_matrix.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::Matrix&lt; SparseVect, T &gt;"><param name="Local" value="classmath_1_1_matrix.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::Matrix&lt; Vect, T &gt;"><param name="Local" value="classmath_1_1_matrix.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::vops::Mult&lt; T &gt;"><param name="Local" value="classmath_1_1vops_1_1_mult.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::QR&lt; Storage, T &gt;"><param name="Local" value="classmath_1_1solver_1_1_q_r.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::Rectangular&lt; Sol, Storage, T &gt;"><param name="Local" value="classmath_1_1solver_1_1_rectangular.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::RowSolver&lt; Storage, T &gt;"><param name="Local" value="classmath_1_1solver_1_1_row_solver.html"><param name="ImageNumber" value="1"></OBJECT>
       <UL>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::CyclicRow< Storage, T >"><param name="Local" value="classmath_1_1solver_1_1_cyclic_row.html"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::JacobiRow< Storage, T >"><param name="Local" value="classmath_1_1solver_1_1_jacobi_row.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::CyclicRow&lt; Storage, T &gt;"><param name="Local" value="classmath_1_1solver_1_1_cyclic_row.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::JacobiRow&lt; Storage, T &gt;"><param name="Local" value="classmath_1_1solver_1_1_jacobi_row.html"><param name="ImageNumber" value="11"></OBJECT>
       </UL>
     <LI><OBJECT type="text/sitemap"><param name="Name" value="math::Singular"><param name="Local" value="structmath_1_1_singular.html"><param name="ImageNumber" value="11"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::Solver< Storage, T >"><param name="Local" value="classmath_1_1_solver.html"><param name="ImageNumber" value="1"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::Solver&lt; Storage, T &gt;"><param name="Local" value="classmath_1_1_solver.html"><param name="ImageNumber" value="1"></OBJECT>
       <UL>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::Elimination< Storage, T >"><param name="Local" value="classmath_1_1solver_1_1_elimination.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::Elimination&lt; Storage, T &gt;"><param name="Local" value="classmath_1_1solver_1_1_elimination.html"><param name="ImageNumber" value="11"></OBJECT>
       </UL>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::Solver< SparseVect, T >"><param name="Local" value="classmath_1_1_solver.html"><param name="ImageNumber" value="1"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::Solver&lt; SparseVect, T &gt;"><param name="Local" value="classmath_1_1_solver.html"><param name="ImageNumber" value="1"></OBJECT>
       <UL>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::Elimination< SparseVect, T >"><param name="Local" value="classmath_1_1solver_1_1_elimination.html"><param name="ImageNumber" value="1"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::Elimination&lt; SparseVect, T &gt;"><param name="Local" value="classmath_1_1solver_1_1_elimination.html"><param name="ImageNumber" value="1"></OBJECT>
         <UL>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::LU< SparseVect, T >"><param name="Local" value="classmath_1_1solver_1_1_l_u_3_01_sparse_vect_00_01_t_01_4.html"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::LU&lt; SparseVect, T &gt;"><param name="Local" value="classmath_1_1solver_1_1_l_u_3_01_sparse_vect_00_01_t_01_4.html"><param name="ImageNumber" value="11"></OBJECT>
         </UL>
       </UL>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::Solver< Vect, T >"><param name="Local" value="classmath_1_1_solver.html"><param name="ImageNumber" value="1"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::Solver&lt; Vect, T &gt;"><param name="Local" value="classmath_1_1_solver.html"><param name="ImageNumber" value="1"></OBJECT>
       <UL>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::Elimination< Vect, T >"><param name="Local" value="classmath_1_1solver_1_1_elimination.html"><param name="ImageNumber" value="1"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::Elimination&lt; Vect, T &gt;"><param name="Local" value="classmath_1_1solver_1_1_elimination.html"><param name="ImageNumber" value="1"></OBJECT>
         <UL>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::LU< Vect, T >"><param name="Local" value="classmath_1_1solver_1_1_l_u_3_01_vect_00_01_t_01_4.html"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="math::solver::LU&lt; Vect, T &gt;"><param name="Local" value="classmath_1_1solver_1_1_l_u_3_01_vect_00_01_t_01_4.html"><param name="ImageNumber" value="11"></OBJECT>
         </UL>
       </UL>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::SparseVect< T >"><param name="Local" value="classmath_1_1_sparse_vect.html"><param name="ImageNumber" value="11"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::vops::Subtr< T >"><param name="Local" value="classmath_1_1vops_1_1_subtr.html"><param name="ImageNumber" value="11"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::vops::Sum< T >"><param name="Local" value="classmath_1_1vops_1_1_sum.html"><param name="ImageNumber" value="11"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::Vect< T >"><param name="Local" value="classmath_1_1_vect.html"><param name="ImageNumber" value="11"></OBJECT>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::Vect< bool >"><param name="Local" value="classmath_1_1_vect.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::SparseVect&lt; T &gt;"><param name="Local" value="classmath_1_1_sparse_vect.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::vops::Subtr&lt; T &gt;"><param name="Local" value="classmath_1_1vops_1_1_subtr.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::vops::Sum&lt; T &gt;"><param name="Local" value="classmath_1_1vops_1_1_sum.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::Vect&lt; T &gt;"><param name="Local" value="classmath_1_1_vect.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::Vect&lt; bool &gt;"><param name="Local" value="classmath_1_1_vect.html"><param name="ImageNumber" value="11"></OBJECT>
     </UL>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Class Members"><param name="Local" value="functions.html"><param name="ImageNumber" value="1"></OBJECT>
     <UL>

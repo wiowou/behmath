@@ -4,14 +4,14 @@
 
 
 # Configuration directories and files
-SourceDirectory: /home/bk/googleDrive/prog/proj/math/optim
-BuildDirectory: /home/bk/googleDrive/prog/proj/math/optim
+SourceDirectory: /home/bk/prog/math/optim
+BuildDirectory: /home/bk/prog/math/optim
 
 # Where to place the cost data store
 CostDataFile: 
 
 # Site is something like machine.domain, i.e. pragmatic.crd
-Site: pacman
+Site: frylock
 
 # Build name is osname-revision-compiler, i.e. Linux-2.4.2-2smp-c++
 BuildName: Linux-c++
@@ -33,7 +33,7 @@ ScpCommand: /usr/bin/scp
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/usr/bin/cmake" "/home/bk/googleDrive/prog/proj/math/optim"
+ConfigureCommand: "/usr/bin/cmake" "/home/bk/prog/math/optim"
 MakeCommand: /usr/bin/make -i
 DefaultCTestConfigurationType: Release
 

@@ -12,10 +12,6 @@
       <UL>
       <LI><OBJECT type="text/sitemap"><param name="Name" value="root"><param name="ImageNumber" value="1"></OBJECT>
         <UL>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="BisectionMidpoint"><param name="Local" value="classmath_1_1root_1_1_bisection_midpoint.html"><param name="ImageNumber" value="1"></OBJECT>
-          <UL>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="Root"><param name="Local" value="classmath_1_1root_1_1_bisection_midpoint.html#aa5c5e0ec8ff299db4d6ce701d93836cd"><param name="ImageNumber" value="11"></OBJECT>
-          </UL>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="Bisection"><param name="Local" value="classmath_1_1root_1_1_bisection.html"><param name="ImageNumber" value="1"></OBJECT>
           <UL>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="Bisection"><param name="Local" value="classmath_1_1root_1_1_bisection.html#a5b8cc9cb7845ba579d4750c1ae1bafd2"><param name="ImageNumber" value="11"></OBJECT>
@@ -26,6 +22,10 @@
           <LI><OBJECT type="text/sitemap"><param name="Name" value="m_mid"><param name="Local" value="classmath_1_1root_1_1_bisection.html#a6d90630823ae144ccb704d9a14dd32bb"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="m_switch"><param name="Local" value="classmath_1_1root_1_1_bisection.html#ac447231bbca79ae4d545b86a0b3ab3ab"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="m_useHybrid"><param name="Local" value="classmath_1_1root_1_1_bisection.html#a048c780c869af9b134906373fade486a"><param name="ImageNumber" value="11"></OBJECT>
+          </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="BisectionMidpoint"><param name="Local" value="classmath_1_1root_1_1_bisection_midpoint.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="Root"><param name="Local" value="classmath_1_1root_1_1_bisection_midpoint.html#aa5c5e0ec8ff299db4d6ce701d93836cd"><param name="ImageNumber" value="11"></OBJECT>
           </UL>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="FixedPoint"><param name="Local" value="classmath_1_1root_1_1_fixed_point.html"><param name="ImageNumber" value="1"></OBJECT>
           <UL>
@@ -49,18 +49,18 @@
           <LI><OBJECT type="text/sitemap"><param name="Name" value="m_A"><param name="Local" value="classmath_1_1root_1_1_lin_frac.html#a8c5b4edcd7fc24abe8230c7b336f5fb5"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="m_b"><param name="Local" value="classmath_1_1root_1_1_lin_frac.html#a7eb4dd3798c1e21ee06b76e5aeaaa1ee"><param name="ImageNumber" value="11"></OBJECT>
           </UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Newton"><param name="Local" value="classmath_1_1root_1_1_newton.html"><param name="ImageNumber" value="1"></OBJECT>
+          <UL>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="Calc"><param name="Local" value="classmath_1_1root_1_1_newton.html#a12f6b558f0a12441253fc09bed94e057"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="FPrime"><param name="Local" value="classmath_1_1root_1_1_newton.html#ae2700da0984645a3d0c487975c52a1bb"><param name="ImageNumber" value="11"></OBJECT>
+          <LI><OBJECT type="text/sitemap"><param name="Name" value="Root"><param name="Local" value="classmath_1_1root_1_1_newton.html#a508d0f13830eeec29aa984f62b299583"><param name="ImageNumber" value="11"></OBJECT>
+          </UL>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="NewtonEx"><param name="Local" value="classmath_1_1root_1_1_newton_ex.html"><param name="ImageNumber" value="1"></OBJECT>
           <UL>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="Calc"><param name="Local" value="classmath_1_1root_1_1_newton_ex.html#a0b9a57265b3df3be44670244d0838245"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="FPrime"><param name="Local" value="classmath_1_1root_1_1_newton_ex.html#aef03c1ef1009698b243644872845de1d"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="Root"><param name="Local" value="classmath_1_1root_1_1_newton_ex.html#a287a00f424fd4f95f2dce7f6fc7fdf4f"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="m_fprime"><param name="Local" value="classmath_1_1root_1_1_newton_ex.html#a228cd34ddd606dd01e827297a59e0150"><param name="ImageNumber" value="11"></OBJECT>
-          </UL>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="Newton"><param name="Local" value="classmath_1_1root_1_1_newton.html"><param name="ImageNumber" value="1"></OBJECT>
-          <UL>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="Calc"><param name="Local" value="classmath_1_1root_1_1_newton.html#a12f6b558f0a12441253fc09bed94e057"><param name="ImageNumber" value="11"></OBJECT>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="FPrime"><param name="Local" value="classmath_1_1root_1_1_newton.html#ae2700da0984645a3d0c487975c52a1bb"><param name="ImageNumber" value="11"></OBJECT>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="Root"><param name="Local" value="classmath_1_1root_1_1_newton.html#a508d0f13830eeec29aa984f62b299583"><param name="ImageNumber" value="11"></OBJECT>
           </UL>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="RootFinder"><param name="Local" value="classmath_1_1root_1_1_root_finder.html"><param name="ImageNumber" value="1"></OBJECT>
           <UL>
@@ -99,16 +99,16 @@
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Class Index"><param name="Local" value="classes.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Class Hierarchy"><param name="Local" value="hierarchy.html"><param name="ImageNumber" value="1"></OBJECT>
     <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::root::RootFinder< F, T >"><param name="Local" value="classmath_1_1root_1_1_root_finder.html"><param name="ImageNumber" value="1"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::root::RootFinder&lt; F, T &gt;"><param name="Local" value="classmath_1_1root_1_1_root_finder.html"><param name="ImageNumber" value="1"></OBJECT>
       <UL>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::root::Bisection< F, MP, T >"><param name="Local" value="classmath_1_1root_1_1_bisection.html"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::root::BisectionMidpoint< F, T >"><param name="Local" value="classmath_1_1root_1_1_bisection_midpoint.html"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::root::FixedPoint< F, T >"><param name="Local" value="classmath_1_1root_1_1_fixed_point.html"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::root::InvQuad< F, T >"><param name="Local" value="classmath_1_1root_1_1_inv_quad.html"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::root::LinFrac< F, T >"><param name="Local" value="classmath_1_1root_1_1_lin_frac.html"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::root::Newton< F, T >"><param name="Local" value="classmath_1_1root_1_1_newton.html"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::root::NewtonEx< F, FP, T >"><param name="Local" value="classmath_1_1root_1_1_newton_ex.html"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::root::Secant< F, T >"><param name="Local" value="classmath_1_1root_1_1_secant.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::root::Bisection&lt; F, MP, T &gt;"><param name="Local" value="classmath_1_1root_1_1_bisection.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::root::BisectionMidpoint&lt; F, T &gt;"><param name="Local" value="classmath_1_1root_1_1_bisection_midpoint.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::root::FixedPoint&lt; F, T &gt;"><param name="Local" value="classmath_1_1root_1_1_fixed_point.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::root::InvQuad&lt; F, T &gt;"><param name="Local" value="classmath_1_1root_1_1_inv_quad.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::root::LinFrac&lt; F, T &gt;"><param name="Local" value="classmath_1_1root_1_1_lin_frac.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::root::Newton&lt; F, T &gt;"><param name="Local" value="classmath_1_1root_1_1_newton.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::root::NewtonEx&lt; F, FP, T &gt;"><param name="Local" value="classmath_1_1root_1_1_newton_ex.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::root::Secant&lt; F, T &gt;"><param name="Local" value="classmath_1_1root_1_1_secant.html"><param name="ImageNumber" value="11"></OBJECT>
       </UL>
     </UL>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Class Members"><param name="Local" value="functions.html"><param name="ImageNumber" value="1"></OBJECT>

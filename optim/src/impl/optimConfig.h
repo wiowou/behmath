@@ -8,6 +8,6 @@
 #define VERSION "."
 #define _WIN32
 
-#define MYDEBUG
+/* #undef MYDEBUG */
 
 #endif /*_OPTIM_CONFIG_H*/

@@ -25,40 +25,32 @@
           <LI><OBJECT type="text/sitemap"><param name="Name" value="Init"><param name="Local" value="classmath_1_1optim_1_1_bigd.html#a2699642e6847d2a42ff5440ce10749b2"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="MinX"><param name="Local" value="classmath_1_1optim_1_1_bigd.html#a6706375e477dca3ab9db348eb063a403"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="Range"><param name="Local" value="classmath_1_1optim_1_1_bigd.html#a399363d539bd660580b0e30ff11dddf4"><param name="ImageNumber" value="11"></OBJECT>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="BigdTest"><param name="Local" value="classmath_1_1optim_1_1_bigd.html#ab52c6b9c7ce6f727b1954634c509027e"><param name="ImageNumber" value="11"></OBJECT>
           </UL>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="ConjGrad"><param name="Local" value="classmath_1_1optim_1_1_conj_grad.html"><param name="ImageNumber" value="1"></OBJECT>
           <UL>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="Calc"><param name="Local" value="classmath_1_1optim_1_1_conj_grad.html#aa2dd64d55c96ca3e19db414d3507a594"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="Continue"><param name="Local" value="classmath_1_1optim_1_1_conj_grad.html#aaaf2a2603fa706c1b15fa3fd89c00bce"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="MinX"><param name="Local" value="classmath_1_1optim_1_1_conj_grad.html#a6e876908d79492e488a74a474c483605"><param name="ImageNumber" value="11"></OBJECT>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="ConjGradTest"><param name="Local" value="classmath_1_1optim_1_1_conj_grad.html#ab6391e23fc21bec3bcecaf3e1955c8cd"><param name="ImageNumber" value="11"></OBJECT>
           </UL>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="GoldenSection"><param name="Local" value="classmath_1_1optim_1_1_golden_section.html"><param name="ImageNumber" value="1"></OBJECT>
           <UL>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="Calc"><param name="Local" value="classmath_1_1optim_1_1_golden_section.html#aaee2de7e5bf360bc14e7786338dfdf7a"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="MinX"><param name="Local" value="classmath_1_1optim_1_1_golden_section.html#aa83ea0b7ac4175aea1918725bcc39ccc"><param name="ImageNumber" value="11"></OBJECT>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="GoldenSectionTest"><param name="Local" value="classmath_1_1optim_1_1_golden_section.html#a7826ac3213607749120e56a3ff414e99"><param name="ImageNumber" value="11"></OBJECT>
           </UL>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="GradDescent"><param name="Local" value="classmath_1_1optim_1_1_grad_descent.html"><param name="ImageNumber" value="1"></OBJECT>
-          <UL>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="GradDescentTest"><param name="Local" value="classmath_1_1optim_1_1_grad_descent.html#a6d414364883e0817c3ccb4a65dfaef90"><param name="ImageNumber" value="11"></OBJECT>
-          </UL>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="GradDescent< F, double >"><param name="Local" value="classmath_1_1optim_1_1_grad_descent_3_01_f_00_01double_01_4.html"><param name="ImageNumber" value="1"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="GradDescent"><param name="Local" value="classmath_1_1optim_1_1_grad_descent.html"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="GradDescent&lt; F, double &gt;"><param name="Local" value="classmath_1_1optim_1_1_grad_descent_3_01_f_00_01double_01_4.html"><param name="ImageNumber" value="1"></OBJECT>
           <UL>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="GradDescent"><param name="Local" value="classmath_1_1optim_1_1_grad_descent_3_01_f_00_01double_01_4.html#a25e70a60b1e39816c6cebcc89e02474a"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="Calc"><param name="Local" value="classmath_1_1optim_1_1_grad_descent_3_01_f_00_01double_01_4.html#a8675601d263de37c10005274341039dc"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="Clear"><param name="Local" value="classmath_1_1optim_1_1_grad_descent_3_01_f_00_01double_01_4.html#af91d627008ef29c0fbd793290481aa8f"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="Init"><param name="Local" value="classmath_1_1optim_1_1_grad_descent_3_01_f_00_01double_01_4.html#ab352876369dba79b6a299e14b064bbb0"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="MinX"><param name="Local" value="classmath_1_1optim_1_1_grad_descent_3_01_f_00_01double_01_4.html#a0dcd0a581edd39758443b548112743b6"><param name="ImageNumber" value="11"></OBJECT>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="GradDescentTest"><param name="Local" value="classmath_1_1optim_1_1_grad_descent_3_01_f_00_01double_01_4.html#a6d414364883e0817c3ccb4a65dfaef90"><param name="ImageNumber" value="11"></OBJECT>
           </UL>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="GradDescent< F, Vect< double > >"><param name="Local" value="classmath_1_1optim_1_1_grad_descent_3_01_f_00_01_vect_3_01double_01_4_01_4.html"><param name="ImageNumber" value="1"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="GradDescent&lt; F, Vect&lt; double &gt; &gt;"><param name="Local" value="classmath_1_1optim_1_1_grad_descent_3_01_f_00_01_vect_3_01double_01_4_01_4.html"><param name="ImageNumber" value="1"></OBJECT>
           <UL>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="Calc"><param name="Local" value="classmath_1_1optim_1_1_grad_descent_3_01_f_00_01_vect_3_01double_01_4_01_4.html#a4333e7b7f662a1a4c72e1c624b5882ba"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="Continue"><param name="Local" value="classmath_1_1optim_1_1_grad_descent_3_01_f_00_01_vect_3_01double_01_4_01_4.html#a5acae8021a48dbda26bdd02dbad9305c"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="MinX"><param name="Local" value="classmath_1_1optim_1_1_grad_descent_3_01_f_00_01_vect_3_01double_01_4_01_4.html#a3ddf24be4c4da2c30631954f0353c402"><param name="ImageNumber" value="11"></OBJECT>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="GradDescentTest"><param name="Local" value="classmath_1_1optim_1_1_grad_descent_3_01_f_00_01_vect_3_01double_01_4_01_4.html#a6d414364883e0817c3ccb4a65dfaef90"><param name="ImageNumber" value="11"></OBJECT>
           </UL>
         <LI><OBJECT type="text/sitemap"><param name="Name" value="MinFinder"><param name="Local" value="classmath_1_1optim_1_1_min_finder.html"><param name="ImageNumber" value="1"></OBJECT>
           <UL>
@@ -74,7 +66,6 @@
           <LI><OBJECT type="text/sitemap"><param name="Name" value="RootFound"><param name="Local" value="classmath_1_1optim_1_1_min_finder.html#aaeda1e7a09abc00464db6ca46c0399da"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="Tolerance"><param name="Local" value="classmath_1_1optim_1_1_min_finder.html#a2c1d860c1b45cfc6727970084a657fe9"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="Tolerance"><param name="Local" value="classmath_1_1optim_1_1_min_finder.html#a54def6712e1a35d7a6e1e81035fe398d"><param name="ImageNumber" value="11"></OBJECT>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="MinFinderTest"><param name="Local" value="classmath_1_1optim_1_1_min_finder.html#a8b3ebfe9f76be597b06b003cf2ce71b4"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="m_f"><param name="Local" value="classmath_1_1optim_1_1_min_finder.html#ab974e81c83efb7a60214f598f2da112f"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="m_gain"><param name="Local" value="classmath_1_1optim_1_1_min_finder.html#a0ad8aca7b4b80f680396c9568de729f1"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="m_guess"><param name="Local" value="classmath_1_1optim_1_1_min_finder.html#a785ec2c69c002557b44127f02d6481d5"><param name="ImageNumber" value="11"></OBJECT>
@@ -87,25 +78,20 @@
           <LI><OBJECT type="text/sitemap"><param name="Name" value="m_runCalc"><param name="Local" value="classmath_1_1optim_1_1_min_finder.html#aec5b7365000cf958462b076468370014"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="m_tolerance"><param name="Local" value="classmath_1_1optim_1_1_min_finder.html#a9250e0c3450eba2ca92690a4fdcb6826"><param name="ImageNumber" value="11"></OBJECT>
           </UL>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="Newton"><param name="Local" value="classmath_1_1optim_1_1_newton.html"><param name="ImageNumber" value="1"></OBJECT>
-          <UL>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="NewtonTest"><param name="Local" value="classmath_1_1optim_1_1_newton.html#a958189108bb622c3b6782831b3ea4563"><param name="ImageNumber" value="11"></OBJECT>
-          </UL>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="Newton< F, double >"><param name="Local" value="classmath_1_1optim_1_1_newton_3_01_f_00_01double_01_4.html"><param name="ImageNumber" value="1"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Newton"><param name="Local" value="classmath_1_1optim_1_1_newton.html"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Newton&lt; F, double &gt;"><param name="Local" value="classmath_1_1optim_1_1_newton_3_01_f_00_01double_01_4.html"><param name="ImageNumber" value="1"></OBJECT>
           <UL>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="Newton"><param name="Local" value="classmath_1_1optim_1_1_newton_3_01_f_00_01double_01_4.html#a642161a0d2e9bf675b43d13e8dd690e1"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="Calc"><param name="Local" value="classmath_1_1optim_1_1_newton_3_01_f_00_01double_01_4.html#ae05ab3f3821e9f89146f57f8dc79e37d"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="Clear"><param name="Local" value="classmath_1_1optim_1_1_newton_3_01_f_00_01double_01_4.html#abab40c61a2e843e456fa7d7986a270d2"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="Init"><param name="Local" value="classmath_1_1optim_1_1_newton_3_01_f_00_01double_01_4.html#aa00a63291eaa32d489d0e342865dbdfa"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="MinX"><param name="Local" value="classmath_1_1optim_1_1_newton_3_01_f_00_01double_01_4.html#ae1b23e3a3a875ef6027bcefe3323f922"><param name="ImageNumber" value="11"></OBJECT>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="NewtonTest"><param name="Local" value="classmath_1_1optim_1_1_newton_3_01_f_00_01double_01_4.html#a958189108bb622c3b6782831b3ea4563"><param name="ImageNumber" value="11"></OBJECT>
           </UL>
-        <LI><OBJECT type="text/sitemap"><param name="Name" value="Newton< F, Vect< double > >"><param name="Local" value="classmath_1_1optim_1_1_newton_3_01_f_00_01_vect_3_01double_01_4_01_4.html"><param name="ImageNumber" value="1"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="Newton&lt; F, Vect&lt; double &gt; &gt;"><param name="Local" value="classmath_1_1optim_1_1_newton_3_01_f_00_01_vect_3_01double_01_4_01_4.html"><param name="ImageNumber" value="1"></OBJECT>
           <UL>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="Calc"><param name="Local" value="classmath_1_1optim_1_1_newton_3_01_f_00_01_vect_3_01double_01_4_01_4.html#aab860364db3005e901259712243ce239"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="Continue"><param name="Local" value="classmath_1_1optim_1_1_newton_3_01_f_00_01_vect_3_01double_01_4_01_4.html#ab8cebef91fdc225142df91ba2b2562b2"><param name="ImageNumber" value="11"></OBJECT>
           <LI><OBJECT type="text/sitemap"><param name="Name" value="MinX"><param name="Local" value="classmath_1_1optim_1_1_newton_3_01_f_00_01_vect_3_01double_01_4_01_4.html#a2362696af9ca00bb5e1385429ff1f200"><param name="ImageNumber" value="11"></OBJECT>
-          <LI><OBJECT type="text/sitemap"><param name="Name" value="NewtonTest"><param name="Local" value="classmath_1_1optim_1_1_newton_3_01_f_00_01_vect_3_01double_01_4_01_4.html#a958189108bb622c3b6782831b3ea4563"><param name="ImageNumber" value="11"></OBJECT>
           </UL>
         </UL>
       </UL>
@@ -113,23 +99,23 @@
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Class Index"><param name="Local" value="classes.html"><param name="ImageNumber" value="11"></OBJECT>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Class Hierarchy"><param name="Local" value="hierarchy.html"><param name="ImageNumber" value="1"></OBJECT>
     <UL>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::optim::MinFinder< F, T >"><param name="Local" value="classmath_1_1optim_1_1_min_finder.html"><param name="ImageNumber" value="1"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::optim::MinFinder&lt; F, T &gt;"><param name="Local" value="classmath_1_1optim_1_1_min_finder.html"><param name="ImageNumber" value="1"></OBJECT>
       <UL>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::optim::GoldenSection< F, T >"><param name="Local" value="classmath_1_1optim_1_1_golden_section.html"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::optim::GradDescent< F, T >"><param name="Local" value="classmath_1_1optim_1_1_grad_descent.html"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::optim::Newton< F, T >"><param name="Local" value="classmath_1_1optim_1_1_newton.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::optim::GoldenSection&lt; F, T &gt;"><param name="Local" value="classmath_1_1optim_1_1_golden_section.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::optim::GradDescent&lt; F, T &gt;"><param name="Local" value="classmath_1_1optim_1_1_grad_descent.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::optim::Newton&lt; F, T &gt;"><param name="Local" value="classmath_1_1optim_1_1_newton.html"><param name="ImageNumber" value="11"></OBJECT>
       </UL>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::optim::MinFinder< F, double >"><param name="Local" value="classmath_1_1optim_1_1_min_finder.html"><param name="ImageNumber" value="1"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::optim::MinFinder&lt; F, double &gt;"><param name="Local" value="classmath_1_1optim_1_1_min_finder.html"><param name="ImageNumber" value="1"></OBJECT>
       <UL>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::optim::GradDescent< F, double >"><param name="Local" value="classmath_1_1optim_1_1_grad_descent_3_01_f_00_01double_01_4.html"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::optim::Newton< F, double >"><param name="Local" value="classmath_1_1optim_1_1_newton_3_01_f_00_01double_01_4.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::optim::GradDescent&lt; F, double &gt;"><param name="Local" value="classmath_1_1optim_1_1_grad_descent_3_01_f_00_01double_01_4.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::optim::Newton&lt; F, double &gt;"><param name="Local" value="classmath_1_1optim_1_1_newton_3_01_f_00_01double_01_4.html"><param name="ImageNumber" value="11"></OBJECT>
       </UL>
-    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::optim::MinFinder< F, Vect< double > >"><param name="Local" value="classmath_1_1optim_1_1_min_finder.html"><param name="ImageNumber" value="1"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="math::optim::MinFinder&lt; F, Vect&lt; double &gt; &gt;"><param name="Local" value="classmath_1_1optim_1_1_min_finder.html"><param name="ImageNumber" value="1"></OBJECT>
       <UL>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::optim::Bigd< F >"><param name="Local" value="classmath_1_1optim_1_1_bigd.html"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::optim::ConjGrad< F >"><param name="Local" value="classmath_1_1optim_1_1_conj_grad.html"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::optim::GradDescent< F, Vect< double > >"><param name="Local" value="classmath_1_1optim_1_1_grad_descent_3_01_f_00_01_vect_3_01double_01_4_01_4.html"><param name="ImageNumber" value="11"></OBJECT>
-      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::optim::Newton< F, Vect< double > >"><param name="Local" value="classmath_1_1optim_1_1_newton_3_01_f_00_01_vect_3_01double_01_4_01_4.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::optim::Bigd&lt; F &gt;"><param name="Local" value="classmath_1_1optim_1_1_bigd.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::optim::ConjGrad&lt; F &gt;"><param name="Local" value="classmath_1_1optim_1_1_conj_grad.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::optim::GradDescent&lt; F, Vect&lt; double &gt; &gt;"><param name="Local" value="classmath_1_1optim_1_1_grad_descent_3_01_f_00_01_vect_3_01double_01_4_01_4.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="math::optim::Newton&lt; F, Vect&lt; double &gt; &gt;"><param name="Local" value="classmath_1_1optim_1_1_newton_3_01_f_00_01_vect_3_01double_01_4_01_4.html"><param name="ImageNumber" value="11"></OBJECT>
       </UL>
     </UL>
   <LI><OBJECT type="text/sitemap"><param name="Name" value="Class Members"><param name="Local" value="functions.html"><param name="ImageNumber" value="1"></OBJECT>
