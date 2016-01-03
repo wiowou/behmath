@@ -1,0 +1,1 @@
+${srcDir}/point.cpp;${srcDir}/vect.cpp;${srcDir}/polygon.cpp;${testDir}/polygonTest.cpp

@@ -1,0 +1,1 @@
+${srcDir}/point.cpp;${srcDir}/pointID.cpp;${testDir}/pointIDTest.cpp

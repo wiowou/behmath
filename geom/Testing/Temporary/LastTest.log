@@ -1,0 +1,82 @@
+Start testing: Jan 03 04:46 EST
+----------------------------------------------------------
+1/5 Testing: Ident
+1/5 Test: Ident
+Command: "/home/bk/prog/math/geom/UnitTests/Ident_test"
+Directory: /home/bk/prog/math/geom
+"Ident" start time: Jan 03 04:46 EST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"Ident" end time: Jan 03 04:46 EST
+"Ident" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/5 Testing: pointID
+2/5 Test: pointID
+Command: "/home/bk/prog/math/geom/UnitTests/pointID_test"
+Directory: /home/bk/prog/math/geom
+"pointID" start time: Jan 03 04:46 EST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"pointID" end time: Jan 03 04:46 EST
+"pointID" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/5 Testing: point
+3/5 Test: point
+Command: "/home/bk/prog/math/geom/UnitTests/point_test"
+Directory: /home/bk/prog/math/geom
+"point" start time: Jan 03 04:46 EST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"point" end time: Jan 03 04:46 EST
+"point" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/5 Testing: vect
+4/5 Test: vect
+Command: "/home/bk/prog/math/geom/UnitTests/vect_test"
+Directory: /home/bk/prog/math/geom
+"vect" start time: Jan 03 04:46 EST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"vect" end time: Jan 03 04:46 EST
+"vect" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/5 Testing: polygon
+5/5 Test: polygon
+Command: "/home/bk/prog/math/geom/UnitTests/polygon_test"
+Directory: /home/bk/prog/math/geom
+"polygon" start time: Jan 03 04:46 EST
+Output:
+----------------------------------------------------------
+-39.2606
+76.4259
+51.2107
+100.024
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"polygon" end time: Jan 03 04:46 EST
+"polygon" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jan 03 04:46 EST
