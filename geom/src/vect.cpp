@@ -92,4 +92,18 @@ Vect Cross( Vect &a, Vect &b )
   return v;
 }
 
+Vect Dot( const Vect &a, const Vect &b )
+{
+  double d = 0.0;
+  d = a.m_crd[0] * b.m_crd[0] + a.m_crd[1] * b.m_crd[1] + a.m_crd[2] * b.m_crd[2];
+  return d;
+}
+
+Vect Dot( Vect &a, Vect &b )
+{
+  double d = 0.0;
+  d = a.m_crd[0] * b.m_crd[0] + a.m_crd[1] * b.m_crd[1] + a.m_crd[2] * b.m_crd[2];
+  return d;
+}
+
 }/*geom*/ }/*math*/ 

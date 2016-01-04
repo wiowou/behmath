@@ -50,6 +50,8 @@ public:
   Vect& operator=( const Point& rhs );
   friend Vect Cross( const Vect &a, const Vect &b );
   friend Vect Cross( Vect &a, Vect &b );
+  friend Vect Dot( const Vect &a, const Vect &b );
+  friend Vect Dot( Vect &a, Vect &b );
   
 protected:
   
@@ -63,6 +65,8 @@ private:
 
 extern Vect Cross( const Vect &a, const Vect &b );
 extern Vect Cross( Vect &a, Vect &b );
+extern Vect Dot( const Vect &a, const Vect &b );
+extern Vect Dot( Vect &a, Vect &b );
 
 }/*geom*/ }/*math*/ 
 
