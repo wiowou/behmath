@@ -37,6 +37,7 @@ class Vect : public Point
 
 public:
   Vect();
+  Vect( double x, double y, double z );
   Vect( const Point* head );
   Vect( const Point head );
   Vect( const Point* head, const Point* tail );

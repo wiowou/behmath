@@ -38,12 +38,14 @@ class Polygon
 public:
   void Add( Point* p );
   void Add( Point &p );
-  Vect CalcPerp();
+  void Remove( Point* p );
+  void Remove( Point& p );
   Vect Perp();
+  Point Centroid();
   
 protected:
   GVect<Point*> m_pts;
-  Vect m_perp;
+  
 private:
 
 

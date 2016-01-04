@@ -34,12 +34,37 @@ void Polygon::Add( Point &p )
   m_pts.push_back(&p);
 }
 
-Vect Polygon::CalcPerp()
+void Polygon::Remove( Point* p )
 {
-  m_perp[0] = m_perp[1] = m_perp[2] = 0.0;
+  for ( int i = 0; i < m_pts.size(); ++i )
+  {
+    if ( m_pts[i] == p )
+    {
+      m_pts.erase( m_pts.begin() + i );
+      return;
+    }
+  }
+}
+
+void Polygon::Remove( Point& p )
+{
+  for ( int i = 0; i < m_pts.size(); ++i )
+  {
+    if ( m_pts[i] == &p )
+    {
+      m_pts.erase( m_pts.begin() + i );
+      return;
+    }
+  }
+}
+
+Vect Polygon::Perp()
+{
+  Vect perp(0.,0.,0.);
+  
   if ( m_pts.size() == 0 )
   {
-    return m_perp;
+    return perp;
   }
   
   m_pts.push_back( m_pts[0] );
@@ -47,19 +72,32 @@ Vect Polygon::CalcPerp()
   for ( int i = 0; i < m_pts.size() - 1; ++i )
   {
     Vect v = Cross( m_pts[i], m_pts[i+1] );
-    m_perp += v;
+    perp += v;
   }
   for ( int i = 0; i < 3; ++i )
   {
-    m_perp[i] *= 0.5;
+    perp[i] *= 0.5;
   }
   m_pts.pop_back();
-  return m_perp;
-} 
+  return perp;
+}
 
-Vect Polygon::Perp()
+Point Polygon::Centroid()
 {
-  return m_perp;
+  Point p(0.,0.,0.);
+  for ( int j = 0; j < m_pts.size(); ++j )
+  {
+    for ( int i = 0; i < 3; ++i )
+    {
+      p[i] += (*m_pts[j])[i];
+    }
+  }
+  double denom = 1.0 / static_cast<double>( m_pts.size() );
+  for ( int i = 0; i < 3; ++i )
+  {
+    p[i] *= denom;
+  }
+  return p;
 }
   
 }/*geom*/ }/*math*/ 

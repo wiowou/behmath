@@ -25,14 +25,30 @@ public:
     poly.Add(p3);
     poly.Add(p4);
     
-    poly.CalcPerp();
+    std::cout << "perpendicular x,y,z" << std::endl;
     std::cout << poly.Perp()[0] << std::endl;
     std::cout << poly.Perp()[1] << std::endl;
     std::cout << poly.Perp()[2] << std::endl;
     double d = poly.Perp().Mag();
+    std::cout << "perpendicular magnitude" << std::endl;
     std::cout << d << std::endl;
     
     i += !( d > 100.023 && d < 100.025 );
+    
+    std::cout << "centroid x,y,z" << std::endl;
+    d = poly.Centroid()[0];
+    std::cout << d << std::endl;
+    i += !( d > -0.49526 && d < -0.49524 );
+    
+    std::cout << "centroid x,y,z" << std::endl;
+    d = poly.Centroid()[1];
+    std::cout << d << std::endl;
+    i += !( d > 3.1654 && d < 3.1656 );
+    
+    std::cout << "centroid x,y,z" << std::endl;
+    d = poly.Centroid()[2];
+    std::cout << d << std::endl;
+    i += !( d > 18.3812 && d < 18.3814 );
     
     return i;
   }

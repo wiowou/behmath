@@ -1,17 +1,17 @@
-Start testing: Jan 03 04:46 EST
+Start testing: Jan 03 22:45 EST
 ----------------------------------------------------------
 1/5 Testing: Ident
 1/5 Test: Ident
 Command: "/home/bk/prog/math/geom/UnitTests/Ident_test"
 Directory: /home/bk/prog/math/geom
-"Ident" start time: Jan 03 04:46 EST
+"Ident" start time: Jan 03 22:45 EST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"Ident" end time: Jan 03 04:46 EST
+"Ident" end time: Jan 03 22:45 EST
 "Ident" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -19,14 +19,14 @@ Test Passed.
 2/5 Test: pointID
 Command: "/home/bk/prog/math/geom/UnitTests/pointID_test"
 Directory: /home/bk/prog/math/geom
-"pointID" start time: Jan 03 04:46 EST
+"pointID" start time: Jan 03 22:45 EST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"pointID" end time: Jan 03 04:46 EST
+"pointID" end time: Jan 03 22:45 EST
 "pointID" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -34,14 +34,14 @@ Test Passed.
 3/5 Test: point
 Command: "/home/bk/prog/math/geom/UnitTests/point_test"
 Directory: /home/bk/prog/math/geom
-"point" start time: Jan 03 04:46 EST
+"point" start time: Jan 03 22:45 EST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"point" end time: Jan 03 04:46 EST
+"point" end time: Jan 03 22:45 EST
 "point" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -49,14 +49,14 @@ Test Passed.
 4/5 Test: vect
 Command: "/home/bk/prog/math/geom/UnitTests/vect_test"
 Directory: /home/bk/prog/math/geom
-"vect" start time: Jan 03 04:46 EST
+"vect" start time: Jan 03 22:45 EST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"vect" end time: Jan 03 04:46 EST
+"vect" end time: Jan 03 22:45 EST
 "vect" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -64,19 +64,27 @@ Test Passed.
 5/5 Test: polygon
 Command: "/home/bk/prog/math/geom/UnitTests/polygon_test"
 Directory: /home/bk/prog/math/geom
-"polygon" start time: Jan 03 04:46 EST
+"polygon" start time: Jan 03 22:45 EST
 Output:
 ----------------------------------------------------------
+perpendicular x,y,z
 -39.2606
 76.4259
 51.2107
+perpendicular magnitude
 100.024
+centroid x,y,z
+-0.49525
+centroid x,y,z
+3.1655
+centroid x,y,z
+18.3813
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"polygon" end time: Jan 03 04:46 EST
+"polygon" end time: Jan 03 22:45 EST
 "polygon" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Jan 03 04:46 EST
+End testing: Jan 03 22:45 EST

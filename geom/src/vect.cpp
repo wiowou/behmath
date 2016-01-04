@@ -28,6 +28,9 @@ namespace geom{
 Vect::Vect() : Point()
 {}
 
+Vect::Vect( double x, double y, double z ) : Point(x,y,z)
+{}
+
 Vect::Vect( const Point* head )
 {
   Set(head);
