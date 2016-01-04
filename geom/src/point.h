@@ -58,6 +58,8 @@ public:
   friend Point operator-( const Point &lhs, const Point &rhs );
   friend Point operator+( const Point &lhs, const Point &rhs );
   
+  virtual ~Point()
+  {}
 protected:
   GVect<double> m_crd;
   
