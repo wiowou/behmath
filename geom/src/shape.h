@@ -24,6 +24,7 @@
 
 #include "typedefs.h"
 #include "point.h"
+#include "vect.h"
 
 namespace math{
 namespace geom{
@@ -43,6 +44,8 @@ public:
   bool Empty();
   //! Average of the first size points
   Point Average( ULong size );
+  //! Normal vector to the plane
+  Vect Perp();
   //! The area of a planar set of points with FEA ordering
   double Area( ULong size );
   //! Area of triangle

@@ -20,7 +20,6 @@
 //</license>
 
 #include "shape.h"
-#include "vect.h"
 
 namespace math{
 namespace geom{
@@ -54,6 +53,11 @@ Point Shape::Average( ULong size )
   return p;
 }
 
+Vect Shape::Perp()
+{
+  return Cross( *m_pts[1] - *m_pts[0], *m_pts[2] - *m_pts[0] );
+}
+
 double Shape::Area( ULong size )
 {
   Vect perp(0.,0.,0.);
@@ -82,7 +86,7 @@ double Shape::Area( ULong size )
 
 double Shape::AreaTri()
 {
-  return 0.5 * Cross( *m_pts[1] - *m_pts[0], *m_pts[2] - *m_pts[0] ).Mag();
+  return 0.5 * Perp().Mag();
 }
 
 double Shape::VolHex()
