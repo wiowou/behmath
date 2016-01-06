@@ -39,6 +39,8 @@ public:
   
   Point( double x, double y, double z );
   
+  void Set( double x, double y, double z );
+  
   GVect<double>& Crd();
   
   double& operator[]( int i );

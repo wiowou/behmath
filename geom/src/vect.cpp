@@ -36,7 +36,7 @@ Vect::Vect( const Point* head )
   Set(head);
 }
 
-Vect::Vect( const Point head )
+Vect::Vect( const Point& head )
 {
   Set(&head);
 }
@@ -46,7 +46,7 @@ Vect::Vect( const Point* head, const Point* tail )
   Set(head,tail);
 }
 
-Vect::Vect( const Point head, const Point tail )
+Vect::Vect( const Point& head, const Point& tail )
 {
   Set(&head,&tail);
 }
@@ -88,6 +88,11 @@ double Dot( const Vect &a, const Vect &b )
   double d = 0.0;
   d = a.m_crd[0] * b.m_crd[0] + a.m_crd[1] * b.m_crd[1] + a.m_crd[2] * b.m_crd[2];
   return d;
+}
+
+double TripleProd( const Vect &a, const Vect &b, const Vect &c )
+{
+  return Dot(a, Cross(b, c));
 }
 
 }/*geom*/ }/*math*/ 

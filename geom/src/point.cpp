@@ -32,6 +32,11 @@ Point::Point() : m_crd(3)
 
 Point::Point( double x, double y, double z ) : Point()
 {
+  Set(x,y,z);
+}
+
+void Point::Set( double x, double y, double z )
+{
   m_crd[0] = x;
   m_crd[1] = y;
   m_crd[2] = z;

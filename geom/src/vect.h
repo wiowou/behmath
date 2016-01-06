@@ -39,9 +39,9 @@ public:
   Vect();
   Vect( double x, double y, double z );
   Vect( const Point* head );
-  Vect( const Point head );
+  Vect( const Point& head );
   Vect( const Point* head, const Point* tail );
-  Vect( const Point head, const Point tail );
+  Vect( const Point& head, const Point& tail );
   
   void Set( const Point* head, const Point* tail = porigin );
   
@@ -50,6 +50,7 @@ public:
   Vect& operator=( const Point& rhs );
   friend Vect Cross( const Vect &a, const Vect &b );
   friend double Dot( const Vect &a, const Vect &b );
+  friend double TripleProd( const Vect &a, const Vect &b, const Vect &c );
   
 protected:
   
@@ -63,6 +64,7 @@ private:
 
 extern Vect Cross( const Vect &a, const Vect &b );
 extern double Dot( const Vect &a, const Vect &b );
+extern double TripleProd( const Vect &a, const Vect &b, const Vect &c );
 
 }/*geom*/ }/*math*/ 
 

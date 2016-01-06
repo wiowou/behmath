@@ -19,41 +19,49 @@
 
 //</license>
 
-#ifndef _MATH_GEOM_POLYGON_h
-#define _MATH_GEOM_POLYGON_h
+#ifndef _MATH_GEOM_SHAPE_h
+#define _MATH_GEOM_SHAPE_h
 
-#include "vect.h"
 #include "typedefs.h"
+#include "point.h"
 
 namespace math{
 namespace geom{
 
 #ifdef MYDEBUG
-  class PolygonTest;
+  class ShapeTest;
 #endif //MYDEBUG
-
-class Polygon
+class Shape
 {
 
 public:
-  void Add( Point* p );
-  void Add( Point &p );
-  void Remove( Point* p );
-  void Remove( Point& p );
-  Vect Perp();
-  Point Centroid();
-  
+  Shape() : m_pts(nullptr)
+  {}
+  //! Point the m_pts array to an array of pointers
+  void Set( Point** p );
+  //! Does the shape have any points?
+  bool Empty();
+  //! Average of the first size points
+  Point Average( ULong size );
+  //! The area of a planar set of points with FEA ordering
+  double Area( ULong size );
+  //! Area of triangle
+  double AreaTri();
+  //! Volume of an irregular hexahedron, assuming points have FEA ordering
+  double VolHex();
+  //! Volume of an irregular tetrahedron, assuming points have FEA ordering
+  double VolTet();
 protected:
-  GVect<Point*> m_pts;
+  Point** m_pts;
   
 private:
 
 
 #ifdef MYDEBUG
-  friend class PolygonTest;
+  friend class ShapeTest;
 #endif //MYDEBUG
 };
 
 }/*geom*/ }/*math*/ 
 
-#endif /*_MATH_GEOM_POLYGON_h */
+#endif /*_MATH_GEOM_SHAPE_h */
