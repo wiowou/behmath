@@ -4,6 +4,8 @@
 #include <string>
 #include <cmath>
 
+#include <vector>
+
 namespace math{
 namespace geom{
 
@@ -21,16 +23,15 @@ public:
     Point p3(-5.158, -1.231, 21.37);
     Point p4(4.04, 1.95, 23.67);
     
-    Point* pts[8];
-    
     i += !shape.Empty();
     
-    shape.Set( &pts[0] );
+    std::vector<Point*> vpts;
+    vpts.push_back(&p1);
+    vpts.push_back(&p2);
+    vpts.push_back(&p3);
+    vpts.push_back(&p4);
     
-    pts[0] = &p1;
-    pts[1] = &p2;
-    pts[2] = &p3;
-    pts[3] = &p4;
+    shape.Set( vpts.data() );
     
     double d = shape.Area(4);
     std::cout << d << std::endl;
@@ -46,6 +47,15 @@ public:
     
     std::cout << "average z" << std::endl;
     i += !( p[2] > 18.3812 && p[2] < 18.3814 );
+    
+    Point* pts[8];
+    
+    shape.Set( &pts[0] );
+    
+    pts[0] = &p1;
+    pts[1] = &p2;
+    pts[2] = &p3;
+    pts[3] = &p4;
     
     p1.Set(0., 0., 0.);
     p2.Set(2., 0., 0.);

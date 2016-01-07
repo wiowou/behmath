@@ -89,6 +89,12 @@ double Shape::AreaTri()
   return 0.5 * Perp().Mag();
 }
 
+double Shape::AreaQuad()
+{
+  Point** pts = m_pts;
+  return Cross( *pts[2] - *pts[0], *pts[3] - *pts[1] ).Mag();
+}
+
 double Shape::VolHex()
 {
   double vol = 0.0;

@@ -48,8 +48,10 @@ public:
   Vect Perp();
   //! The area of a planar set of points with FEA ordering
   double Area( ULong size );
-  //! Area of triangle
+  //! Area of general triangle
   double AreaTri();
+  //! Area of general quadrilateral
+  double AreaQuad();
   //! Volume of an irregular hexahedron, assuming points have FEA ordering
   double VolHex();
   //! Volume of an irregular tetrahedron, assuming points have FEA ordering
