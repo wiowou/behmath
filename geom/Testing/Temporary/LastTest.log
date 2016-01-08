@@ -1,10 +1,10 @@
-Start testing: Jan 06 20:04 EST
+Start testing: Jan 07 19:46 EST
 ----------------------------------------------------------
 1/5 Testing: shape
 1/5 Test: shape
 Command: "/home/bk/prog/math/geom/UnitTests/shape_test"
 Directory: /home/bk/prog/math/geom
-"shape" start time: Jan 06 20:04 EST
+"shape" start time: Jan 07 19:46 EST
 Output:
 ----------------------------------------------------------
 100.024
@@ -15,7 +15,7 @@ average z
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"shape" end time: Jan 06 20:04 EST
+"shape" end time: Jan 07 19:46 EST
 "shape" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -23,14 +23,14 @@ Test Passed.
 2/5 Test: Ident
 Command: "/home/bk/prog/math/geom/UnitTests/Ident_test"
 Directory: /home/bk/prog/math/geom
-"Ident" start time: Jan 06 20:04 EST
+"Ident" start time: Jan 07 19:46 EST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"Ident" end time: Jan 06 20:04 EST
+"Ident" end time: Jan 07 19:46 EST
 "Ident" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -38,14 +38,14 @@ Test Passed.
 3/5 Test: pointID
 Command: "/home/bk/prog/math/geom/UnitTests/pointID_test"
 Directory: /home/bk/prog/math/geom
-"pointID" start time: Jan 06 20:04 EST
+"pointID" start time: Jan 07 19:46 EST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"pointID" end time: Jan 06 20:04 EST
+"pointID" end time: Jan 07 19:46 EST
 "pointID" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -53,14 +53,14 @@ Test Passed.
 4/5 Test: point
 Command: "/home/bk/prog/math/geom/UnitTests/point_test"
 Directory: /home/bk/prog/math/geom
-"point" start time: Jan 06 20:04 EST
+"point" start time: Jan 07 19:46 EST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"point" end time: Jan 06 20:04 EST
+"point" end time: Jan 07 19:46 EST
 "point" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -68,15 +68,15 @@ Test Passed.
 5/5 Test: vect
 Command: "/home/bk/prog/math/geom/UnitTests/vect_test"
 Directory: /home/bk/prog/math/geom
-"vect" start time: Jan 06 20:04 EST
+"vect" start time: Jan 07 19:46 EST
 Output:
 ----------------------------------------------------------
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"vect" end time: Jan 06 20:04 EST
+"vect" end time: Jan 07 19:46 EST
 "vect" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Jan 06 20:04 EST
+End testing: Jan 07 19:46 EST

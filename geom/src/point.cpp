@@ -27,7 +27,7 @@ namespace geom{
 const Point origin(0.,0.,0.);
 const Point* porigin = &origin;
 
-Point::Point() : m_crd(3)
+Point::Point()
 {}
 
 Point::Point( double x, double y, double z ) : Point()
@@ -42,7 +42,7 @@ void Point::Set( double x, double y, double z )
   m_crd[2] = z;
 }
 
-GVect<double>& Point::Crd()
+double* Point::Crd()
 {
   return m_crd;
 }

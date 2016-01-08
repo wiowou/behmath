@@ -41,7 +41,7 @@ public:
   
   void Set( double x, double y, double z );
   
-  GVect<double>& Crd();
+  double* Crd();
   
   double& operator[]( int i );
   
@@ -60,10 +60,10 @@ public:
   friend Point operator-( const Point &lhs, const Point &rhs );
   friend Point operator+( const Point &lhs, const Point &rhs );
   
-  virtual ~Point()
-  {}
+  //virtual ~Point()
+  //{}
 protected:
-  GVect<double> m_crd;
+  double m_crd[3];
   
 private:
 

@@ -22,15 +22,15 @@
 #ifndef _MATH_GEOM_TYPEDEFS_h
 #define _MATH_GEOM_TYPEDEFS_h
 
-#include <vector>
+//#include <vector>
 
 namespace math{
 namespace geom{
 
   typedef unsigned long long ULong;
   
-  template<typename T>
-  using GVect = std::vector<T>;
+  //template<typename T>
+  //using GVect = std::vector<T>;
 
 }/*geom*/ }/*math*/ 
 
