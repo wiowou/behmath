@@ -22,6 +22,7 @@ public:
     Point p2(-5.03, 4.38, 13.09);
     Point p3(-5.158, -1.231, 21.37);
     Point p4(4.04, 1.95, 23.67);
+    Point p5(-1.106, -3.257, 7.973);
     
     i += !shape.Empty();
     
@@ -33,7 +34,7 @@ public:
     
     shape.Set( vpts.data() );
     
-    double d = shape.Area(4);
+    double d = shape.AreaQuad();
     std::cout << d << std::endl;
     
     i += !( d > 100.023 && d < 100.025 );
@@ -56,24 +57,29 @@ public:
     pts[1] = &p2;
     pts[2] = &p3;
     pts[3] = &p4;
-    
-    p1.Set(0., 0., 0.);
-    p2.Set(2., 0., 0.);
-    p3.Set(2., 1., 0.);
-    p4.Set(0., 1., 0.);
-    
-    Point p5(0., 0., 3.);
-    Point p6(2., 0., 3.);
-    Point p7(2., 1., 3.);
-    Point p8(0., 1., 3.);
-    
     pts[4] = &p5;
+    
+    d = shape.VolPyra();
+    i += !( d > -333.34 && d < -333.32 );
+    
+    p1.Set(1.5, 0., 0.);
+    p2.Set(3.5, 0., 0.);
+    p3.Set(3.5, 1., 0.);
+    p4.Set(1.5, 1., 0.);
+    
+    p5.Set(1.5, 0., 3.);
+    Point p6(3.5, 0., 3.);
+    Point p7(3.5, 1., 3.);
+    Point p8(1.5, 1., 3.);
+    
+    
     pts[5] = &p6;
     pts[6] = &p7;
     pts[7] = &p8;
     
     d = shape.VolHex();
     i += !( d > 5.99 && d < 6.01 );
+    
     
     return i;
   }

@@ -45,9 +45,13 @@ public:
   
   void Set( const Point* head, const Point* tail = porigin );
   
-  double Mag();
+  double Mag() const;
   
   Vect& operator=( const Point& rhs );
+  Vect& operator+( const Vect& rhs );
+  Vect& operator-( const Vect& rhs );
+  friend Vect operator+( const Vect &lhs, const Vect &rhs );
+  friend Vect operator-( const Vect &lhs, const Vect &rhs );
   friend Vect Cross( const Vect &a, const Vect &b );
   friend double Dot( const Vect &a, const Vect &b );
   friend double TripleProd( const Vect &a, const Vect &b, const Vect &c );
@@ -62,10 +66,14 @@ private:
 #endif //MYDEBUG
 };
 
+extern Vect operator+( const Vect &lhs, const Vect &rhs );
+extern Vect operator-( const Vect &lhs, const Vect &rhs );
 extern Vect Cross( const Vect &a, const Vect &b );
 extern double Dot( const Vect &a, const Vect &b );
 extern double TripleProd( const Vect &a, const Vect &b, const Vect &c );
 
+//! The scalar projection of a onto b, same as b * cos (theta), theta is angle between a and b
+extern double ScalarProj( const Vect &a, const Vect &b );
 }/*geom*/ }/*math*/ 
 
 #endif /*_MATH_GEOM_VECT_h */

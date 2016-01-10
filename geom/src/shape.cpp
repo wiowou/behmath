@@ -53,56 +53,61 @@ Point Shape::Average( ULong size )
   return p;
 }
 
-Vect Shape::Perp()
+Vect Shape::PerpTri()
 {
   return Cross( *m_pts[1] - *m_pts[0], *m_pts[2] - *m_pts[0] );
 }
 
-double Shape::Area( ULong size )
-{
-  Vect perp(0.,0.,0.);
-  
-  if ( size < 3 )
-  {
-    return 0.0;
-  }
-  
-  for ( int i = 0; i < size - 1; ++i )
-  {
-    Vect v = Cross( m_pts[i], m_pts[i+1] );
-    perp += v;
-  }
-  Point* p = m_pts[0];
-  Vect v = Cross( m_pts[size-1], m_pts[0] );
-  perp += v;
-    
-  for ( int i = 0; i < 3; ++i )
-  {
-    perp[i] *= 0.5;
-  }
-
-  return perp.Mag();
-}
-
 double Shape::AreaTri()
 {
-  return 0.5 * Perp().Mag();
+  return 0.5 * PerpTri().Mag();
+}
+
+Vect Shape::PerpQuad()
+{
+  return Cross( *m_pts[2] - *m_pts[0], *m_pts[3] - *m_pts[1] );
 }
 
 double Shape::AreaQuad()
 {
-  Point** pts = m_pts;
-  return Cross( *pts[2] - *pts[0], *pts[3] - *pts[1] ).Mag();
+  return 0.5 * PerpQuad().Mag();
 }
 
 double Shape::VolHex()
 {
   double vol = 0.0;
   Point** pts = m_pts;
-  vol = TripleProd( *pts[6] - *pts[1] + *pts[7] - *pts[0], *pts[6] - *pts[3], *pts[2] - *pts[0] );
-  vol += TripleProd( *pts[7] - *pts[0], *pts[6] - *pts[3] + *pts[5] - *pts[0], *pts[6] - *pts[4] );
-  vol += TripleProd( *pts[6] - *pts[1], *pts[5] - *pts[0], *pts[6] - *pts[4] +* pts[2] - *pts[0] );
-  return vol * 0.0833333333333333334;
+                                  Vect r1c2 = *pts[6] - *pts[3];  Vect r1c3 = *pts[2] - *pts[0];
+  Vect r2c1 = *pts[7] - *pts[0];                                  Vect r2c3 = *pts[6] - *pts[4];
+  Vect r3c1 = *pts[6] - *pts[1];  Vect r3c2 = *pts[5] - *pts[0];
+  
+  vol = TripleProd(  r2c1 + r3c1, r1c2,        r1c3 );
+  vol += TripleProd( r2c1,        r1c2 + r3c2, r2c3 );
+  vol += TripleProd( r3c1,        r3c2,        r1c3 + r2c3 );
+  return vol * 0.083333333333333333;
+}
+
+double Shape::VolPrism()
+{
+  double vol = 0.0;
+  Point** pts = m_pts;
+                                  Vect r1c2 = *pts[5] - *pts[2];  Vect r1c3 = *pts[2] - *pts[0];
+  Vect r2c1 = *pts[5] - *pts[0];                                  Vect r2c3 = *pts[5] - *pts[3];
+  Vect r3c1 = *pts[5] - *pts[1];  Vect r3c2 = *pts[4] - *pts[0];
+  
+  vol = TripleProd(  r2c1 + r3c1, r1c2,        r1c3 );
+  vol += TripleProd( r2c1,        r1c2 + r3c2, r2c3 );
+  vol += TripleProd( r3c1,        r3c2,        r1c3 + r2c3 );
+  return vol * 0.083333333333333333;
+}
+
+double Shape::VolPyra()
+{
+  Vect perp = PerpQuad();
+  double base = 0.5 * perp.Mag();
+  Vect a( *m_pts[4], *m_pts[0] );
+  double height = ScalarProj( a, perp);
+  return 0.3333333333333333333 * base * height;
 }
 
 double Shape::VolTet()

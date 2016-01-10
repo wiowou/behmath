@@ -45,17 +45,23 @@ public:
   //! Average of the first size points
   Point Average( ULong size );
   //! Normal vector to the plane
-  Vect Perp();
-  //! The area of a planar set of points with FEA ordering
-  double Area( ULong size );
+  Vect PerpTri();
   //! Area of general triangle
   double AreaTri();
+  //! Normal vector to the quadrilateral
+  Vect PerpQuad();
   //! Area of general quadrilateral
   double AreaQuad();
   //! Volume of an irregular hexahedron, assuming points have FEA ordering
   double VolHex();
   //! Volume of an irregular tetrahedron, assuming points have FEA ordering
   double VolTet();
+  //! Volume of an irregular prism, assuming points have FEA ordering.
+  //! Treated like a degenerate Hex
+  double VolPyra();
+  //! Volume of an irregular pyramid, assuming points have FEA ordering.
+  //! Treated like a degenerate Hex
+  double VolPrism();
 protected:
   Point** m_pts;
   

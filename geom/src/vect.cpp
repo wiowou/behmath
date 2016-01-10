@@ -51,11 +51,30 @@ Vect::Vect( const Point& head, const Point& tail )
   Set(&head,&tail);
 }
 
+Vect& Vect::operator+( const Vect& rhs )
+{
+  for ( int i = 0; i < 3; ++i )
+  {
+    m_crd[i] += rhs.m_crd[i];
+  }
+  return *this;
+}
+
+Vect& Vect::operator-( const Vect& rhs )
+{
+  for ( int i = 0; i < 3; ++i )
+  {
+    m_crd[i] -= rhs.m_crd[i];
+  }
+  return *this;
+}
+
 Vect& Vect::operator=( const Point& rhs )
 {
   m_crd[0] = rhs.X();
   m_crd[1] = rhs.Y();
   m_crd[2] = rhs.Z();
+  return *this;
 }
 
 void Vect::Set( const Point* head, const Point* tail )
@@ -63,7 +82,7 @@ void Vect::Set( const Point* head, const Point* tail )
   operator=( (*head) - (*tail) );
 }
 
-double Vect::Mag()
+double Vect::Mag() const
 {
   double mag = 0.0;
   for ( int i = 0; i < 3; ++i )
@@ -93,6 +112,31 @@ double Dot( const Vect &a, const Vect &b )
 double TripleProd( const Vect &a, const Vect &b, const Vect &c )
 {
   return Dot(a, Cross(b, c));
+}
+
+Vect operator+( const Vect &lhs, const Vect &rhs )
+{
+  Vect v;
+  for ( int i = 0; i < 3; ++i )
+  {
+    v.m_crd[i] = lhs.m_crd[i] + rhs.m_crd[i];
+  }
+  return v;
+}
+
+Vect operator-( const Vect &lhs, const Vect &rhs )
+{
+  Vect v;
+  for ( int i = 0; i < 3; ++i )
+  {
+    v.m_crd[i] = lhs.m_crd[i] - rhs.m_crd[i];
+  }
+  return v;
+}
+
+double ScalarProj( const Vect &a, const Vect &b )
+{
+  return Dot( a, b) / b.Mag();
 }
 
 }/*geom*/ }/*math*/ 
