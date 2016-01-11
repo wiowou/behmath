@@ -38,7 +38,7 @@ Vect::Vect( const Point* head )
 
 Vect::Vect( const Point& head )
 {
-  Set(&head);
+  Set(head);
 }
 
 Vect::Vect( const Point* head, const Point* tail )
@@ -48,7 +48,7 @@ Vect::Vect( const Point* head, const Point* tail )
 
 Vect::Vect( const Point& head, const Point& tail )
 {
-  Set(&head,&tail);
+  Set(head,tail);
 }
 
 Vect& Vect::operator+( const Vect& rhs )
@@ -80,6 +80,21 @@ Vect& Vect::operator=( const Point& rhs )
 void Vect::Set( const Point* head, const Point* tail )
 {
   operator=( (*head) - (*tail) );
+}
+
+void Vect::Set( const Point& head, const Point& tail )
+{
+  operator=( head - tail );
+}
+
+void Vect::Set( const Point* head )
+{
+  operator=( *head );
+}
+
+void Vect::Set( const Point& head )
+{
+  operator=( head );
 }
 
 double Vect::Mag() const

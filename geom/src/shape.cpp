@@ -108,6 +108,13 @@ double Shape::VolPyra()
   Vect a( *m_pts[4], *m_pts[0] );
   double height = ScalarProj( a, perp);
   return 0.3333333333333333333 * base * height;
+  /*
+  Point** pts = m_pts;
+  Vect v02(pts[0], pts[2]);
+  double vol = 0.1666666666666666 * TripleProd( *pts[5] - *pts[0], *pts[3] - *pts[2], v02 );
+  vol += 0.083333333333333333 * TripleProd( v02, *pts[0] - *pts[3], *pts[0] - *pts[1] );
+  return vol;
+  */
 }
 
 double Shape::VolTet()

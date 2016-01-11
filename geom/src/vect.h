@@ -43,7 +43,10 @@ public:
   Vect( const Point* head, const Point* tail );
   Vect( const Point& head, const Point& tail );
   
-  void Set( const Point* head, const Point* tail = porigin );
+  void Set( const Point* head, const Point* tail );
+  void Set( const Point* head );
+  void Set( const Point& head, const Point& tail );
+  void Set( const Point& head );
   
   double Mag() const;
   
