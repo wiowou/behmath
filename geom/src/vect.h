@@ -51,8 +51,8 @@ public:
   double Mag() const;
   
   Vect& operator=( const Point& rhs );
-  Vect& operator+( const Vect& rhs );
-  Vect& operator-( const Vect& rhs );
+  Vect& operator+=( const Vect& rhs );
+  Vect& operator-=( const Vect& rhs );
   friend Vect operator+( const Vect &lhs, const Vect &rhs );
   friend Vect operator-( const Vect &lhs, const Vect &rhs );
   friend Vect Cross( const Vect &a, const Vect &b );

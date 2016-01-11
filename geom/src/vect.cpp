@@ -51,7 +51,7 @@ Vect::Vect( const Point& head, const Point& tail )
   Set(head,tail);
 }
 
-Vect& Vect::operator+( const Vect& rhs )
+Vect& Vect::operator+=( const Vect& rhs )
 {
   for ( int i = 0; i < 3; ++i )
   {
@@ -60,7 +60,7 @@ Vect& Vect::operator+( const Vect& rhs )
   return *this;
 }
 
-Vect& Vect::operator-( const Vect& rhs )
+Vect& Vect::operator-=( const Vect& rhs )
 {
   for ( int i = 0; i < 3; ++i )
   {

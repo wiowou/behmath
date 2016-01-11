@@ -18,6 +18,7 @@ public:
   int Exec()
   {
     int i = 0;
+
     Point p1(4.167, 7.563, 15.395);
     Point p2(-5.03, 4.38, 13.09);
     Point p3(-5.158, -1.231, 21.37);
@@ -49,7 +50,7 @@ public:
     
     std::cout << "average z" << std::endl;
     i += !( p[2] > 18.3812 && p[2] < 18.3814 );
-    
+
     Point* pts[8];
     
     shape.Set( &pts[0] );
@@ -64,7 +65,7 @@ public:
     pts[7] = &p8;
     
     d = shape.VolPyra();
-    i += !( d > -333.34 && d < -333.32 );
+    i += !( d > -333.39 && d < -333.37 );
     
     p1.Set(0.0, 0., 0.);
     p2.Set(2.0, 0., 0.);
@@ -93,6 +94,19 @@ public:
     p8.Set(1.5, 1., 3.);
     
     d = shape.VolHex();
+    i += !( d > 2.99 && d < 3.01 );
+    
+    p1.Set(1.5, 0., 0.);
+    p2.Set(3.5, 0., 0.);
+    //p3.Set(3.5, 0., 0.);
+    p3.Set(1.5, 1., 0.);
+    
+    p4.Set(1.5, 0., 3.);
+    p5.Set(3.5, 0., 3.);
+    //p7.Set(3.5, 0., 3.);
+    p6.Set(1.5, 1., 3.);
+    
+    d = shape.VolPrism();
     i += !( d > 2.99 && d < 3.01 );
         
     return i;

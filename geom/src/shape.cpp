@@ -103,18 +103,23 @@ double Shape::VolPrism()
 
 double Shape::VolPyra()
 {
+  /*
   Vect perp = PerpQuad();
   double base = 0.5 * perp.Mag();
   Vect a( *m_pts[4], *m_pts[0] );
   double height = ScalarProj( a, perp);
   return 0.3333333333333333333 * base * height;
-  /*
-  Point** pts = m_pts;
-  Vect v02(pts[0], pts[2]);
-  double vol = 0.1666666666666666 * TripleProd( *pts[5] - *pts[0], *pts[3] - *pts[2], v02 );
-  vol += 0.083333333333333333 * TripleProd( v02, *pts[0] - *pts[3], *pts[0] - *pts[1] );
-  return vol;
   */
+  double vol = 0.0;
+  Point** pts = m_pts;
+                                  Vect r1c2 = *pts[4] - *pts[2];  Vect r1c3 = *pts[2] - *pts[0];
+  Vect r2c1 = *pts[4] - *pts[0];                                  Vect r2c3 = *pts[4] - *pts[3];
+  Vect r3c1 = *pts[4] - *pts[1];  Vect& r3c2 = r2c1;
+  
+  vol = TripleProd(  r2c1 + r3c1, r1c2,        r1c3 );
+  vol += TripleProd( r2c1,        r1c2 + r3c2, r2c3 );
+  vol += TripleProd( r3c1,        r3c2,        r1c3 + r2c3 );
+  return vol * 0.166666666666666667;
 }
 
 double Shape::VolTet()
