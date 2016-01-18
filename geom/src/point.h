@@ -22,8 +22,6 @@
 #ifndef _MATH_GEOM_POINT_h
 #define _MATH_GEOM_POINT_h
 
-#include "typedefs.h"
-
 namespace math{
 namespace geom{
 

@@ -24,11 +24,11 @@
 namespace math{
 namespace geom{
 
-ULong Ident::ID()
+unsigned long long Ident::ID()
 {
   return m_id;
 }
-void Ident::ID( ULong id )
+void Ident::ID( unsigned long long id )
 {
   m_id = id;
 }

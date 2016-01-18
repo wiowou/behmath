@@ -22,7 +22,6 @@
 #ifndef _MATH_GEOM_SHAPE_h
 #define _MATH_GEOM_SHAPE_h
 
-#include "typedefs.h"
 #include "point.h"
 #include "vect.h"
 
@@ -43,7 +42,7 @@ public:
   //! Does the shape have any points?
   bool Empty();
   //! Average of the first size points
-  Point Average( ULong size );
+  Point Average( unsigned long long size );
   //! Normal vector to the plane
   Vect PerpTri();
   //! Area of general triangle

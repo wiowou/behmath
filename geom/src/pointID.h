@@ -38,7 +38,7 @@ class PointID : public Point, public Ident
 public:
   PointID() : Point()
   {}
-  PointID( double x, double y, double z, ULong id ) : Point(x,y,z)
+  PointID( double x, double y, double z, unsigned long long id ) : Point(x,y,z)
   {
     m_id = id;
   }

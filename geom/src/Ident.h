@@ -22,8 +22,6 @@
 #ifndef _MATH_GEOM_IDENT_h
 #define _MATH_GEOM_IDENT_h
 
-#include "typedefs.h"
-
 namespace math{
 namespace geom{
 
@@ -35,11 +33,11 @@ class Ident
 {
 
 public:
-  ULong ID();
-  void ID( ULong id );
+  unsigned long long ID();
+  void ID( unsigned long long id );
   
 protected:
-  ULong m_id;
+  unsigned long long m_id;
   
 private:
 

@@ -35,10 +35,10 @@ bool Shape::Empty()
   return m_pts == nullptr;
 }
 
-Point Shape::Average( ULong size )
+Point Shape::Average( unsigned long long size )
 {
   Point p(0.,0.,0.);
-  for ( ULong j = 0; j < size; ++j )
+  for ( unsigned long long j = 0; j < size; ++j )
   {
     for ( int i = 0; i < 3; ++i )
     {
