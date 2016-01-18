@@ -20,6 +20,7 @@
 //</license>
 
 #include "point.h"
+#include <math.h>
 
 namespace math{
 namespace geom{
@@ -115,6 +116,17 @@ Point operator+( const Point &lhs, const Point &rhs )
     p.m_crd[i] = lhs.m_crd[i] + rhs.m_crd[i];
   }
   return p;
+}
+
+double Dist( const Point &lhs, const Point &rhs )
+{
+  double x2 = lhs.X() - rhs.X();
+  x2 *= x2;
+  double y2 = lhs.Y() - rhs.Y();
+  y2 *= y2;
+  double z2 = lhs.Z() - rhs.Z();
+  z2 *= z2;
+  return sqrt(x2 + y2 + z2);
 }
 
 }/*geom*/ }/*math*/ 

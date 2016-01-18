@@ -73,6 +73,7 @@ private:
 
 extern Point operator-( const Point &lhs, const Point &rhs );
 extern Point operator+( const Point &lhs, const Point &rhs );
+extern double Dist( const Point &lhs, const Point &rhs );
 
 extern const Point origin;
 extern const Point* porigin;

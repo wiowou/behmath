@@ -14,47 +14,13 @@ public:
   
   int Exec()
   {
-#ifdef _WIN32
-    testDir = "/cygdrive/f/Documents/prog/proj/${Project}/UnitTests";
-#else 
-    testDir = "/media/wirelessHD/Documents/prog/proj/${Project}/UnitTests";
-#endif //WIN32
     int i = 0;
+    Point p1(1.0, 2.0, 3.0);
+    Point p2(5.0, 8.5, 9.3);
     
+    double d = Dist(p1,p2);
+    i += !( (d - 9.89646) > -0.001 && (d - 9.89646) < 0.001);
     return i;
-  }
-  
-  int FileMatch( std::string outFileName, std::string expFileName )
-  {
-    std::ifstream out, expected;
-    std::string lineOut, lineExpected;
-    out.open( outFileName );
-    if ( out.fail() )
-    {
-      std::cout << "Failed open" << outFileName << std::endl;
-      return 1;
-    }
-    expected.open( expFileName );
-    if ( expected.fail() )
-    {
-      std::cout << "Failed open" << expFileName << std::endl;
-      return 1;
-    }
-    while ( std::getline( expected, lineExpected ) )
-    {
-      std::getline( out, lineOut );
-      if ( lineOut != lineExpected )
-      {
-        std::cout << "Failed " << outFileName << std::endl;
-        return 1;
-      }
-    }
-    if ( std::getline( out, lineOut ) )
-    {
-      std::cout << "Failed truncate " << outFileName << std::endl;
-      return 1;
-    }
-    return 0;
   }
 
 };
