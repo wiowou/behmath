@@ -209,6 +209,26 @@ private:
 #endif //MYDEBUG
 };
 
+template <> 
+class OrthoLinTerp<0>
+{
+public:
+  double val;
+  //! \param v is an input vector of the variables to interpolate on in each dimension.
+  /*! \param v is of length ndim. It provides a general method for an n dimensional regular table interpolation.
+  */
+  double operator()( const std::vector<double> &v )
+  {
+    return val;
+  }
+  
+  //! provides a method that can be used in convenient form to do the interpolation for up to ndim = 5.
+  double operator()( const double x1, const double x2 = 0.0, const double x3 = 0.0, const double x4 = 0.0, const double x5 = 0.0 )
+  {
+    return val;
+  }
+};
+
 }/*math*/ 
 
 #endif /*_ORTHOLINTERP_h */

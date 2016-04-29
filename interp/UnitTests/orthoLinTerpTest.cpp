@@ -11,6 +11,7 @@ class OrthoLinTerpTest
 public:
     OrthoLinTerp<1> lt1;
     OrthoLinTerp<2> lt2;
+    OrthoLinTerp<0> lt3;
     std::string testDir;
     
     int Exec()
@@ -75,6 +76,10 @@ public:
 
         i += Interp2(1.8, 0.0, 2.0);
         
+        lt3.val = 5.0;
+        
+        double diff = std::abs(lt3(16.0) - 5.0 );
+        i += diff > 0.001;
         return i;
     }
 
