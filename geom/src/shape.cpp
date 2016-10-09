@@ -55,22 +55,30 @@ Point Shape::Average( unsigned long long size )
 
 Vect Shape::PerpTri()
 {
-  return Cross( *m_pts[1] - *m_pts[0], *m_pts[2] - *m_pts[0] );
+  Vect v = Cross( *m_pts[1] - *m_pts[0], *m_pts[2] - *m_pts[0] );
+  v[0] *= 0.5;
+  v[1] *= 0.5;
+  v[2] *= 0.5;
+  return v;
 }
 
 double Shape::AreaTri()
 {
-  return 0.5 * PerpTri().Mag();
+  return PerpTri().Mag();
 }
 
 Vect Shape::PerpQuad()
 {
-  return Cross( *m_pts[2] - *m_pts[0], *m_pts[3] - *m_pts[1] );
+  Vect v = Cross( *m_pts[2] - *m_pts[0], *m_pts[3] - *m_pts[1] );
+  v[0] *= 0.5;
+  v[1] *= 0.5;
+  v[2] *= 0.5;
+  return v;
 }
 
 double Shape::AreaQuad()
 {
-  return 0.5 * PerpQuad().Mag();
+  return PerpQuad().Mag();
 }
 
 double Shape::VolHex()
