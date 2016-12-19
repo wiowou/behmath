@@ -19,40 +19,9 @@
 
 //</license>
 
-#ifndef _MATH_GEOM_POINTID_h
-#define _MATH_GEOM_POINTID_h
-
-#include "point.h"
-#include "Ident.h"
+#include "UID.h"
 
 namespace math{
 namespace geom{
 
-#ifdef MYDEBUG
-  class PointIDTest;
-#endif //MYDEBUG
-
-class PointID : public Point, public Ident
-{
-
-public:
-  PointID() : Point()
-  {}
-  PointID( double x, double y, double z, unsigned long long id ) : Point(x,y,z)
-  {
-    m_id = id;
-  }
-
-protected:
-
-private:
-
-
-#ifdef MYDEBUG
-  friend class PointIDTest;
-#endif //MYDEBUG
-};
-
 }/*geom*/ }/*math*/ 
-
-#endif /*_MATH_GEOM_POINTID_h */

@@ -8,6 +8,6 @@
 #define VERSION "."
 #define _WIN32
 
-/* #undef MYDEBUG */
+#define MYDEBUG
 
 #endif /*_CURVE_CONFIG_H*/

@@ -19,34 +19,62 @@
 
 //</license>
 
-#ifndef _MATH_GEOM_IDENT_h
-#define _MATH_GEOM_IDENT_h
+#ifndef _MATH_GEOM_UID_h
+#define _MATH_GEOM_UID_h
 
 namespace math{
 namespace geom{
 
 #ifdef MYDEBUG
-  class IdentTest;
+  class UIDTest;
 #endif //MYDEBUG
 
-class Ident
+template <class T = void>
+class UID
 {
 
 public:
-  unsigned long long ID();
-  void ID( unsigned long long id );
+	UID()
+	{
+		m_id = m_count++;
+	}
+	
+	UID(const UID &u)
+	{
+		m_id = m_count++;
+	}
+	
+	UID& operator=(UID u)
+	{
+		return *this;
+	}
+	
+	unsigned long long ID() const
+	{
+		return m_id;
+	}
+	
+	void ID( unsigned long long id )
+	{
+		m_id = id;
+	}
+
   
 protected:
   unsigned long long m_id;
-  
+	static unsigned long long m_count;
+	
 private:
 
 
 #ifdef MYDEBUG
-  friend class IdentTest;
+  friend class UIDTest;
 #endif //MYDEBUG
 };
 
+template <class T>
+unsigned long long UID<T>::m_count = 0;
+
 }/*geom*/ }/*math*/ 
 
-#endif /*_MATH_GEOM_IDENT_h */
+#endif /*_MATH_GEOM_UID_h */

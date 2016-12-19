@@ -19,18 +19,59 @@
 
 //</license>
 
-#include "Ident.h"
+#ifndef _MATH_GEOM_KEYPOINT_h
+#define _MATH_GEOM_KEYPOINT_h
+
+#include <set>
+
+#include "point.h"
+#include "UID.h"
+
 
 namespace math{
 namespace geom{
 
-unsigned long long Ident::ID()
+class HermiteSpline;
+
+#ifdef MYDEBUG
+  class KeyPointTest;
+#endif //MYDEBUG
+
+class KeyPoint : public Point
 {
-  return m_id;
-}
-void Ident::ID( unsigned long long id )
-{
-  m_id = id;
-}
+
+public:
+	unsigned long long ID() const
+	{
+		return m_id.ID();
+	}
+	
+	void ID( unsigned long long id )
+	{
+		m_id.ID(id);
+	}
+	
+	void Associate(HermiteSpline* p)
+	{
+		m_spline.insert(p);
+	}
+	
+	void Disassociate(HermiteSpline* p)
+	{
+		m_spline.erase(p);
+	}
+	
+protected:
+
+private:
+	UID<KeyPoint> m_id;
+	std::set<HermiteSpline*> m_spline;
+
+#ifdef MYDEBUG
+  friend class KeyPointTest;
+#endif //MYDEBUG
+};
 
 }/*geom*/ }/*math*/ 
+
+#endif /*_MATH_GEOM_KEYPOINT_h */

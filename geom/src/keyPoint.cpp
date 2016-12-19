@@ -19,7 +19,7 @@
 
 //</license>
 
-#include "pointID.h"
+#include "keyPoint.h"
 
 namespace math{
 namespace geom{

@@ -21,6 +21,7 @@ public:
     {
       x[i] = i;
       y[i] = i * i;
+			//y[i] = i;
     }
     
     math::curve::HermiteSpline hs;
