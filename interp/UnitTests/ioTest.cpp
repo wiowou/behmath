@@ -1,3 +1,5 @@
+#define MYDEBUG
+
 #include "../src/io.h"
 #include <iostream>
 #include <fstream>

@@ -1,7 +1,0 @@
-minFinder 4 0.000380218
-newton 4 0.000793219
-gradDescent 4 0.00842375
-bigd 4 0.000340998
-goldenSection 3 0.000797033
-conjGrad 4 0.00085175
----

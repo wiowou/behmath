@@ -1,3 +1,5 @@
+#define MYDEBUG
+
 #include "../src/orthoLinTerp.h"
 #include <iostream>
 #include <fstream>

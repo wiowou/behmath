@@ -55,7 +55,7 @@ SET ( ${CMAKE_PROJECT_NAME}_VERSION_MAJOR 1 )
 
 SET ( ${CMAKE_PROJECT_NAME}_VERSION_MINOR 0 )
 
-SET ( CMAKE_BUILD_TYPE Debug ) # Debug, Release, RelWithDebInfo
+SET ( CMAKE_BUILD_TYPE Release ) # Debug, Release, RelWithDebInfo
 
 SET ( testDir ${CMAKE_SOURCE_DIR}/UnitTests ) 
 

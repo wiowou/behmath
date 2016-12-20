@@ -1,3 +1,5 @@
+#define MYDEBUG
+
 #include "../src/table.h"
 #include <iostream>
 #include <fstream>

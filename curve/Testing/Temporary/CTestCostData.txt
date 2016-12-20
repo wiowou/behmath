@@ -1,6 +1,0 @@
-curve 2 0.000804543
-exponential 2 0.000677943
-polynomial 2 0.000818014
-power 2 0.000683546
-hermiteSpline 1 0.00138998
----
