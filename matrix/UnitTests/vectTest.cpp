@@ -1,3 +1,5 @@
+#define MYDEBUG
+
 #include "../src/vect.h"
 #include <iostream>
 #include <fstream>

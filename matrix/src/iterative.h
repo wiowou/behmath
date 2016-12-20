@@ -21,8 +21,7 @@
 #ifndef _MATH_SOLVER_ITERATIVE_h
 #define _MATH_SOLVER_ITERATIVE_h
 
-#include "typedefs.h"
-#include "impl/matrixConfig.h"
+
 #include "matrix.h"
 #include "sum.h"
 #include <cmath>
@@ -76,17 +75,17 @@ public:
     m_tolerance = tol;
   }
 
-  void MaxIter( ULong imax )
+  void MaxIter( unsigned long long imax )
   {
     m_maxIter = imax;
   }
   
-  ULong MaxIter()
+  unsigned long long MaxIter()
   {
     return m_maxIter;
   }
   
-  ULong NIter()
+  unsigned long long NIter()
   {
     return m_nIter;
   }
@@ -97,7 +96,7 @@ protected:
     Matrix< Storage, T >& A = *m_A;
     Vect<T>& x = *m_x;
     vops::Sum<T> sum;
-    for ( ULong i = 0; i < A.Rows(); ++i )
+    for ( unsigned long long i = 0; i < A.Rows(); ++i )
     {
       x[i] = sum( A[i] ) / A[i].NNZ(); //use the average for the row
     }
@@ -106,7 +105,7 @@ protected:
   inline bool Continue()
   {
     //this can be parallelized, it's a simple redux sum
-    for ( ULong i = 0; i < m_xNew.Size(); ++i )
+    for ( unsigned long long i = 0; i < m_xNew.Size(); ++i )
     {
       if ( m_notWithinTol[i] )
       {
@@ -133,8 +132,8 @@ protected:
   Vect<bool> m_notWithinTol;
   Vect<T> m_xNew;
   T m_tolerance;
-  ULong m_maxIter;
-  ULong m_nIter;
+  unsigned long long m_maxIter;
+  unsigned long long m_nIter;
 
 private:
 

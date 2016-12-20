@@ -114,10 +114,10 @@ public:
   {
     Matrix< Vect, T >& A = *m_A;
     
-    for ( ULong n = 0; n < A.Cols(); ++n )
+    for ( unsigned long long n = 0; n < A.Cols(); ++n )
     {
       StoreAlpha( n, A );
-      for ( ULong j = n + 1; j < A.Cols(); ++j )
+      for ( unsigned long long j = n + 1; j < A.Cols(); ++j )
       {
         HouseHolderQn_x_( A[j], n );
       }
@@ -153,7 +153,7 @@ public:
   //! calculates the the eigenvalues and eigenvectors of A (same as A Transpose)
   //! for a non-singular square matrix. If convergence is not met, the eigenvalue
   //! matrix returned will be 2 x 1 of zeros.
-  ULong Eig( ULong maxIter, T tol = 1e-5, bool calcEigVect = false )
+  unsigned long long Eig( unsigned long long maxIter, T tol = 1e-5, bool calcEigVect = false )
   {
     Matrix< Vect, T >& R = *m_A;
     Matrix< Vect, T >& A = *m_A;
@@ -171,9 +171,9 @@ public:
     {
       evect.Resize( Q.Rows() );
       //Transpose the eigenvector matrix for easy multiplication
-      for ( ULong i = 0; i < Q.Rows(); ++i )
+      for ( unsigned long long i = 0; i < Q.Rows(); ++i )
       {
-        for ( ULong j = 0; j < Q.Rows(); ++j )
+        for ( unsigned long long j = 0; j < Q.Rows(); ++j )
         {
           evect[i][j] = Q[j][i];
         }
@@ -184,7 +184,7 @@ public:
     Matrix< Vect, T > AP( Q.Rows() );
     dot( R, Q, AP );
     
-    ULong iter = 0;    
+    unsigned long long iter = 0;    
     while ( iter < maxIter && ExceedsOffDiagTol( AP, tol) )
     {
       A.Swap( AP );
@@ -201,7 +201,7 @@ public:
     if( iter < maxIter )
     {
       eval.Resize( AP.Rows() );
-      for ( ULong i = 0; i < AP.Rows(); ++i )
+      for ( unsigned long long i = 0; i < AP.Rows(); ++i )
       {
         eval[i].PushBack( i, AP[i][i] );
       }      
@@ -218,21 +218,21 @@ protected:
     m_factorized = false;
   }
   
-  void StoreAlpha( ULong col, Matrix< Vect, T >& A )
+  void StoreAlpha( unsigned long long col, Matrix< Vect, T >& A )
   {
     vops::Dot<T> dot;
     m_alpha[col] = sqrt( dot( A[col], A[col], col ) );
     A[col][col] -= m_alpha[col];
   }
   
-  void HouseHolderQn_x_( Vect<T>& v, ULong n )
+  void HouseHolderQn_x_( Vect<T>& v, unsigned long long n )
   {
     Matrix< Vect, T >& A = *m_A;
     vops::Dot<T> dot;
 
     T qu = dot( A[n], v, n );
     T uuRecip = -2.0 / dot( A[n], A[n], n ); //multiply by the -2.0 and combine with reciprocal
-    for ( ULong i = n; i < v.Size(); ++i )
+    for ( unsigned long long i = n; i < v.Size(); ++i )
     {
       v[i] += qu * A[n][i] * uuRecip;
     }
@@ -241,7 +241,7 @@ protected:
   void SwapAlphaWithRPivots( Matrix< Vect, T >& R, Vect<T>& alpha )
   {
     T tmp;
-    for ( ULong i = 0; i < R.Cols(); ++i )
+    for ( unsigned long long i = 0; i < R.Cols(); ++i )
     {
       tmp = R[i][i];
       R[i][i] = alpha[i];
@@ -258,9 +258,9 @@ protected:
     solver.Identity(QTr);
     
     //creating Q transpose
-    for ( ULong i = 0; i < A.Cols(); ++i )
+    for ( unsigned long long i = 0; i < A.Cols(); ++i )
     {
-      for ( ULong j = A.Cols(); j > 0; --j ) //cols?
+      for ( unsigned long long j = A.Cols(); j > 0; --j ) //cols?
       {
         HouseHolderQn_x_( QTr[i], j - 1 );
       }      
@@ -282,10 +282,10 @@ protected:
     {
       R.Transpose(); //just undo the transpose flag
     }
-    for ( ULong i = 0; i < R.Rows(); ++i )
+    for ( unsigned long long i = 0; i < R.Rows(); ++i )
     {
       R[i][i] = m_alpha[i];
-      for ( ULong j = i + 1; j < R.Rows(); ++j )
+      for ( unsigned long long j = i + 1; j < R.Rows(); ++j )
       {
         R[i][j] = R[j][i];
         R[j][i] = T();

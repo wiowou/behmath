@@ -1,3 +1,5 @@
+#define MYDEBUG
+
 #include "../src/polynomial.h"
 #include <iostream>
 #include <fstream>

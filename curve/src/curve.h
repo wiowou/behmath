@@ -22,7 +22,6 @@
 #ifndef _MATH_CURVE_h
 #define _MATH_CURVE_h
 
-#include "impl/curveConfig.h"
 #include "matrix/QR.h"
 #include "matrix/rectangular.h"
 #include "matrix/matrix.h"
@@ -38,6 +37,7 @@ namespace math{
 #ifdef MYDEBUG
   class CurveTest;
 #endif //MYDEBUG
+
 class Curve
 {
 public:

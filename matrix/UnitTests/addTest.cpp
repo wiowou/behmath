@@ -1,3 +1,5 @@
+#define MYDEBUG
+
 #include "../src/add.h"
 #include <iostream>
 #include <fstream>
@@ -153,7 +155,7 @@ public:
     return i;
   }
   
-  int CheckPair( ULong pos, double d )
+  int CheckPair( unsigned long long pos, double d )
   {
     if ( std::abs( (sv3[pos] - d) / d ) > 0.0001 )
     {
@@ -163,7 +165,7 @@ public:
     return 0;
   }
   
-  int CheckPair2( ULong pos, double d )
+  int CheckPair2( unsigned long long pos, double d )
   {
     if ( std::abs(d) < 1e-10 )
     {

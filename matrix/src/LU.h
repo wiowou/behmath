@@ -80,7 +80,7 @@ public:
     {
       Factorize();
     }
-    for ( ULong i = 0; i < m_A->Cols(); ++i )
+    for ( unsigned long long i = 0; i < m_A->Cols(); ++i )
     {
       m_b = &InvT[i];
       Solve();
@@ -116,9 +116,9 @@ protected:
   void LInvB( Matrix< Vect, T >& L, Vect<T>& b )
   {
     //go up the column, then back a column
-    for ( ULong n = 0; n < L.Cols(); ++n )
+    for ( unsigned long long n = 0; n < L.Cols(); ++n )
     {
-      for ( ULong m = n + 1; m < L.Rows(); ++m )
+      for ( unsigned long long m = n + 1; m < L.Rows(); ++m )
       {
         b[m] += L[m][n] * b[n];
       }
@@ -152,23 +152,23 @@ public:
     UpperTriangular();
     Matrix< SparseVect, T >& A = *m_A;
     
-    for ( ULong i = 0; i < L.Rows(); ++i )
+    for ( unsigned long long i = 0; i < L.Rows(); ++i )
     {
       L[i].Set(i, 1.0 );
-      for ( ULong j = i + 1; j < L.Cols(); ++j )
+      for ( unsigned long long j = i + 1; j < L.Cols(); ++j )
       {
          L[i][j] = T();
       }
     }
     Vect<T> colU( L.Rows() );
     vops::Dot<T> dot;
-    for ( ULong i = 0; i < L.Cols(); ++i )
+    for ( unsigned long long i = 0; i < L.Cols(); ++i )
     {
-      for ( ULong k = 0; k < i + 1; ++k )
+      for ( unsigned long long k = 0; k < i + 1; ++k )
       {
         colU[k] = A[k][i];
       }
-      for ( ULong j = i + 1; j <  L.Rows(); ++j )
+      for ( unsigned long long j = i + 1; j <  L.Rows(); ++j )
       {
         T d = dot( i, colU, L[j] );
         L[j][i] = ( L[j][i] - d ) / colU[i];
@@ -192,7 +192,7 @@ public:
     {
       Factorize( *m_L, *m_A );
     }
-    for ( ULong i = 0; i < m_A->Cols(); ++i )
+    for ( unsigned long long i = 0; i < m_A->Cols(); ++i )
     {
       m_b = &InvT[i];
       Solve();

@@ -1,3 +1,5 @@
+#define MYDEBUG
+
 #include "../src/sparseVect.h"
 #include <iostream>
 #include <fstream>
@@ -54,7 +56,7 @@ public:
     i+= sparseVect.Find(2) != 2;
     i+= sparseVect.Find(5) != 4;
     
-    ULong max;
+    unsigned long long max;
     max = sparseVect.MaxIdx();
     i += ( max != 6 );
     std::cout << max << std::endl;
@@ -108,7 +110,7 @@ public:
     return i;
   }
   
-  int CheckPair( ULong i, ULong pos, double d )
+  int CheckPair( unsigned long long i, unsigned long long pos, double d )
   {
     if ( sparseVect.m_pos[i] != pos )
     {
@@ -123,7 +125,7 @@ public:
     return 0;
   }
   
-  int CheckPair2( math::SparseVect<double> &spVect, ULong i, ULong pos, double d )
+  int CheckPair2( math::SparseVect<double> &spVect, unsigned long long i, unsigned long long pos, double d )
   {
     if ( spVect.m_pos[i] != pos )
     {

@@ -57,7 +57,7 @@ public:
   {
     m_A = &matrix;
     m_PMatrix.Resize( m_A->Rows(), m_A->Cols() );
-    for ( ULong i = 0; i < m_A->Rows(); ++i )
+    for ( unsigned long long i = 0; i < m_A->Rows(); ++i )
     {
       m_PMatrix[i].PushBack(i, 1.0);
     }
@@ -140,7 +140,7 @@ public:
   }
   
 protected:
-  inline void Reduce( Matrix< Storage, T > &A, const ULong &pivotIdx, T &pivotVal, ULong i ) //tested
+  inline void Reduce( Matrix< Storage, T > &A, const unsigned long long &pivotIdx, T &pivotVal, unsigned long long i ) //tested
   {
     T factor = -A[i][pivotIdx] / pivotVal;
     A[i][pivotIdx] = factor; //store the elimination matrix in A
@@ -158,7 +158,7 @@ protected:
     }
   }
  
-  void RowReduceDown( Matrix< Storage, T > &A, ULong pivotIdx = 0 ) //tested
+  void RowReduceDown( Matrix< Storage, T > &A, unsigned long long pivotIdx = 0 ) //tested
   {
     if ( pivotIdx == A.Rows() )
     {
@@ -166,18 +166,18 @@ protected:
     }
     
     T pivotVal = A[pivotIdx][pivotIdx];
-    ULong newPivotIdx = PivotDown( A, pivotIdx, pivotVal ); //pivots according to options set
+    unsigned long long newPivotIdx = PivotDown( A, pivotIdx, pivotVal ); //pivots according to options set
     RowSwap( pivotIdx, newPivotIdx );
     
     // This loop can be parallelized
-    for ( ULong i = pivotIdx + 1; i < A.Rows(); ++i )
+    for ( unsigned long long i = pivotIdx + 1; i < A.Rows(); ++i )
     {
       Reduce( A, pivotIdx, pivotVal, i );
     }
     RowReduceDown( A, pivotIdx + 1 ); //proper tail recursion
   }
 
-  void RowReduceUp( Matrix< Storage, T > &A, ULong pivotIdx ) //tested
+  void RowReduceUp( Matrix< Storage, T > &A, unsigned long long pivotIdx ) //tested
   {
     if ( pivotIdx == 0 )
     {
@@ -185,21 +185,21 @@ protected:
     }
     
     T pivotVal;
-    ULong newPivotIdx = PivotUp( A, pivotIdx, pivotVal ); //pivots according to options set
+    unsigned long long newPivotIdx = PivotUp( A, pivotIdx, pivotVal ); //pivots according to options set
     RowSwap( pivotIdx, newPivotIdx );
 
     vops::Axpy<T> AXPY;
     T factor;
     
     // This loop can be parallelized
-    for ( ULong i = pivotIdx; i > 0; --i )
+    for ( unsigned long long i = pivotIdx; i > 0; --i )
     {
       Reduce( A, pivotIdx, pivotVal, i - 1 );
     }
     RowReduceUp( A, pivotIdx - 1 ); //proper tail recursion
   }
   
-  ULong PivotDown( Matrix< Storage, T > &A, const ULong pivotIdx, T &pivotVal )
+  unsigned long long PivotDown( Matrix< Storage, T > &A, const unsigned long long pivotIdx, T &pivotVal )
   {
     if ( m_partialPivotingMax )
     {
@@ -211,7 +211,7 @@ protected:
     }   
   }
 
-  ULong PivotUp( Matrix< Storage, T > &A, const ULong pivotIdx, T &pivotVal )
+  unsigned long long PivotUp( Matrix< Storage, T > &A, const unsigned long long pivotIdx, T &pivotVal )
   {
     if ( m_partialPivotingMax )
     {
@@ -223,9 +223,9 @@ protected:
     }    
   }
   
-  ULong PartialPivotingDown( Matrix< Storage, T > &A, const ULong pivotIdx, T &pivotVal )
+  unsigned long long PartialPivotingDown( Matrix< Storage, T > &A, const unsigned long long pivotIdx, T &pivotVal )
   { 
-    ULong newIdx = pivotIdx;
+    unsigned long long newIdx = pivotIdx;
     while ( newIdx < A.Rows() && std::abs(pivotVal) < m_tolerance )
     {
       ++newIdx;
@@ -238,9 +238,9 @@ protected:
     return newIdx;
   }
 
-  ULong PartialPivotingUp( Matrix< Storage, T > &A, const ULong pivotIdx, T &pivotVal )
+  unsigned long long PartialPivotingUp( Matrix< Storage, T > &A, const unsigned long long pivotIdx, T &pivotVal )
   { 
-    ULong newIdx = pivotIdx;
+    unsigned long long newIdx = pivotIdx;
     while ( newIdx > 0 && std::abs(pivotVal) < m_tolerance )
     {
       --newIdx;
@@ -257,9 +257,9 @@ protected:
     return newIdx;
   }
   
-  ULong PartialPivotingMaxDown( Matrix< Storage, T > &A, const ULong pivotIdx, T &pivotVal )
+  unsigned long long PartialPivotingMaxDown( Matrix< Storage, T > &A, const unsigned long long pivotIdx, T &pivotVal )
   {
-    ULong maxIdx = A.MaxIdxBelow( pivotIdx );
+    unsigned long long maxIdx = A.MaxIdxBelow( pivotIdx );
     pivotVal = A[maxIdx][pivotIdx];
     if ( std::abs(pivotVal) < Tolerance() )
     {
@@ -268,9 +268,9 @@ protected:
     return maxIdx;
   }
 
-  ULong PartialPivotingMaxUp( Matrix< Storage, T > &A, const ULong pivotIdx, T &pivotVal )
+  unsigned long long PartialPivotingMaxUp( Matrix< Storage, T > &A, const unsigned long long pivotIdx, T &pivotVal )
   {
-    ULong maxIdx = A.MaxIdxAbove( pivotIdx );
+    unsigned long long maxIdx = A.MaxIdxAbove( pivotIdx );
     pivotVal = A[maxIdx][pivotIdx];
     if ( std::abs(pivotVal) < Tolerance() )
     {
@@ -279,7 +279,7 @@ protected:
     return maxIdx;
   }
   
-  void RowSwap( ULong pivotIdx, ULong swapIdx ) //tested
+  void RowSwap( unsigned long long pivotIdx, unsigned long long swapIdx ) //tested
   {
     m_A->RowSwap( pivotIdx, swapIdx );
     m_PMatrix.RowSwap( pivotIdx, swapIdx );
@@ -296,7 +296,7 @@ protected:
   void ReOrder( Vect<T>& v )
   {
     Vect<T> vNew( v.Size() );
-    for ( ULong i = 0; i < v.Size(); ++i )
+    for ( unsigned long long i = 0; i < v.Size(); ++i )
     {
       vNew[i] = v[ m_PMatrix[i].Pos(0) ];
     }

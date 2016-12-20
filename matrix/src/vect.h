@@ -21,10 +21,9 @@
 #ifndef _MATH_VECT_h
 #define _MATH_VECT_h
 
-#include "impl/matrixConfig.h"
 #include <iostream>
 #include <iomanip>
-#include "typedefs.h"
+
 
 namespace math{
 
@@ -51,7 +50,7 @@ public:
     Init(2);    
   }
   
-  explicit Vect( ULong size )
+  explicit Vect( unsigned long long size )
   {
     Init(size);
   }
@@ -67,7 +66,7 @@ public:
     m_size = other.m_size;
     m_allocSize = other.m_allocSize;
     m_data = new T [m_allocSize];
-    for ( ULong i = 0; i < m_size; ++i )
+    for ( unsigned long long i = 0; i < m_size; ++i )
     {
       m_data[i] = other.m_data[i];
     }
@@ -82,8 +81,8 @@ public:
   
   void Swap( Vect &other )
   {
-    ULong tmp_size = other.m_size;
-    ULong tmp_allocSize = other.m_allocSize;
+    unsigned long long tmp_size = other.m_size;
+    unsigned long long tmp_allocSize = other.m_allocSize;
     T* tmp_data = other.m_data;
     
     other.m_size = m_size;
@@ -105,7 +104,7 @@ public:
   //! vector is reached. If @param pos is specified, it should be an array of size @param nnz.
   //! The @param pos should indicate the index, or position, of the corresponding entry in @param data.
   //! The @param nnz indicates the size of both data and pos. Vector is resized to allow @param nnz entries.  
-  void Data( T* data, ULong* pos = NULL, ULong nnz = 0 )
+  void Data( T* data, unsigned long long* pos = NULL, unsigned long long nnz = 0 )
   {
     if ( pos != NULL )
     {
@@ -114,7 +113,7 @@ public:
         return;
       }
       Resize( pos[nnz - 1] );
-      for ( ULong i = 0, j = 0; i < m_size; ++i )
+      for ( unsigned long long i = 0, j = 0; i < m_size; ++i )
       {
         if ( i == pos[j] )
         {
@@ -129,7 +128,7 @@ public:
       return;
     }
     
-    for ( ULong i = 0; i < m_size; ++i )
+    for ( unsigned long long i = 0; i < m_size; ++i )
     {
       Set( i, *data++ );
     }
@@ -146,10 +145,10 @@ public:
   }
   
   //! Returns the location in m_data where the max occurs.
-  ULong MaxIdx( ULong start = 0 )
+  unsigned long long MaxIdx( unsigned long long start = 0 )
   {
-    ULong max = start;
-    for ( ULong i = start + 1; i < m_size; ++i )
+    unsigned long long max = start;
+    for ( unsigned long long i = start + 1; i < m_size; ++i )
     {
       if ( m_data[i] * m_data[i] > m_data[max] * m_data[max] )
       {
@@ -160,32 +159,32 @@ public:
   }
 
   //! Returns i. For compatibility with SparseVect
-  ULong Pos( ULong i ) const
+  unsigned long long Pos( unsigned long long i ) const
   {
     return i;
   }
   
   //! Returns the index located in m_data at location @param i.
-  T& operator()( ULong i )
+  T& operator()( unsigned long long i )
   {
     return m_data[i];
   }
   
   //! Returns the number of entries not logically considered to be zero.
   //! ie, returns the size of m_data  
-  ULong NNZ() const
+  unsigned long long NNZ() const
   {
     return m_size;
   }
   
   //! Returns the dimensionality that the vector is considered to be
-  ULong Size() const
+  unsigned long long Size() const
   {
     return m_size;
   }
   
   //! Changes the size of the number of entries logically considered to be zero
-  void Resize( ULong size )
+  void Resize( unsigned long long size )
   {
     if ( size <= m_allocSize )
     {
@@ -194,7 +193,7 @@ public:
     }
     T* tmp = m_data;
     m_data = new T [size];
-    for ( ULong i = 0; i < m_size; ++i )
+    for ( unsigned long long i = 0; i < m_size; ++i )
     {
       m_data[i] = tmp[i];
     }
@@ -204,21 +203,21 @@ public:
 
   //! Allocates memory in m_data of @param size. Copies old data to new vector
   //! if necessary  
-  void Allocate( ULong size )
+  void Allocate( unsigned long long size )
   {
     Resize(size);
   }
 
   //! Returns the value at index idx. If idx is logically considered to be zero,
   //! returns default constructor for template type T  
-  T& operator[]( const ULong idx )
+  T& operator[]( const unsigned long long idx )
   {
     return m_data[ idx ];
   }
   
   //! Sets and overwrites any previous value at idx. Idx is the logical index to the vector, not the physical one.
   //! Will resize the allocated data if necessary.
-  void Set( ULong idx, T val )
+  void Set( unsigned long long idx, T val )
   {
     if ( idx >= m_size )
     {
@@ -229,14 +228,14 @@ public:
   }
   
   //! Retrieves data value at idx. Idx is the logical index to the vector, not the physical one.
-  T Get( const ULong idx ) const
+  T Get( const unsigned long long idx ) const
   {
     return m_data[idx];
   }
   
   
   //! Adds a logical non-zero entry to the end of the vector
-  void PushBack( ULong idx, T val )
+  void PushBack( unsigned long long idx, T val )
   {
     Set( idx, val );
   }
@@ -244,13 +243,13 @@ public:
   //! Performs a row reduction, assuming vector is a column vector.
   //! vector[reducedRow] += factor * vector[reducingRow]. Does the right thing if either
   //! or both indexes are not found  
-  inline void RowReduce(  T factor, ULong reducingRow, ULong reducedRow )
+  inline void RowReduce(  T factor, unsigned long long reducingRow, unsigned long long reducedRow )
   {
     m_data[reducedRow] += factor * m_data[reducingRow];
   }
   
   //! Swaps entries, assuming vector is a column vector
-  inline void RowSwap( ULong rowNum1, ULong rowNum2 )
+  inline void RowSwap( unsigned long long rowNum1, unsigned long long rowNum2 )
   {
     if ( rowNum1 == rowNum2 )
     {
@@ -267,7 +266,7 @@ public:
     std::ios::fmtflags fla(os.flags() );
     os << "Vector( ";
     os << A.Size() << " )" << " = " << std::endl;
-    for ( ULong i = 0; i < A.Size(); ++i )
+    for ( unsigned long long i = 0; i < A.Size(); ++i )
     {
       os << "  [";
       os << std::fixed << std::setw(10) << std::setprecision(4);
@@ -279,7 +278,7 @@ public:
   }
   
 protected: //methods
-  void Init( ULong size )
+  void Init( unsigned long long size )
   {
     m_size = size;
     m_allocSize = size;
@@ -293,10 +292,10 @@ protected: //methods
   
 protected: //members
   //! the logical and physical size of vector
-  ULong m_size;
+  unsigned long long m_size;
   
   //! The memory allocation size
-  ULong m_allocSize;
+  unsigned long long m_allocSize;
   
   //! the array of data
   T* m_data;

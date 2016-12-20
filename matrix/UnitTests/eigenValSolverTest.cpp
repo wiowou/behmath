@@ -1,3 +1,5 @@
+#define MYDEBUG
+
 #include "../src/eigenValSolver.h"
 #include <iostream>
 #include <fstream>

@@ -21,8 +21,7 @@
 #ifndef _MATH_SOLVER_ROWSOLVER_h
 #define _MATH_SOLVER_ROWSOLVER_h
 
-#include "typedefs.h"
-#include "impl/matrixConfig.h"
+
 #include "dot.h"
 
 namespace math{
@@ -74,7 +73,7 @@ public:
     m_notWithinTol = notWithinTol;
   }
 
-  void SetIdx( ULong idx )
+  void SetIdx( unsigned long long idx )
   {
     m_idx = idx;
   }
@@ -95,7 +94,7 @@ protected:
   Vect<T>* m_xNew;
   Vect<T>* m_b;
   Vect<bool>* m_notWithinTol;
-  ULong m_idx;
+  unsigned long long m_idx;
   T m_coeff;
   T m_tolerance;
   vops::Dot<T> dot;

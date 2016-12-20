@@ -1,3 +1,5 @@
+#define MYDEBUG
+
 #include "../src/eigJacobi.h"
 #include <iostream>
 #include <fstream>

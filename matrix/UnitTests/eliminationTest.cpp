@@ -1,3 +1,5 @@
+#define MYDEBUG
+
 #include "../src/elimination.h"
 #include <iostream>
 #include <fstream>
@@ -73,7 +75,7 @@ public:
     {
       2, 3, -1 
     };
-    ULong row1pos[] =
+    unsigned long long row1pos[] =
     {
       0, 1, 2
     };
@@ -83,7 +85,7 @@ public:
     {
       3, 6, -3, 3 
     };
-    ULong row2pos[] =
+    unsigned long long row2pos[] =
     {
       0, 1, 2, 3
     };
@@ -93,7 +95,7 @@ public:
     {
       -1, -3, 9, 4, -2 
     };
-    ULong row3pos[] =
+    unsigned long long row3pos[] =
     {
       0, 1, 2, 3, 4
     };
@@ -103,7 +105,7 @@ public:
     {
       3, 4, -3, 5, 2 
     };
-    ULong row4pos[] =
+    unsigned long long row4pos[] =
     {
       1, 2, 3, 4, 5
     };
@@ -113,7 +115,7 @@ public:
     {
       -2, 5, 3, -3 
     };
-    ULong row5pos[] =
+    unsigned long long row5pos[] =
     {
       2, 3, 4, 5
     };
@@ -123,7 +125,7 @@ public:
     {
       2, -3, 4 
     };
-    ULong row6pos[] =
+    unsigned long long row6pos[] =
     {
       3, 4, 5
     };
@@ -201,7 +203,7 @@ public:
   }
   
   //helper method
-  int CheckPair( SparseVect<double> &sv, ULong pos, double d )
+  int CheckPair( SparseVect<double> &sv, unsigned long long pos, double d )
   {
     if ( std::abs(sv[pos] - d) > 1e-4 )
     {
@@ -211,7 +213,7 @@ public:
     return 0;
   }
   //helper method
-  int CheckPair( Vect<double> &v, ULong pos, double d )
+  int CheckPair( Vect<double> &v, unsigned long long pos, double d )
   {
     if ( std::abs(d) < 1e-4 )
     {

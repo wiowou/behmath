@@ -1,3 +1,5 @@
+#define MYDEBUG
+
 #include "../src/dot.h"
 #include <iostream>
 #include <fstream>
@@ -125,7 +127,7 @@ public:
     return i;
   }
 
-  int CheckPair( SparseVect<double> &sv, ULong pos, double d )
+  int CheckPair( SparseVect<double> &sv, unsigned long long pos, double d )
   {
     if ( std::abs ( (sv[pos] - d) / d ) > 0.0001 )
     {
@@ -134,7 +136,7 @@ public:
     }
     return 0;
   }
-  int CheckPair( Vect<double> &v, ULong pos, double d )
+  int CheckPair( Vect<double> &v, unsigned long long pos, double d )
   {
     if ( std::abs(d) < 1e-10 )
     {

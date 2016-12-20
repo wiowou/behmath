@@ -1,3 +1,5 @@
+#define MYDEBUG
+
 #include "../src/solver.h"
 #include <iostream>
 #include <fstream>

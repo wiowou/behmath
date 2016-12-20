@@ -1,3 +1,5 @@
+#define MYDEBUG
+
 #include "../src/hermiteSpline.h"
 #include <iostream>
 #include <fstream>

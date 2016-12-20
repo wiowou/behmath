@@ -1,3 +1,5 @@
+#define MYDEBUG
+
 #include "../src/eigen.h"
 #include "../src/QR.h"
 #include "../src/eigJacobi.h"

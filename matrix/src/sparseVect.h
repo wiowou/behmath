@@ -21,10 +21,9 @@
 #ifndef _MATH_SPARSEVECT_h
 #define _MATH_SPARSEVECT_h
 
-#include "impl/matrixConfig.h"
 #include <iostream>
 #include <iomanip>
-#include "typedefs.h"
+
 
 namespace math{
 
@@ -51,7 +50,7 @@ public:
     Init(2);
   }
   
-  explicit SparseVect( ULong allocSize ) //tested
+  explicit SparseVect( unsigned long long allocSize ) //tested
   {
     Init( allocSize );
   }
@@ -67,9 +66,9 @@ public:
     m_nnz = other.m_nnz;
     m_size = other.m_size;
     m_allocSize = other.m_allocSize;
-    m_pos = new ULong [m_allocSize];
+    m_pos = new unsigned long long [m_allocSize];
     m_data = new T [m_allocSize];
-    for ( ULong i = 0; i < m_nnz; ++i )
+    for ( unsigned long long i = 0; i < m_nnz; ++i )
     {
       m_pos[i] = other.m_pos[i];
       m_data[i] = other.m_data[i];
@@ -85,10 +84,10 @@ public:
   
   void Swap( SparseVect &other )
   {
-    ULong tmp_nnz = other.m_nnz;
-    ULong tmp_size = other.m_size;
-    ULong tmp_allocSize = other.m_allocSize;
-    ULong* tmp_pos = other.m_pos;
+    unsigned long long tmp_nnz = other.m_nnz;
+    unsigned long long tmp_size = other.m_size;
+    unsigned long long tmp_allocSize = other.m_allocSize;
+    unsigned long long* tmp_pos = other.m_pos;
     T* tmp_data = other.m_data;
     
     other.m_nnz = m_nnz;
@@ -114,15 +113,17 @@ public:
   //! vector is reached. If @param pos is specified, it should be an array of size @param nnz.
   //! The @param pos should indicate the index, or position, of the corresponding entry in @param data.
   //! The @param nnz indicates the size of both data and pos. Vector is resized to allow @param nnz entries.
-  void Data( T* data, ULong* pos = NULL, ULong nnz = 0 )
+  void Data( T* data, unsigned long long* pos = NULL, unsigned long long nnz = 0 )
   {
     if ( pos == NULL || nnz == 0 )
     {
       return;
     }
+    unsigned long long size = m_size;
     Clear();
+    m_size = size;
     Allocate(nnz);
-    for ( ULong i = 0; i < nnz; ++i )
+    for ( unsigned long long i = 0; i < nnz; ++i )
     {
       PushBack( pos[i], data[i] );
     }
@@ -139,10 +140,10 @@ public:
   }
   
   //! Returns the location in m_data where the max occurs.
-  ULong MaxIdx() //tested
+  unsigned long long MaxIdx() //tested
   {
-    ULong max = 0;
-    for ( ULong i = 1; i < m_nnz; ++i )
+    unsigned long long max = 0;
+    for ( unsigned long long i = 1; i < m_nnz; ++i )
     {
       if ( m_data[i] * m_data[i] > m_data[max] * m_data[max] )
       {
@@ -153,33 +154,33 @@ public:
   }
   
   //! Returns the index located in m_pos at location @param i
-  ULong Pos( ULong i ) const
+  unsigned long long Pos( unsigned long long i ) const
   {
     return m_pos[i];
   }
   
   //! Returns the index located in m_data at location @param i.
   //! Use this in conjunction with MaxIdx()
-  T& operator()( ULong i )
+  T& operator()( unsigned long long i )
   {
     return m_data[i];
   }
   
   //! Returns the number of entries not logically considered to be zero.
   //! ie, returns the size of m_data
-  ULong NNZ() const
+  unsigned long long NNZ() const
   {
     return m_nnz;
   }
   
   //! Returns the dimensionality that the vector is considered to be
-  ULong Size() const
+  unsigned long long Size() const
   {
     return m_size;
   }
   
   //! Changes the size of the number of entries logically considered to be zero
-  void Resize( ULong size )
+  void Resize( unsigned long long size )
   {
     m_size = size;
     if ( m_nnz > 0 && size < m_pos[ m_nnz - 1] )
@@ -190,21 +191,21 @@ public:
   
   //! Allocates memory in m_data of @param size. Copies old data to new vector
   //! if necessary
-  void Allocate( ULong size ) //tested
+  void Allocate( unsigned long long size ) //tested
   {
     if ( size <= m_allocSize )
     {
       return;
     }
-    m_size = m_allocSize = size;
-    ULong* pos = new ULong [m_allocSize];
+    m_allocSize = size;
+    unsigned long long* pos = new unsigned long long [m_allocSize];
     T* data = new T [m_allocSize];
-    for ( ULong i = 0; i < m_nnz; ++i)
+    for ( unsigned long long i = 0; i < m_nnz; ++i)
     {
       pos[i] = m_pos[i];
       data[i] = m_data[i];
     }
-    ULong* tmp = m_pos;
+    unsigned long long* tmp = m_pos;
     T* tmp2 = m_data;
     m_pos = pos;
     m_data = data;
@@ -214,9 +215,9 @@ public:
   
   //! Returns the value at index idx. If idx is logically considered to be zero,
   //! returns default constructor for template type T
-  T& operator[]( const ULong idx ) //tested
+  T& operator[]( const unsigned long long idx ) //tested
   {
-    ULong ub = UpperBoundIdx(idx);
+    unsigned long long ub = UpperBoundIdx(idx);
     if ( ub == m_nnz || m_pos[ub] != idx )
     {
       m_default = T();
@@ -227,23 +228,23 @@ public:
   
   //! Sets and overwrites any previous value at idx. Idx is the logical index to the vector, not the physical one.
   //! Will resize the allocated data if necessary.
-  void Set( ULong idx, T val ) //tested
+  void Set( unsigned long long idx, T val ) //tested
   {
-    ULong ub = UpperBoundIdx(idx);
+    unsigned long long ub = UpperBoundIdx(idx);
     Set( idx, val, ub );
   }
 
   /*
-  void SetData( ULong i, T val )
+  void SetData( unsigned long long i, T val )
   {
     m_data[i] = val;
   }
   */
   
   //! Retrieves data value at idx. Idx is the logical index to the vector, not the physical one.
-  T Get( const ULong idx ) const
+  T Get( const unsigned long long idx ) const
   {
-    ULong ub = UpperBoundIdx(idx);
+    unsigned long long ub = UpperBoundIdx(idx);
     if ( ub == m_nnz || m_pos[ub] != idx )
     {
       m_default = T();
@@ -253,7 +254,7 @@ public:
   }
   
   //! Adds a logical non-zero entry to the end of the vector
-  void PushBack( ULong idx, T val ) //tested
+  void PushBack( unsigned long long idx, T val ) //tested
   {
     if ( m_nnz == m_allocSize - 1 )
     {
@@ -262,17 +263,17 @@ public:
     m_data[m_nnz] = val;
     m_pos[m_nnz] = idx;
     ++m_nnz;
-    if ( m_size < m_nnz )
+    if ( m_size <= idx )
     {
-      m_size = m_nnz;
+      m_size = idx + 1;
     }
   }
   
   //! Returns the physical index associated with logical index @param idx. If @param idx
   //! is not found, returns m_nnz;
-  ULong Find( const ULong idx ) const //tested
+  unsigned long long Find( const unsigned long long idx ) const //tested
   {
-    ULong ub = UpperBoundIdx(idx);
+    unsigned long long ub = UpperBoundIdx(idx);
     if ( ub == m_nnz || m_pos[ub] != idx )
     {
       return m_nnz;
@@ -283,14 +284,14 @@ public:
   //! Performs a row reduction, assuming vector is a column vector.
   //! vector[reducedRow] += factor * vector[reducingRow]. Does the right thing if either
   //! or both indexes are not found
-  inline void RowReduce(  T factor, ULong reducingRow, ULong reducedRow ) //tested
+  inline void RowReduce(  T factor, unsigned long long reducingRow, unsigned long long reducedRow ) //tested
   {
-    ULong reducingRowIdx = Find( reducingRow );
+    unsigned long long reducingRowIdx = Find( reducingRow );
     if ( reducingRowIdx == m_nnz )
     {
       return;
     }
-    ULong reducedRowIdx = Find( reducedRow );
+    unsigned long long reducedRowIdx = Find( reducedRow );
     if ( reducedRowIdx == m_nnz )
     {
       Set( reducedRow, factor * m_data[reducingRowIdx] );
@@ -300,14 +301,14 @@ public:
   }
   
   //! Swaps entries, assuming vector is a column vector
-  inline void RowSwap( ULong rowNum1, ULong rowNum2 )
+  inline void RowSwap( unsigned long long rowNum1, unsigned long long rowNum2 )
   {
     if ( rowNum1 == rowNum2 )
     {
       return;
     }
-    ULong rowNum1idx = Find(rowNum1);
-    ULong rowNum2idx = Find(rowNum2);
+    unsigned long long rowNum1idx = Find(rowNum1);
+    unsigned long long rowNum2idx = Find(rowNum2);
     
     if ( rowNum1idx == m_nnz && rowNum2idx == m_nnz )
     {
@@ -339,7 +340,7 @@ public:
     std::ios::fmtflags fla(os.flags() );
     os << "Vector( ";
     os << A.Size() << " )" << " = " << std::endl;
-    for ( ULong i = 0; i < A.Size(); ++i )
+    for ( unsigned long long i = 0; i < A.Size(); ++i )
     {
       os << "  [";
       os << std::fixed << std::setw(10) << std::setprecision(4);
@@ -351,13 +352,13 @@ public:
   }
   
 protected:
-  void Init( ULong allocSize ) //tested
+  void Init( unsigned long long allocSize ) //tested
   {
     m_nnz = 0;
     m_size = allocSize;
     m_allocSize = allocSize;
     m_data = new T [m_allocSize];
-    m_pos = new ULong [m_allocSize];
+    m_pos = new unsigned long long [m_allocSize];
   }
   
   void Destroy() //tested
@@ -369,10 +370,10 @@ protected:
   //! Returns the upper bound physical index in m_data of @param val, which is a logical index.
   //! If val > the end, returns m_nnz. If val == an logical index, returns the corresponding
   //! physical index
-  ULong UpperBoundIdx( const ULong val ) const //tested
+  unsigned long long UpperBoundIdx( const unsigned long long val ) const //tested
   {
-    ULong const* beg = m_pos;
-    ULong const* end = &m_pos[m_nnz];
+    unsigned long long const* beg = m_pos;
+    unsigned long long const* end = &m_pos[m_nnz];
     if ( val <= *beg )
     {
       return 0;
@@ -382,18 +383,18 @@ protected:
     {
       return ( end - beg ) + 1;
     }
-    ULong const* zeroPos = beg;
+    unsigned long long const* zeroPos = beg;
     while ( ( end - beg ) > 2 )
     {
-      //ULong const* mid = &beg[ ( end - beg ) >> 1 ]; // >> 1 is division by 2
+      //unsigned long long const* mid = &beg[ ( end - beg ) >> 1 ]; // >> 1 is division by 2
       double pos = ( static_cast<double>(val) - static_cast<double>(*beg) ) / 
         ( static_cast<double>(*end) - static_cast<double>(*beg) ) * static_cast<double>(end - beg);
-      double fraction = pos - static_cast<ULong>(pos);
+      double fraction = pos - static_cast<unsigned long long>(pos);
       if ( fraction < 0.001 )
       {
         pos += 0.01;
       }
-      ULong const* mid = &beg[ static_cast<ULong>(pos) ];
+      unsigned long long const* mid = &beg[ static_cast<unsigned long long>(pos) ];
       if ( *mid == val )
       {
         return (mid - zeroPos);
@@ -415,8 +416,8 @@ protected:
         beg = mid;
       }
     }
-    ULong dist = end - beg;
-    for ( ULong i = 0; i <= dist; ++i )
+    unsigned long long dist = end - beg;
+    for ( unsigned long long i = 0; i <= dist; ++i )
     {
       if ( *beg >= val )
       {
@@ -428,17 +429,17 @@ protected:
 
   //! Sets and overwrites any previous value at idx. Idx is the logical index to the vector, not the physical one.
   //! Will resize the allocated data if necessary.  
-  void Set( ULong idx, T val, ULong ub ) //tested
+  void Set( unsigned long long idx, T val, unsigned long long ub ) //tested
   {
+    if ( m_size <= idx )
+    {
+      m_size = idx + 1;
+    }
     if ( m_nnz == 0 )
     {
       m_pos[0] = idx;
       m_data[0] = val;
       m_nnz++;
-      if ( m_size < m_nnz )
-      {
-        m_size = m_nnz;
-      }
       return;
     }
     if ( ub < m_nnz && m_pos[ub] == idx )
@@ -449,21 +450,21 @@ protected:
     if ( m_nnz == m_allocSize - 1 )
     {
       m_allocSize = 2 * m_allocSize;
-      ULong* pos = new ULong [m_allocSize];
+      unsigned long long* pos = new unsigned long long [m_allocSize];
       T* data = new T [m_allocSize];
-      for ( ULong i = 0; i < ub; ++i)
+      for ( unsigned long long i = 0; i < ub; ++i)
       {
         pos[i] = m_pos[i];
         data[i] = m_data[i];
       }
       pos[ub] = idx;
       data[ub] = val;
-      for ( ULong i = ub + 1; i < m_nnz + 1; ++i )
+      for ( unsigned long long i = ub + 1; i < m_nnz + 1; ++i )
       {
         pos[i] = m_pos[i - 1];
         data[i] = m_data[i - 1];      
       }
-      ULong* tmp = m_pos;
+      unsigned long long* tmp = m_pos;
       T* tmp2 = m_data;
       m_pos = pos;
       m_data = data;
@@ -471,13 +472,9 @@ protected:
       delete[] tmp2;
       
       m_nnz++;
-      if ( m_size < m_nnz )
-      {
-        m_size = m_nnz;
-      }
       return;
     }
-    for ( ULong i = m_nnz; i > ub; --i )
+    for ( unsigned long long i = m_nnz; i > ub; --i )
     {
       m_pos[i] = m_pos[i - 1];
       m_data[i] = m_data[i - 1];
@@ -486,25 +483,21 @@ protected:
     m_data[ub] = val;
     
     m_nnz++;
-    if ( m_size < m_nnz )
-    {
-      m_size = m_nnz;
-    }
     return;
   }
 
 protected: //members
   //! number of non-zero entries
-  ULong m_nnz;
+  unsigned long long m_nnz;
   
   //! allocation size
-  ULong m_allocSize;
+  unsigned long long m_allocSize;
   
   //! logical size of the vector
-  ULong m_size;
+  unsigned long long m_size;
   
   //! the logical indexes corresponding to the physical indexes of m_data
-  ULong* m_pos;
+  unsigned long long* m_pos;
   
   //! the array of data 
   T* m_data;

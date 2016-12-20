@@ -56,7 +56,7 @@ public:
     m_calcedEigVect = false;
     m_calcedEigVal = false;
     m_needToPivot.Resize( m_A->Rows() );
-    for ( ULong i = 0; i < m_A->Rows(); ++i )
+    for ( unsigned long long i = 0; i < m_A->Rows(); ++i )
     {
       m_needToPivot[i] = true;
     }
@@ -74,7 +74,7 @@ public:
     m_tolerance = tol;
   }
   
-  void MaxIter( ULong maxIter )
+  void MaxIter( unsigned long long maxIter )
   {
     m_maxIter = maxIter;
   }
@@ -118,7 +118,7 @@ public:
     return &m_EigVal;
   }
   
-  ULong Iter()
+  unsigned long long Iter()
   {
     return m_iter;
   }
@@ -135,8 +135,8 @@ public:
     Matrix<Storage,T>& AT = *m_A;
     
     //use the physical dimensions since not sure whether transpose flag is set
-    ULong nrow = AT.PRows();
-    ULong ncol = AT.PCols();
+    unsigned long long nrow = AT.PRows();
+    unsigned long long ncol = AT.PCols();
     
     //save the location of m_A so it can be restored
     Matrix<Storage,T>* pA = m_A;
@@ -145,9 +145,9 @@ public:
     //create A*A^T by creating A first then dotting it
     Matrix<Vect,T> A(ncol, nrow);  //mem alloc
 
-    for ( ULong i = 0; i < nrow; ++i )
+    for ( unsigned long long i = 0; i < nrow; ++i )
     {
-      for ( ULong j = 0; j < ncol; ++j )
+      for ( unsigned long long j = 0; j < ncol; ++j )
       {
         A[j][i] = AT[i][j];
       }
@@ -172,7 +172,7 @@ public:
     m_VT.Swap( m_EigVect ); //store the eig vects in VT
 
     //sqrt of eigvals of AAT or ATA = eigvals of A or AT
-    for ( ULong i = 0; i < nrow; ++i )
+    for ( unsigned long long i = 0; i < nrow; ++i )
     {
       m_EigVal[i][i] = sqrt( m_EigVal[i][i] );
     }
@@ -210,13 +210,13 @@ protected:
     
     Matrix<SparseVect,T>& eval = m_EigVal;
     Matrix<Vect,T>& evect = m_EigVect;
-    ULong nrow = m_A->Rows();
+    unsigned long long nrow = m_A->Rows();
     
     Vect<T> b( nrow - 1 ); //size b for A - last row
 
     evect.Resize( nrow );
     
-    for ( ULong i = 0; i < nrow; ++i )
+    for ( unsigned long long i = 0; i < nrow; ++i )
     {
       evect[i][nrow - 1] = T(1.0);
       Elimination<Storage,T> sol;
@@ -224,11 +224,11 @@ protected:
       
       Shift( A, eval[i][i] ); //shift A
   
-      ULong knownRow = nrow;
+      unsigned long long knownRow = nrow;
       while ( knownRow > 0 )
       {
         A.RowSwap( nrow - 1, knownRow - 1 );
-        for ( ULong j = 0; j < b.Size(); ++j )
+        for ( unsigned long long j = 0; j < b.Size(); ++j )
         {
           b[j] = -A[j][ nrow - 1 ];
         }
@@ -261,7 +261,7 @@ protected:
       }
       if ( knownRow == 0 )
       {
-        for ( ULong j = 0; j < nrow - 1; ++j )
+        for ( unsigned long long j = 0; j < nrow - 1; ++j )
         {
           evect[i][j] = T();
         }
@@ -272,7 +272,7 @@ protected:
   
   void Shift( Matrix<Storage,T>& A, T val )
   {
-    for ( ULong i = 0; i < A.Rows(); ++i )
+    for ( unsigned long long i = 0; i < A.Rows(); ++i )
     {
       A[i][i] -= val;
     }
@@ -297,12 +297,12 @@ protected:
   Matrix<Storage,T>* m_A;
   Matrix<SparseVect,T> m_EigVal;
   Matrix<Vect,T> m_EigVect;
-  ULong m_maxIter;
+  unsigned long long m_maxIter;
   T m_tolerance;
   bool m_calcedEigVect;
   bool m_calcedEigVal;
   Vect<bool> m_needToPivot;
-  ULong m_iter;
+  unsigned long long m_iter;
   
   Matrix<Vect,T> m_VT;
   Matrix<Vect,T> m_U;

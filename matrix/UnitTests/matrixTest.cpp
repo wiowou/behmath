@@ -1,3 +1,5 @@
+#define MYDEBUG
+
 #include "../src/matrix.h"
 #include "../src/vect.h"
 #include "../src/sparseVect.h"

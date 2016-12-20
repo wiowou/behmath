@@ -23,7 +23,7 @@
 
 #include "vect.h"
 #include "sparseVect.h"
-#include "typedefs.h"
+
 
 namespace math{
 namespace vops{
@@ -43,7 +43,7 @@ class Mult
 public:
   //! Z = X * Y * W
   template< template <typename> class Vec1, template <typename> class Vec2, template <typename> class Vec3, template <typename> class Vec4 >
-  void operator()( Vec1<T> &W, Vec2<T> &X, Vec3<T> &Y, Vec4<T> &Z, ULong start = 0  )
+  void operator()( Vec1<T> &W, Vec2<T> &X, Vec3<T> &Y, Vec4<T> &Z, unsigned long long start = 0  )
   {
     operator()( W, X, Z, start );
     operator()( Z, Y, start );
@@ -51,17 +51,17 @@ public:
 
   //! Z = X * Y * W
   template< template <typename> class Vec1, template <typename> class Vec2, template <typename> class Vec3, template <typename> class Vec4 >
-  void operator()( ULong end, Vec1<T> &W, Vec2<T> &X, Vec3<T> &Y, Vec4<T> &Z )
+  void operator()( unsigned long long end, Vec1<T> &W, Vec2<T> &X, Vec3<T> &Y, Vec4<T> &Z )
   {
     operator()( end, W, X, Z );
     operator()( end, Z, Y );
   }  
   
   //! X = X * Y
-  void operator()( SparseVect<T> &X, SparseVect<T> &Y, ULong start = 0  ) //tested
+  void operator()( SparseVect<T> &X, SparseVect<T> &Y, unsigned long long start = 0  ) //tested
   {
-    ULong i = 0;
-    ULong j = 0;
+    unsigned long long i = 0;
+    unsigned long long j = 0;
     if ( start != 0 )
     {
       i = X.UpperBoundIdx(start);
@@ -78,7 +78,7 @@ public:
       {
         // resizing X so that it still consists of actual non-zero entries
         --X.m_nnz;
-        for ( ULong k = i; k < X.NNZ(); ++k )
+        for ( unsigned long long k = i; k < X.NNZ(); ++k )
         {
           X.m_pos[k] = X.m_pos[k+1];
           X.m_data[k] = X.m_data[k+1];
@@ -92,12 +92,12 @@ public:
   }
   
   //! X = X * Y
-  void operator()( ULong end, SparseVect<T> &X, SparseVect<T> &Y ) //tested
+  void operator()( unsigned long long end, SparseVect<T> &X, SparseVect<T> &Y ) //tested
   {
-    ULong i = 0;
-    ULong j = 0;
-    ULong iend = X.NNZ();
-    ULong jend = Y.NNZ();
+    unsigned long long i = 0;
+    unsigned long long j = 0;
+    unsigned long long iend = X.NNZ();
+    unsigned long long jend = Y.NNZ();
     if ( X.m_pos[iend - 1] >= end )
     {
       iend = X.UpperBoundIdx(end);
@@ -118,7 +118,7 @@ public:
       {
         // resizing X so that it still consists of actual non-zero entries
         --X.m_nnz;
-        for ( ULong k = i; k < X.NNZ(); ++k )
+        for ( unsigned long long k = i; k < X.NNZ(); ++k )
         {
           X.m_pos[k] = X.m_pos[k+1];
           X.m_data[k] = X.m_data[k+1];
@@ -133,9 +133,9 @@ public:
   }  
   
   //! X = X * Y
-  void operator()( SparseVect<T> &X, Vect<T> &Y, ULong start = 0  ) //tested
+  void operator()( SparseVect<T> &X, Vect<T> &Y, unsigned long long start = 0  ) //tested
   {
-    ULong j = 0;
+    unsigned long long j = 0;
     if ( start != 0 )
     {
       j = X.UpperBoundIdx(start);
@@ -148,10 +148,10 @@ public:
   }
 
   //! X = X * Y
-  void operator()( ULong end, SparseVect<T> &X, Vect<T> &Y ) //tested
+  void operator()( unsigned long long end, SparseVect<T> &X, Vect<T> &Y ) //tested
   {
-    ULong j = 0;
-    ULong jend = X.NNZ();
+    unsigned long long j = 0;
+    unsigned long long jend = X.NNZ();
     if ( X.m_pos[jend - 1] >= end )
     {
       jend = X.UpperBoundIdx(end);
@@ -163,14 +163,14 @@ public:
     }
   }
 
-  void operator()( Vect<T> &X, SparseVect<T> &Y, ULong start = 0 ) //tested
+  void operator()( Vect<T> &X, SparseVect<T> &Y, unsigned long long start = 0 ) //tested
   {
-    ULong j = 0;
+    unsigned long long j = 0;
     if ( start != 0 )
     {
       j = Y.UpperBoundIdx(start);
     }
-    for ( ULong i = start; i < X.Size(); ++i )
+    for ( unsigned long long i = start; i < X.Size(); ++i )
     {
       if ( i == Y.m_pos[j] )
       {
@@ -183,11 +183,11 @@ public:
     }
   }
 
-  void operator()( ULong end, Vect<T> &X, SparseVect<T> &Y ) //tested
+  void operator()( unsigned long long end, Vect<T> &X, SparseVect<T> &Y ) //tested
   {
-    ULong j = 0;
+    unsigned long long j = 0;
     //end = Z.Size() < end ? Z.Size() : end;
-    for ( ULong i = 0; i < end; ++i )
+    for ( unsigned long long i = 0; i < end; ++i )
     {
       if ( i == Y.m_pos[j] )
       {
@@ -200,27 +200,27 @@ public:
     }
   }
   
-  void operator()( Vect<T> &X, Vect<T> &Y, ULong start = 0  )
+  void operator()( Vect<T> &X, Vect<T> &Y, unsigned long long start = 0  )
   {
-    for ( ULong i = start; i < X.Size(); ++i )
+    for ( unsigned long long i = start; i < X.Size(); ++i )
     {
       X[i] *= Y[i];
     }
   }
 
-  void operator()( ULong end, Vect<T> &X, Vect<T> &Y  )
+  void operator()( unsigned long long end, Vect<T> &X, Vect<T> &Y  )
   {
     //end = Z.Size() < end ? Z.Size() : end;
-    for ( ULong i = 0; i < end; ++i )
+    for ( unsigned long long i = 0; i < end; ++i )
     {
       X[i] *= Y[i];
     }
   }
   
-  void operator()( SparseVect<T> &X, SparseVect<T> &Y, SparseVect<T> &Z, ULong start = 0  ) //tested
+  void operator()( SparseVect<T> &X, SparseVect<T> &Y, SparseVect<T> &Z, unsigned long long start = 0  ) //tested
   {
-    ULong i = 0;
-    ULong j = 0;
+    unsigned long long i = 0;
+    unsigned long long j = 0;
     if ( start != 0 )
     {
       i = X.UpperBoundIdx(start);
@@ -244,12 +244,12 @@ public:
     } 
   }
 
-  void operator()( ULong end, SparseVect<T> &X, SparseVect<T> &Y, SparseVect<T> &Z  ) //tested
+  void operator()( unsigned long long end, SparseVect<T> &X, SparseVect<T> &Y, SparseVect<T> &Z  ) //tested
   {
-    ULong i = 0;
-    ULong j = 0;
-    ULong iend = X.NNZ();
-    ULong jend = Y.NNZ();
+    unsigned long long i = 0;
+    unsigned long long j = 0;
+    unsigned long long iend = X.NNZ();
+    unsigned long long jend = Y.NNZ();
     if ( X.m_pos[iend - 1] >= end )
     {
       iend = X.UpperBoundIdx(end);
@@ -277,17 +277,17 @@ public:
     } 
   }
   
-  void operator()( SparseVect<T> &X, SparseVect<T> &Y, Vect<T> &Z, ULong start = 0  ) //tested
+  void operator()( SparseVect<T> &X, SparseVect<T> &Y, Vect<T> &Z, unsigned long long start = 0  ) //tested
   {
-    ULong i = 0;
-    ULong j = 0;
+    unsigned long long i = 0;
+    unsigned long long j = 0;
     if ( start != 0 )
     {
       i = X.UpperBoundIdx(start);
       j = Y.UpperBoundIdx(start);
     }
     
-    ULong startZeros;
+    unsigned long long startZeros;
     if ( Y.m_pos[j] > X.m_pos[i] )
     {
       startZeros = Y.m_pos[j] < Z.Size() ? Y.m_pos[j] : Z.Size();
@@ -299,7 +299,7 @@ public:
       j = Y.UpperBoundIdx( startZeros );
     }
 
-    ULong k;
+    unsigned long long k;
     for ( k = start; k < startZeros; ++k )
     {
       Z[k] = T();
@@ -327,12 +327,12 @@ public:
     }
   }
 
-  void operator()( ULong end, SparseVect<T> &X, SparseVect<T> &Y, Vect<T> &Z ) //tested
+  void operator()( unsigned long long end, SparseVect<T> &X, SparseVect<T> &Y, Vect<T> &Z ) //tested
   {
-    ULong i = 0;
-    ULong j = 0;
-    ULong iend = X.NNZ();
-    ULong jend = Y.NNZ();
+    unsigned long long i = 0;
+    unsigned long long j = 0;
+    unsigned long long iend = X.NNZ();
+    unsigned long long jend = Y.NNZ();
     if ( X.m_pos[iend - 1] >= end )
     {
       iend = X.UpperBoundIdx(end);
@@ -342,7 +342,7 @@ public:
       jend = Y.UpperBoundIdx(end);
     }
     
-    ULong startZeros;
+    unsigned long long startZeros;
     if ( Y.m_pos[j] > X.m_pos[i] )
     {
       startZeros = Y.m_pos[j] < Z.Size() ? Y.m_pos[j] : end;
@@ -354,7 +354,7 @@ public:
       j = Y.UpperBoundIdx( startZeros );
     }
 
-    ULong k;
+    unsigned long long k;
     for ( k = 0; k < startZeros; ++k )
     {
       Z[k] = T();
@@ -382,9 +382,9 @@ public:
     }
   }
   
-  void operator()( Vect<T> &X, SparseVect<T> &Y, SparseVect<T> &Z, ULong start = 0  ) //tested
+  void operator()( Vect<T> &X, SparseVect<T> &Y, SparseVect<T> &Z, unsigned long long start = 0  ) //tested
   {
-    ULong j = 0;
+    unsigned long long j = 0;
     if ( start != 0 )
     {
       j = Y.UpperBoundIdx(start);
@@ -396,15 +396,15 @@ public:
     }
   }
   
-  void operator()( SparseVect<T> &X, Vect<T> &Y, SparseVect<T> &Z, ULong start = 0  ) //tested
+  void operator()( SparseVect<T> &X, Vect<T> &Y, SparseVect<T> &Z, unsigned long long start = 0  ) //tested
   {
     operator()( Y, X, Z, start );
   }
 
-  void operator()( ULong end, Vect<T> &X, SparseVect<T> &Y, SparseVect<T> &Z ) //tested
+  void operator()( unsigned long long end, Vect<T> &X, SparseVect<T> &Y, SparseVect<T> &Z ) //tested
   {
-    ULong j = 0;
-    ULong jend = Y.NNZ();
+    unsigned long long j = 0;
+    unsigned long long jend = Y.NNZ();
     if ( Y.m_pos[jend - 1] >= end )
     {
       jend = Y.UpperBoundIdx(end);
@@ -416,19 +416,19 @@ public:
     }
   }
   
-  void operator()( ULong end, SparseVect<T> &X, Vect<T> &Y, SparseVect<T> &Z  ) //tested
+  void operator()( unsigned long long end, SparseVect<T> &X, Vect<T> &Y, SparseVect<T> &Z  ) //tested
   {
     operator()( end, Y, X, Z );
   }
   
-  void operator()( Vect<T> &X, SparseVect<T> &Y, Vect<T> &Z, ULong start = 0 )  //tested
+  void operator()( Vect<T> &X, SparseVect<T> &Y, Vect<T> &Z, unsigned long long start = 0 )  //tested
   {
-    ULong j = 0;
+    unsigned long long j = 0;
     if ( start != 0 )
     {
       j = Y.UpperBoundIdx(start);
     }
-    for ( ULong i = start; i < Z.Size(); ++i )
+    for ( unsigned long long i = start; i < Z.Size(); ++i )
     {
       if ( i == Y.m_pos[j] )
       {
@@ -441,16 +441,16 @@ public:
     }
   }
   
-  void operator()( SparseVect<T> &X, Vect<T> &Y, Vect<T> &Z, ULong start = 0  )  //tested
+  void operator()( SparseVect<T> &X, Vect<T> &Y, Vect<T> &Z, unsigned long long start = 0  )  //tested
   {
     operator()( Y, X, Z, start );
   }
 
-  void operator()( ULong end, Vect<T> &X, SparseVect<T> &Y, Vect<T> &Z )  //tested
+  void operator()( unsigned long long end, Vect<T> &X, SparseVect<T> &Y, Vect<T> &Z )  //tested
   {
-    ULong j = 0;
+    unsigned long long j = 0;
     //end = Z.Size() < end ? Z.Size() : end;
-    for ( ULong i = 0; i < end; ++i )
+    for ( unsigned long long i = 0; i < end; ++i )
     {
       if ( i == Y.m_pos[j] )
       {
@@ -463,23 +463,23 @@ public:
     }
   }
 
-  void operator()( ULong end, SparseVect<T> &X, Vect<T> &Y, Vect<T> &Z )  //tested
+  void operator()( unsigned long long end, SparseVect<T> &X, Vect<T> &Y, Vect<T> &Z )  //tested
   {
     operator()( end, Y, X, Z );
   }
   
-  void operator()( Vect<T> &X, Vect<T> &Y, Vect<T> &Z, ULong start = 0  )
+  void operator()( Vect<T> &X, Vect<T> &Y, Vect<T> &Z, unsigned long long start = 0  )
   {
-    for ( ULong i = start; i < X.Size(); ++i )
+    for ( unsigned long long i = start; i < X.Size(); ++i )
     {
       Z[i] = X[i] * Y[i];
     }
   }
 
-  void operator()( ULong end, Vect<T> &X, Vect<T> &Y, Vect<T> &Z  )
+  void operator()( unsigned long long end, Vect<T> &X, Vect<T> &Y, Vect<T> &Z  )
   {
     //end = Z.Size() < end ? Z.Size() : end;
-    for ( ULong i = 0; i < end; ++i )
+    for ( unsigned long long i = 0; i < end; ++i )
     {
       Z[i] = X[i] * Y[i];
     }

@@ -21,12 +21,11 @@
 #ifndef _MATH_RMAJ_MATRIX_h
 #define _MATH_RMAJ_MATRIX_h
 
-#include "impl/matrixConfig.h"
 #include "vect.h"
 #include "sparseVect.h"
 #include <iostream>
 #include <iomanip>
-#include "typedefs.h"
+
 
 namespace math{
 
@@ -46,12 +45,12 @@ public:
     Init(2,1);
   }
   
-  explicit Matrix( ULong size )
+  explicit Matrix( unsigned long long size )
   {
     Init(size);
   }
   
-  Matrix( ULong mrow, ULong ncol  )
+  Matrix( unsigned long long mrow, unsigned long long ncol  )
   {
     Init(mrow, ncol);
   }
@@ -67,7 +66,7 @@ public:
     m_size = other.m_size;
     m_isTransposed = other.m_isTransposed;
     m_row = new Storage<T> [m_size];
-    for ( ULong i = 0; i < m_size; ++i )
+    for ( unsigned long long i = 0; i < m_size; ++i )
     {
       m_row[i] = other.m_row[i];
     }
@@ -81,7 +80,7 @@ public:
   }
   
   //! Returns number of rows of the matrix, taking account of transposition
-  ULong Rows()
+  unsigned long long Rows()
   {
     if ( m_isTransposed )
     {
@@ -91,13 +90,13 @@ public:
   }
 
   //! Returns number of physical rows of the matrix, not taking account of transposition
-  ULong PRows()
+  unsigned long long PRows()
   {
     return m_size;
   }
   
   //! Returns number of cols of the matrix, taking account of transposition
-  ULong Cols()
+  unsigned long long Cols()
   {
     if ( m_isTransposed )
     {
@@ -107,7 +106,7 @@ public:
   }
 
   //! Returns number of cols of the matrix, not taking account of transposition
-  ULong PCols()
+  unsigned long long PCols()
   {
     return m_row[0].Size();
   }
@@ -115,7 +114,7 @@ public:
   void Swap( Matrix &other )
   {
     bool tmp_isTransposed = other.m_isTransposed;
-    ULong tmp_size = other.m_size;
+    unsigned long long tmp_size = other.m_size;
     Storage<T>* tmp_row = other.m_row;
     
     other.m_isTransposed = m_isTransposed;
@@ -129,12 +128,12 @@ public:
   
   //! Re-dimensions the matrix and its child row vectors. Deletes previous data contained within.
   //! This method assumes a square matrix
-  void Resize( ULong size )
+  void Resize( unsigned long long size )
   {
     if ( size <= m_size )
     {
       m_size = size;
-      for ( ULong i = 0; i < m_size; ++i )
+      for ( unsigned long long i = 0; i < m_size; ++i )
       {
         m_row[i].Resize(m_size);
       }
@@ -145,13 +144,13 @@ public:
   }
   
   //! Re-dimensions the matrix and its child row vectors. Deletes previous data contained within.
-  void Resize( ULong mrow, ULong ncol )
+  void Resize( unsigned long long mrow, unsigned long long ncol )
   {
     m_isTransposed = false;
     if ( mrow <= m_size )
     {
       m_size = mrow;
-      for ( ULong i = 0; i < m_size; ++i )
+      for ( unsigned long long i = 0; i < m_size; ++i )
       {
         m_row[i].Resize(ncol);
       }
@@ -159,7 +158,7 @@ public:
     }
 
     Storage<T>* row = new Storage<T> [mrow];  
-    for ( ULong i = 0; i < m_size; ++i )
+    for ( unsigned long long i = 0; i < m_size; ++i )
     {
       row[i] = m_row[i];
     }
@@ -167,7 +166,7 @@ public:
     Destroy();
     m_row = row;
     
-    for ( ULong i = 0; i < m_size; ++i )
+    for ( unsigned long long i = 0; i < m_size; ++i )
     {
       m_row[i].Resize(ncol);
     }
@@ -183,11 +182,11 @@ public:
   //! If matrix is sparse, fill data in using the vector's Data method: matrix[i].Data()
   void Data( T* data ) //tested
   {
-    ULong nrow = m_size;
-    ULong ncol = m_row[0].Size();
-    for ( ULong i = 0; i < nrow; ++i )
+    unsigned long long nrow = m_size;
+    unsigned long long ncol = m_row[0].Size();
+    for ( unsigned long long i = 0; i < nrow; ++i )
     {
-      for ( ULong j = 0; j < ncol; ++j )
+      for ( unsigned long long j = 0; j < ncol; ++j )
       {
         Set( i,j, *data++ );
       }
@@ -195,13 +194,13 @@ public:
   }
   
   //! Returns a row vector
-  Storage<T>& operator[]( ULong m )
+  Storage<T>& operator[]( unsigned long long m )
   {
     return m_row[m];
   }
   
   //! Gets/Sets the m,n element of the matrix. Recognizes if matrix is transposed.
-  T& operator()( ULong m, ULong n ) //tested
+  T& operator()( unsigned long long m, unsigned long long n ) //tested
   {
     if ( m_isTransposed )
     {
@@ -211,7 +210,7 @@ public:
   }
   
   //! Sets the m,n element of the matrix. Recognizes if matrix is transposed.
-  void Set( ULong m, ULong n, T val ) //tested
+  void Set( unsigned long long m, unsigned long long n, T val ) //tested
   {
     if ( m_isTransposed )
     {
@@ -232,18 +231,18 @@ public:
     return m_isTransposed;
   }
   
-  void RowSwap( ULong rowNum1, ULong rowNum2 ) //tested
+  void RowSwap( unsigned long long rowNum1, unsigned long long rowNum2 ) //tested
   {
     m_row[rowNum1].Swap( m_row[rowNum2] );
   }
 
   //! Returns the row number for the maximum pivot value below @param pivotIdx row
-  ULong MaxIdxBelow( const ULong pivotIdx ) const //tested
+  unsigned long long MaxIdxBelow( const unsigned long long pivotIdx ) const //tested
   {
-    ULong rowEnd = m_size;
-    ULong max = pivotIdx;
+    unsigned long long rowEnd = m_size;
+    unsigned long long max = pivotIdx;
     T maxVal = m_row[pivotIdx][pivotIdx];
-    for ( ULong i = pivotIdx + 1; i < rowEnd; ++i )
+    for ( unsigned long long i = pivotIdx + 1; i < rowEnd; ++i )
     {   
       T val = m_row[i][pivotIdx];
       if ( val * val > maxVal * maxVal  )
@@ -256,12 +255,12 @@ public:
   }
   
   //! Returns the row number for the maximum pivot value above @param pivotIdx row
-  ULong MaxIdxAbove( const ULong pivotIdx ) const //tested
+  unsigned long long MaxIdxAbove( const unsigned long long pivotIdx ) const //tested
   {
-    ULong rowEnd = 0;
-    ULong max = pivotIdx;
+    unsigned long long rowEnd = 0;
+    unsigned long long max = pivotIdx;
     T maxVal = m_row[pivotIdx][pivotIdx];
-    for ( ULong i = pivotIdx; i > rowEnd; --i )
+    for ( unsigned long long i = pivotIdx; i > rowEnd; --i )
     {   
       T val = m_row[i - 1][pivotIdx];
       if ( val * val > maxVal * maxVal )
@@ -276,8 +275,8 @@ public:
   //! Print the matrix
   friend std::ostream& operator<<( std::ostream& os, Matrix& A )
   {
-    ULong nrow = A.m_size;
-    ULong ncol = A[0].Size();
+    unsigned long long nrow = A.m_size;
+    unsigned long long ncol = A[0].Size();
     if ( A.IsTransposed() )
     {
       nrow = A[0].Size();
@@ -287,10 +286,10 @@ public:
     os << "Matrix( ";
     os << nrow << "x" << ncol << " )" << " = " << std::endl;
     
-    for (ULong i = 0; i < nrow; ++i )
+    for (unsigned long long i = 0; i < nrow; ++i )
     {
       os << "  [";
-      for (ULong j = 0; j < ncol; ++j )
+      for (unsigned long long j = 0; j < ncol; ++j )
       {
         os << std::fixed << std::setw(10) << std::setprecision(4);
         if ( A.IsTransposed() )
@@ -310,27 +309,27 @@ public:
 
 protected: //methods
   
-  void Init( ULong size )
+  void Init( unsigned long long size )
   {
     m_isTransposed = false;
     size = size < 2 ? 2 : size;
     m_row = new Storage<T> [size];
     m_size = size;
     
-    for ( ULong i = 0; i < m_size; ++i )
+    for ( unsigned long long i = 0; i < m_size; ++i )
     {
       m_row[i].Resize(m_size);
     }
   }
   
-  void Init( ULong mrow, ULong ncol )
+  void Init( unsigned long long mrow, unsigned long long ncol )
   { 
     m_isTransposed = false;
     mrow = mrow < 2 ? 2 : mrow;
     m_row = new Storage<T> [mrow];
     m_size = mrow;
     
-    for ( ULong i = 0; i < m_size; ++i )
+    for ( unsigned long long i = 0; i < m_size; ++i )
     {
       m_row[i].Resize(ncol);
     }
@@ -345,7 +344,7 @@ protected: //members
   bool m_isTransposed;
   
   //! number of rows in the matrix
-  ULong m_size;
+  unsigned long long m_size;
   
   //! pointer to a row vector
   Storage<T>* m_row;

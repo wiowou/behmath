@@ -23,7 +23,7 @@
 
 #include "vect.h"
 #include "sparseVect.h"
-#include "typedefs.h"
+
 
 namespace math{
 namespace vops{
@@ -41,10 +41,10 @@ class Axpy
 {
 
 public:
-  void operator()( T A, SparseVect<T> &X, SparseVect<T> &Y, ULong start = 0 ) //tested
+  void operator()( T A, SparseVect<T> &X, SparseVect<T> &Y, unsigned long long start = 0 ) //tested
   {
-    ULong i = 0;
-    ULong j = 0;
+    unsigned long long i = 0;
+    unsigned long long j = 0;
     if ( start != 0 )
     {
       i = X.UpperBoundIdx(start);
@@ -74,12 +74,12 @@ public:
     }
   }
 
-  void operator()( ULong end, T A, SparseVect<T> &X, SparseVect<T> &Y ) //tested
+  void operator()( unsigned long long end, T A, SparseVect<T> &X, SparseVect<T> &Y ) //tested
   {
-    ULong i = 0;
-    ULong j = 0;
-    ULong iend = X.NNZ();
-    ULong jend = Y.NNZ();
+    unsigned long long i = 0;
+    unsigned long long j = 0;
+    unsigned long long iend = X.NNZ();
+    unsigned long long jend = Y.NNZ();
     if ( X.m_pos[iend - 1] >= end )
     {
       iend = X.UpperBoundIdx(end);
@@ -114,10 +114,10 @@ public:
     }
   }
   
-  void operator()( T A, SparseVect<T> &X, SparseVect<T> &Y, SparseVect<T> &Z, ULong start = 0 ) //tested
+  void operator()( T A, SparseVect<T> &X, SparseVect<T> &Y, SparseVect<T> &Z, unsigned long long start = 0 ) //tested
   {
-    ULong i = 0;
-    ULong j = 0;
+    unsigned long long i = 0;
+    unsigned long long j = 0;
     if ( start != 0 )
     {
       i = X.UpperBoundIdx(start);
@@ -151,12 +151,12 @@ public:
     }
   }
 
-  void operator()( ULong end, T A, SparseVect<T> &X, SparseVect<T> &Y, SparseVect<T> &Z ) //tested
+  void operator()( unsigned long long end, T A, SparseVect<T> &X, SparseVect<T> &Y, SparseVect<T> &Z ) //tested
   {
-    ULong i = 0;
-    ULong j = 0;
-    ULong iend = X.NNZ();
-    ULong jend = Y.NNZ();
+    unsigned long long i = 0;
+    unsigned long long j = 0;
+    unsigned long long iend = X.NNZ();
+    unsigned long long jend = Y.NNZ();
     if ( X.m_pos[iend - 1] >= end )
     {
       iend = X.UpperBoundIdx(end);
@@ -194,9 +194,9 @@ public:
     }
   }
   
-  void operator()( T A, SparseVect<T> &X, Vect<T> &Y, ULong start = 0 ) //tested
+  void operator()( T A, SparseVect<T> &X, Vect<T> &Y, unsigned long long start = 0 ) //tested
   {
-    ULong i = 0;
+    unsigned long long i = 0;
     if ( start != 0 )
     {
       i = X.UpperBoundIdx(start);
@@ -208,23 +208,59 @@ public:
     }
   }
 
-  void operator()( T A, Vect<T> &X, SparseVect<T> &Y, ULong start = 0 ) //tested
+  void operator()( T A, Vect<T> &X, SparseVect<T> &Y, unsigned long long start = 0 ) //tested
   {
-    operator()( A, X, Y, start );
+    if (Y.Size() == 0) return;
+    SparseVect<T> Z;
+    Z.Allocate(Y.Size() );
+    unsigned long long end = Y.Size();
+    if (X.Size() < end) end = X.Size();
+    unsigned long long j = 0;
+    unsigned long long i = 0;
+    for ( ; i < start; ++i )
+    {
+      if (j < Y.NNZ() && i == Y.m_pos[j])
+      {
+        Z.PushBack(i, Y.m_data[j]);
+        ++j;
+      }
+    }
+    for ( ; i < end; ++i )
+    {
+      if (j < Y.NNZ() && i == Y.m_pos[j])
+      {
+        Z.PushBack(i, A * X.m_data[i] + Y.m_data[j]);
+        ++j;
+      }
+      else
+      {
+        Z.PushBack(i, A * X.m_data[i]);
+      }
+      
+    }
+    for ( ; i < Y.Size(); ++i)
+    {
+      if (j < Y.NNZ() && i == Y.m_pos[j])
+      {
+        Z.PushBack(i, Y.m_data[j]);
+        ++j;
+      }
+    }
+    Z.Swap(Y);
   }  
   
-  void operator()( T A, Vect<T> &X, Vect<T> &Y, ULong start = 0 )
+  void operator()( T A, Vect<T> &X, Vect<T> &Y, unsigned long long start = 0 )
   {
-    for ( ULong i = start; i < Y.Size(); ++i )
+    for ( unsigned long long i = start; i < Y.Size(); ++i )
     {
       Y.m_data[i] += A * X.m_data[i];
     }
   }
 
-  void operator()( ULong end, T A, Vect<T> &X, Vect<T> &Y )
+  void operator()( unsigned long long end, T A, Vect<T> &X, Vect<T> &Y )
   {
     //end = Y.Size() < end ? Y.Size() : end;
-    for ( ULong i = 0; i < end; ++i )
+    for ( unsigned long long i = 0; i < end; ++i )
     {
       Y.m_data[i] += A * X.m_data[i];
     }

@@ -164,9 +164,9 @@ public:
     vops::Dot<T> dot;
     
     L[0].Back() = sqrt( L[0].Back() );
-    for ( ULong i = 1; i < L.Rows(); ++i )
+    for ( unsigned long long i = 1; i < L.Rows(); ++i )
     {
-      for ( ULong j = L[i].Pos(0), k = 0; j < i + 1; ++j )
+      for ( unsigned long long j = L[i].Pos(0), k = 0; j < i + 1; ++j )
       {
         if ( k == L[i].NNZ() )
         {
@@ -242,9 +242,9 @@ public:
     vops::Dot<T> dot;
     
     L[0][0] = sqrt( L[0][0] );
-    for ( ULong i = 1; i < L.Rows(); ++i )
+    for ( unsigned long long i = 1; i < L.Rows(); ++i )
     {
-      for ( ULong j = 0; j < i + 1; ++j )
+      for ( unsigned long long j = 0; j < i + 1; ++j )
       {
         if ( j == i )
         {

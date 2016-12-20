@@ -1,3 +1,5 @@
+#define MYDEBUG
+
 #include "../src/curve.h"
 #include "../src/polynomial.h"
 #include "../src/power.h"

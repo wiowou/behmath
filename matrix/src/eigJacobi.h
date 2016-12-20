@@ -55,7 +55,7 @@ public:
   
   //! calculates the the eigenvalues and eigenvectors of A (same as A Transpose)
   //! for a non-singular square matrix
-  ULong Eig( ULong maxIter, T tol = 1e-5, bool calcEigVect = false )
+  unsigned long long Eig( unsigned long long maxIter, T tol = 1e-5, bool calcEigVect = false )
   {
     Matrix<Storage,T>& A = *m_A;
     m_EigVal.Clear();
@@ -68,12 +68,12 @@ public:
     }
     
     Matrix<Storage,T> res( A.Rows() );
-    ULong iter = 0;    
+    unsigned long long iter = 0;    
     while ( iter < maxIter && ExceedsOffDiagTol( A, tol) )
     {
-      for ( ULong i = 0; i < A.Rows(); ++i )
+      for ( unsigned long long i = 0; i < A.Rows(); ++i )
       {
-        for ( ULong j = 0; j < A[i].NNZ(); ++j )
+        for ( unsigned long long j = 0; j < A[i].NNZ(); ++j )
         {
           if ( A[i].Pos(j) >= i )
           {
@@ -101,7 +101,7 @@ public:
     if( iter < maxIter )
     {
       m_EigVal.Resize( A.Rows() );
-      for ( ULong i = 0; i < A.Rows(); ++i )
+      for ( unsigned long long i = 0; i < A.Rows(); ++i )
       {
         m_EigVal[i].PushBack( i, A[i][i] );
       }      
@@ -109,7 +109,7 @@ public:
     return iter;
   }
 protected:
-  void CreateGivensRotMatrix( ULong i, ULong j, Matrix<Storage,T>& A, Matrix<SparseVect,T> &G )
+  void CreateGivensRotMatrix( unsigned long long i, unsigned long long j, Matrix<Storage,T>& A, Matrix<SparseVect,T> &G )
   {
     T Aij = A[i](j);
     T Aij2 = Aij * Aij;
@@ -124,7 +124,7 @@ protected:
     G[j].Set(j, c); G[j].Set(i, -s);
     G[i].Set(j, s); G[i].Set(i, c); 
   }
-  void TransposeGivens( ULong i, ULong j, Matrix<SparseVect,T> &G )
+  void TransposeGivens( unsigned long long i, unsigned long long j, Matrix<SparseVect,T> &G )
   {
     G[i][j] *= -1.0;
     G[j][i] *= -1.0;    

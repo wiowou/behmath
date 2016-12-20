@@ -51,7 +51,7 @@ public:
     InitialGuess();
     
     Vect<CyclicRow<Storage,T> > rowSolver( m_x->Size() );
-    for ( ULong i = 0; i < rowSolver.Size(); ++i )
+    for ( unsigned long long i = 0; i < rowSolver.Size(); ++i )
     {
       rowSolver[i].SetRow( &(*m_A)[i] );
       rowSolver[i].SetX( m_x );
@@ -67,7 +67,7 @@ public:
     while ( m_nIter < m_maxIter && Continue() )
     {
       //this loop cannot be parallelized
-      for ( ULong i = 0; i < rowSolver.Size(); ++i )
+      for ( unsigned long long i = 0; i < rowSolver.Size(); ++i )
       {
         rowSolver[i].Exec();
       }

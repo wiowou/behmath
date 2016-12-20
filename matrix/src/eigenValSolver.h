@@ -57,9 +57,9 @@ public:
 protected:
   bool ExceedsOffDiagTol( Matrix< Vect, T >& A, T tol )
   {
-    for ( ULong i = 0; i < A.Rows(); ++i )
+    for ( unsigned long long i = 0; i < A.Rows(); ++i )
     {
-      for ( ULong j = 0; j < A[i].NNZ(); ++j )
+      for ( unsigned long long j = 0; j < A[i].NNZ(); ++j )
       {
         if ( A[i].Pos(j) >= i )
         {

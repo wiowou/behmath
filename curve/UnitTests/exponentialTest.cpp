@@ -1,3 +1,5 @@
+#define MYDEBUG
+
 #include "../src/exponential.h"
 #include <iostream>
 #include <fstream>

@@ -154,12 +154,12 @@ protected:
     if ( m_c != NULL )
     {
       /*
-      for ( ULong i = 0; i < c.NNZ(); ++i )
+      for ( unsigned long long i = 0; i < c.NNZ(); ++i )
       {
         c(i) = sqrt( c(i) ); //weighting factors must be positive
       }
       vops::Mult<T> mult;
-      for ( ULong i = 0; i < AT.Rows(); ++i )
+      for ( unsigned long long i = 0; i < AT.Rows(); ++i )
       {
         mult( AT[i], c );
       }
@@ -202,12 +202,12 @@ protected:
     subtr( tmp, f, m_ATCBminusF );
   }
   
-  bool DimCheck( SparseVect<T> &v, ULong size )
+  bool DimCheck( SparseVect<T> &v, unsigned long long size )
   {
     return v.NNZ() > size;
   }
   
-  bool DimCheck( Vect<T> &v, ULong size )
+  bool DimCheck( Vect<T> &v, unsigned long long size )
   {
     return v.Size() != size;
   }

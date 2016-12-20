@@ -53,7 +53,7 @@ public:
     //setting up each row solver object so that it can run independently in parallel
     //as a self-contained unit. Pointers to A,b,x,xNew are set along with the row number
     Vect<JacobiRow<Storage,T> > rowSolver( m_x->Size() );
-    for ( ULong i = 0; i < rowSolver.Size(); ++i )
+    for ( unsigned long long i = 0; i < rowSolver.Size(); ++i )
     {
       rowSolver[i].SetRow( &(*m_A)[i] );
       rowSolver[i].SetX( m_x );
@@ -69,7 +69,7 @@ public:
     while ( m_nIter < m_maxIter && Continue() )
     {
       //this loop can be parallelized
-      for ( ULong i = 0; i < rowSolver.Size(); ++i )
+      for ( unsigned long long i = 0; i < rowSolver.Size(); ++i )
       {
         rowSolver[i].Exec();
       }

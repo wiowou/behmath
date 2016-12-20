@@ -1,3 +1,5 @@
+#define MYDEBUG
+
 #include "../src/axpy.h"
 #include <iostream>
 #include <fstream>
@@ -58,18 +60,17 @@ public:
     
     axpy(-1.0, v1, sv2, 2);
     
-    i += v1.Size() != 15;
+    i += sv2.Size() != 14;
     
-    i += CheckPair( v1, 0, 0.0 );
-    i += CheckPair( v1, 1, 0.0 );
-    i += CheckPair( v1, 2, -16.4 );
-    i += CheckPair( v1, 3, -13.2 );
-    i += CheckPair( v1, 5, -15.3 );
-    i += CheckPair( v1, 8, -21.0 );
-    i += CheckPair( v1, 11, -8.0 );
-    i += CheckPair( v1, 12, -32.6 );
-    i += CheckPair( v1, 13, -13.0 );
-    i += CheckPair( v1, 14, 7.0 );
+    i += CheckPair( 0, -15.6 );
+    i += CheckPair( 1, -17.0 );
+    i += CheckPair( 2, 16.4 );
+    i += CheckPair( 3, 13.2 );
+    i += CheckPair( 5, 15.3 );
+    i += CheckPair( 8, 21.0 );
+    i += CheckPair( 11, 8.0 );
+    i += CheckPair( 12, 32.6 );
+    i += CheckPair( 13, 13.0 );
     
     sv3.Clear();
     sv2.Clear();
@@ -155,7 +156,7 @@ public:
     return i;
   }
   
-  int CheckPair( ULong pos, double d )
+  int CheckPair( unsigned long long pos, double d )
   {
     if ( std::abs( ( sv2[pos] - d) / d ) > 0.0001 )
     {
@@ -164,7 +165,7 @@ public:
     }
     return 0;
   }
-  int CheckPair( SparseVect<double> &sv, ULong pos, double d )
+  int CheckPair( SparseVect<double> &sv, unsigned long long pos, double d )
   {
     if ( std::abs( ( sv[pos] - d) / d ) > 0.0001 )
     {
@@ -173,7 +174,7 @@ public:
     }
     return 0;
   }
-  int CheckPair( Vect<double> &v, ULong pos, double d )
+  int CheckPair( Vect<double> &v, unsigned long long pos, double d )
   {
     if ( std::abs(d) < 1e-10 )
     {
@@ -191,7 +192,7 @@ public:
     }
     return 0;
   }    
-  int CheckPair2( ULong pos, double d )
+  int CheckPair2( unsigned long long pos, double d )
   {
     if ( std::abs( ( v1[pos] - d) / d ) > 0.0001 )
     {

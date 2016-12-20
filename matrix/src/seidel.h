@@ -65,7 +65,7 @@ public:
     while ( m_nIter < m_maxIter && Continue() )
     {
       // [x] = [U][x]
-      for ( ULong i = 0; i < U.Rows(); ++i )
+      for ( unsigned long long i = 0; i < U.Rows(); ++i )
       {
         x[i] = dot( U[i], x, i + 1 );
       }
@@ -91,7 +91,7 @@ protected:
   void UpdateNotWithinTol( Vect<T> &v1, Vect<T> &v2 )
   {
     // can be parallelized
-    for ( ULong i = 0; i < m_notWithinTol.Size(); ++i )
+    for ( unsigned long long i = 0; i < m_notWithinTol.Size(); ++i )
     {
       m_notWithinTol[i] = std::abs( v1[i] - v2[i] ) > m_tolerance;
     }

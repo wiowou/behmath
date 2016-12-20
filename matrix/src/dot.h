@@ -26,7 +26,7 @@
 #include "mult.h"
 #include "sum.h"
 #include "matrix.h"
-#include "typedefs.h"
+
 
 namespace math{
 namespace vops{
@@ -48,9 +48,9 @@ public:
   template< template <typename> class Vec, template <typename> class Vec2, template <typename> class Vec3, template <typename> class Vec4 >
   void operator()( Matrix< Vec, T > &lhs, Vec2<T>& diag, Matrix< Vec3, T > &rhs, Matrix< Vec4, T > &result ) 
   {
-    for ( ULong i = 0; i < result.PRows(); ++i )
+    for ( unsigned long long i = 0; i < result.PRows(); ++i )
     {
-      for ( ULong j = 0; j < result.PCols(); ++j )
+      for ( unsigned long long j = 0; j < result.PCols(); ++j )
       {
         result[i][j] = operator()( lhs[i], diag, rhs[j] );
       }
@@ -63,9 +63,9 @@ public:
   template< template <typename> class Vec, template <typename> class Vec2, template <typename> class Vec3 >
   void operator()( Matrix< Vec, T > &lhs, Vec2<T>& diag, Matrix< Vec3, T > &result ) 
   {
-    for ( ULong i = 0; i < result.PRows(); ++i )
+    for ( unsigned long long i = 0; i < result.PRows(); ++i )
     {
-      for ( ULong j = 0; j < result.PCols(); ++j )
+      for ( unsigned long long j = 0; j < result.PCols(); ++j )
       {
         result[i][j] = operator()( lhs[i], diag, lhs[j] );
       }
@@ -77,9 +77,9 @@ public:
   template< template <typename> class Vec, template <typename> class Vec2, template <typename> class Vec3 >
   void operator()( Matrix< Vec, T > &lhs, Matrix< Vec2, T > &rhs, Matrix< Vec3, T > &result )
   {
-    for ( ULong i = 0; i < result.PRows(); ++i )
+    for ( unsigned long long i = 0; i < result.PRows(); ++i )
     {
-      for ( ULong j = 0; j < result.PCols(); ++j )
+      for ( unsigned long long j = 0; j < result.PCols(); ++j )
       {
         result[i][j] = operator()( lhs[i], rhs[j] );
       }
@@ -91,9 +91,9 @@ public:
   template< template <typename> class Vec, template <typename> class Vec2 >
   void operator()( Matrix< Vec, T > &lhs, Matrix< Vec2, T > &result )
   {
-    for ( ULong i = 0; i < result.PRows(); ++i )
+    for ( unsigned long long i = 0; i < result.PRows(); ++i )
     {
-      for ( ULong j = 0; j < result.PCols(); ++j )
+      for ( unsigned long long j = 0; j < result.PCols(); ++j )
       {
         result[i][j] = operator()( lhs[i], lhs[j] );
       }
@@ -105,14 +105,14 @@ public:
   template< template <typename> class Vec, template <typename> class Vec2 >
   void operator()( Matrix< Vec, T > &matrix, Vec2<T>& vector, Vect<T>& result ) //tested
   {
-    for ( ULong i = 0; i < matrix.PRows(); ++i )
+    for ( unsigned long long i = 0; i < matrix.PRows(); ++i )
     {
       result.Set( i, operator()( matrix[i], vector ) );
     }
   }
 
   template< class Vec1, class Vec2, class Vec3 >
-  T operator()( Vec1 &W, Vec2 &X, Vec3 &Y, ULong start = 0 )
+  T operator()( Vec1 &W, Vec2 &X, Vec3 &Y, unsigned long long start = 0 )
   {
     Mult<T> mult;
     SparseVect<T> Z;
@@ -122,7 +122,7 @@ public:
   }
   
   template< class Vec1, class Vec2, class Vec3 >
-  T operator()( ULong end, Vec1 &W, Vec2 &X, Vec3 &Y )
+  T operator()( unsigned long long end, Vec1 &W, Vec2 &X, Vec3 &Y )
   {
     Mult<T> mult;
     SparseVect<T> Z;
@@ -131,7 +131,7 @@ public:
     return sum( Z );
   }
 
-  T operator()( Vect<T> &W, Vect<T> &X, Vect<T> &Y, ULong start = 0 )
+  T operator()( Vect<T> &W, Vect<T> &X, Vect<T> &Y, unsigned long long start = 0 )
   {
     Mult<T> mult;
     Vect<T> Z;
@@ -141,7 +141,7 @@ public:
     return sum( Z, start );
   }
 
-  T operator()( ULong end, Vect<T> &W, Vect<T> &X, Vect<T> &Y )
+  T operator()( unsigned long long end, Vect<T> &W, Vect<T> &X, Vect<T> &Y )
   {
     Mult<T> mult;
     Vect<T> Z;
@@ -152,7 +152,7 @@ public:
   }
   
   template< class Vec1, class Vec2 >
-  T operator()( Vec1 &X, Vec2 &Y, ULong start = 0 ) //tested
+  T operator()( Vec1 &X, Vec2 &Y, unsigned long long start = 0 ) //tested
   {
     Mult<T> mult;
     SparseVect<T> Z;
@@ -162,7 +162,7 @@ public:
   }
 
   template< class Vec1, class Vec2 >
-  T operator()( ULong end, Vec1 &X, Vec2 &Y )  //tested
+  T operator()( unsigned long long end, Vec1 &X, Vec2 &Y )  //tested
   {
     Mult<T> mult;
     SparseVect<T> Z;
@@ -171,7 +171,7 @@ public:
     return sum( end, Z );
   }
   
-  T operator()( Vect<T> &X, Vect<T> &Y, ULong start = 0 ) //tested
+  T operator()( Vect<T> &X, Vect<T> &Y, unsigned long long start = 0 ) //tested
   {
     Mult<T> mult;
     Vect<T> Z;
@@ -181,7 +181,7 @@ public:
     return sum( Z, start );
   }
 
-  T operator()( ULong end, Vect<T> &X, Vect<T> &Y ) //tested
+  T operator()( unsigned long long end, Vect<T> &X, Vect<T> &Y ) //tested
   {
     Mult<T> mult;
     Vect<T> Z;

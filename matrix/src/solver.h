@@ -21,8 +21,6 @@
 #ifndef _MATH_SOLVER_h
 #define _MATH_SOLVER_h
 
-#include "impl/matrixConfig.h"
-#include "typedefs.h"
 #include "dot.h"
 #include "sum.h"
 #include "vect.h"
@@ -47,7 +45,7 @@ public:
       BackSolveUpTransposed( A, x, b);
       return;
     }
-    ULong i = A.Cols();
+    unsigned long long i = A.Cols();
     x[i-1] = b[i-1] / A[i-1][i-1];
     --i;
     vops::Dot<T> dot;
@@ -59,7 +57,7 @@ public:
   
   void BackSolveDown( Matrix< Storage, T >& A, Vect<T>& x, Vect<T>& b ) //tested
   {
-    ULong i = 0;
+    unsigned long long i = 0;
     x[i] = b[i] / A[i][i];
     ++i;
     vops::Dot<T> dot;
@@ -72,7 +70,7 @@ public:
   void InitialGuess( Matrix< Storage, T >& A, Vect<T>& x )
   {
     vops::Sum<T> sum;
-    for ( ULong i = 0; i < A.Cols(); ++i )
+    for ( unsigned long long i = 0; i < A.Cols(); ++i )
     {
       x[i] = sum( A[i] ) / A[i].NNZ(); //use the average for the row
     }
@@ -80,9 +78,9 @@ public:
   
   void Zeros( Matrix<Vect,T> &A ) //tested
   {
-    for ( ULong i = 0; i < A.Rows(); ++i )
+    for ( unsigned long long i = 0; i < A.Rows(); ++i )
     {
-      for ( ULong j = 0; j < A.Cols(); ++j )
+      for ( unsigned long long j = 0; j < A.Cols(); ++j )
       {
         A(i,j) = T();
       }
@@ -91,7 +89,7 @@ public:
 
   void Zeros( Matrix<SparseVect,T> &A ) //tested
   {
-    for ( ULong i = 0; i < A.Rows(); ++i )
+    for ( unsigned long long i = 0; i < A.Rows(); ++i )
     {
       A[i].Clear();
     }
@@ -99,9 +97,9 @@ public:
   
   void Identity( Matrix<Storage,T> &A ) //tested
   {
-    ULong size = A.Cols() < A.Rows() ? A.Cols() : A.Rows();
+    unsigned long long size = A.Cols() < A.Rows() ? A.Cols() : A.Rows();
     Zeros(A);   
-    for ( ULong i = 0; i < size; ++i )
+    for ( unsigned long long i = 0; i < size; ++i )
     {
       A[i].Set(i, T(1.0) );
     }
@@ -112,13 +110,13 @@ protected:
   //! Start on the last column of A and work to the first column
   void BackSolveUpTransposed( Matrix< Storage, T >& A, Vect<T>& x, Vect<T>& b ) 
   {
-    ULong i = A.Cols();
+    unsigned long long i = A.Cols();
     x[i-1] = b[i-1] / A[i-1][i-1];
     --i;
     for ( ; i > 0; --i ) // iterating through rows of A transpose, cols of A
     {
       T sum = T();
-      for ( ULong j = i; j < A.Cols(); ++j ) //iterating through cols of A transpose, rows of A
+      for ( unsigned long long j = i; j < A.Cols(); ++j ) //iterating through cols of A transpose, rows of A
       {
         if ( A[j].Pos(0) > i ) // not tested
         {

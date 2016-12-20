@@ -1,3 +1,5 @@
+#define MYDEBUG
+
 #include "../src/power.h"
 #include <iostream>
 #include <fstream>

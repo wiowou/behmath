@@ -23,7 +23,7 @@
 
 #include "vect.h"
 #include "sparseVect.h"
-#include "typedefs.h"
+
 
 namespace math{
 namespace vops{
@@ -40,47 +40,47 @@ class Sum
 {
 
 public:
-  T operator()( SparseVect<T> &X, ULong start = 0 ) //tested
+  T operator()( SparseVect<T> &X, unsigned long long start = 0 ) //tested
   {
     T res = T();
-    for ( ULong i = start; i < X.NNZ(); ++i )
+    for ( unsigned long long i = start; i < X.NNZ(); ++i )
     {
       res += X.m_data[i];
     }
     return res;
   }
 
-  T operator()( ULong end, SparseVect<T> &X )  //tested
+  T operator()( unsigned long long end, SparseVect<T> &X )  //tested
   {
     T res = T();
-    ULong i = 0;
-    ULong iend = X.NNZ();
+    unsigned long long i = 0;
+    unsigned long long iend = X.NNZ();
     if ( X.m_pos[iend - 1] >= end )
     {
       iend = X.UpperBoundIdx(end);
     }
 
-    for ( ULong i = 0; i < iend; ++i )
+    for ( unsigned long long i = 0; i < iend; ++i )
     {
       res += X.m_data[i];
     }
     return res;
   }
   
-  T operator()( Vect<T> &X, ULong start = 0  )  //tested
+  T operator()( Vect<T> &X, unsigned long long start = 0  )  //tested
   {
     T res = T(); //make sure this operation works for T
-    for ( ULong i = start; i < X.Size(); ++i )
+    for ( unsigned long long i = start; i < X.Size(); ++i )
     {
       res += X.m_data[i];
     }
     return res;
   }
 
-  T operator()( ULong end, Vect<T> &X ) //tested
+  T operator()( unsigned long long end, Vect<T> &X ) //tested
   {
     T res = T(); //make sure this operation works for T
-    for ( ULong i = 0; i < end; ++i )
+    for ( unsigned long long i = 0; i < end; ++i )
     {
       res += X.m_data[i];
     }

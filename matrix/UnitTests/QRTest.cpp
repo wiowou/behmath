@@ -1,3 +1,5 @@
+#define MYDEBUG
+
 #include "../src/QR.h"
 #include <iostream>
 #include <fstream>
@@ -126,7 +128,7 @@ public:
     std::cout << "A^T: " << A << std::endl;
     
     QR.ATranspose(A);
-    ULong iter = QR.Eig( 50, 1e-5, true ); //50 iterations max, tolerance of 1e-5 for off diagonal entries, calculate eigenvectors too
+    unsigned long long iter = QR.Eig( 50, 1e-5, true ); //50 iterations max, tolerance of 1e-5 for off diagonal entries, calculate eigenvectors too
     
     std::cout << "iterations: " << iter << std::endl;
     Matrix<Vect>* EVect = QR.EigVect();
@@ -138,7 +140,7 @@ public:
     return i;
   }
 
-  int CheckPair( SparseVect<double> &sv, ULong pos, double d )
+  int CheckPair( SparseVect<double> &sv, unsigned long long pos, double d )
   {
     if ( std::abs(sv[pos] - d) > 1e-4 )
     {
@@ -148,7 +150,7 @@ public:
     return 0;
   }
   //helper method
-  int CheckPair( Vect<double> &v, ULong pos, double d )
+  int CheckPair( Vect<double> &v, unsigned long long pos, double d )
   {
     if ( std::abs(d) < 1e-4 )
     {

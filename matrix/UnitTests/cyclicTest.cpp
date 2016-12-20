@@ -1,3 +1,5 @@
+#define MYDEBUG
+
 #include "../src/cyclic.h"
 #include <iostream>
 #include <fstream>
@@ -67,7 +69,7 @@ public:
   }
 
   //helper method
-  int CheckPair( SparseVect<double> &sv, ULong pos, double d )
+  int CheckPair( SparseVect<double> &sv, unsigned long long pos, double d )
   {
     if ( std::abs(sv[pos] - d) > 1e-4 )
     {
@@ -77,7 +79,7 @@ public:
     return 0;
   }
   //helper method
-  int CheckPair( Vect<double> &v, ULong pos, double d )
+  int CheckPair( Vect<double> &v, unsigned long long pos, double d )
   {
     if ( std::abs(d) < 1e-4 )
     {
