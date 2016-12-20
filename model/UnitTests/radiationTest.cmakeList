@@ -1,0 +1,1 @@
+${srcDir}/domain.cpp;${srcDir}/boundaryCondition.cpp;${srcDir}/attribute.cpp;${srcDir}/bc/radiation.cpp;${testDir}/radiationTest.cpp

@@ -1,0 +1,1 @@
+${srcDir}/domain.cpp;${srcDir}/mesher.cpp;${srcDir}/gmshIO.cpp;${srcDir}/vtkIO.cpp;${srcDir}/boundaryCondition.cpp;${srcDir}/thermal.cpp;${testDir}/thermalTest.cpp

@@ -1,0 +1,1 @@
+${srcDir}/domain.cpp;${srcDir}/boundaryCondition.cpp;${srcDir}/bc/temperature.cpp;${testDir}/temperatureTest.cpp

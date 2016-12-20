@@ -1,0 +1,13 @@
+#ifndef _${ProjName}CONFIG_H
+#define _${ProjName}CONFIG_H
+
+//Project: ${ProjName}
+//Major Version: @${ProjName}_VERSION_MAJOR@
+//Minor Version: @${ProjName}_VERSION_MINOR@
+
+#define VERSION_MODEL "@${ProjName}_VERSION_MAJOR@.@${ProjName}_VERSION_MINOR@"
+#define _WIN32
+
+#cmakedefine MYDEBUG
+
+#endif /*_${ProjName}CONFIG_H*/

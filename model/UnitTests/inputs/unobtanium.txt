@@ -1,0 +1,15 @@
+{
+  "temperature-units" : "Kelvin",
+  "thermalConductivity-units" : "W/m2/Kelvin",
+  "thermalConductivity":
+  [
+    [
+      0,
+      3000.0
+    ],
+    [
+      50000.0,
+      50000.0
+    ]
+  ]
+}
