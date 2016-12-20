@@ -1,1 +1,0 @@
-${srcDir}/domain.cpp;${srcDir}/boundaryCondition.cpp;${srcDir}/bc/HTC.cpp;${testDir}/HTCTest.cpp

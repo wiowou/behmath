@@ -1,1 +1,0 @@
-${srcDir}/domain.cpp;${srcDir}/vtkIO.cpp;${testDir}/vtkIOTest.cpp
