@@ -40,15 +40,18 @@ class HermiteSpline
 {
 public:
 	HermiteSpline();
-	//Returns a point on the curve that splits curve into curve of length t and 1-t
+	//! Returns a point on the curve that splits curve into curve of length t and 1-t
 	void PointWithRatio(double ratio, Point &point); //ratio ranges from 0 to 1.
 	void PointWithRatio(std::vector<double> &ratio, std::vector<Point> &point);
-	void Fit(std::vector<KeyPoint*> pt);
+	//! returns true on error, false otherwise
+  bool Fit(std::vector<KeyPoint*> pt);
 	void Clear();
-	//slope and ratio are recalculated
-	void Update();
+	//! slope and ratio are recalculated
+	void Update(std::vector<double> &deltat);
 	bool Empty();
 	double Length();
+  friend bool operator<(const HermiteSpline &lhs, const HermiteSpline &rhs);
+  friend bool operator==(const HermiteSpline &lhs, const HermiteSpline &rhs);
 private:
 	void PointAtTargetLengthOnSegment(unsigned long long idx, double targLength, Point &p);
 	void PointOnSegment(unsigned long long idx, double t, Point &p);
@@ -59,11 +62,15 @@ private:
 	std::vector<Point> m_slope;
 	std::vector<double> m_ratio;
 	double m_length;
-
+  
+  KeyPoint* m_id[2];
 #ifdef MYDEBUG
   friend class HermiteSplineTest;
 #endif //MYDEBUG
 };
+
+extern bool operator<(const HermiteSpline &lhs, const HermiteSpline &rhs);
+extern bool operator==(const HermiteSpline &lhs, const HermiteSpline &rhs);
 
 }/*geom*/ }/*math*/ 
 

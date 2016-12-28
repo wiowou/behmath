@@ -49,6 +49,13 @@ public:
 		return *this;
 	}
 	
+  void swap(UID &u)
+  {
+    unsigned long long tmp_id = m_id;
+    m_id = u.m_id;
+    u.m_id = tmp_id;
+  }
+  
 	unsigned long long ID() const
 	{
 		return m_id;
@@ -59,6 +66,10 @@ public:
 		m_id = id;
 	}
 
+  friend bool operator<(const UID &lhs, const UID &rhs)
+  {
+    return lhs.m_id < rhs.m_id;
+  }
   
 protected:
   unsigned long long m_id;

@@ -1,0 +1,15 @@
+- Want to be able to create volume blocks using 6 or 8 keypoints IN ANY ORDER
+- lines must be created with those keypoints beforehand
+- areas will be created underneath
+
+- only volumes have raw pointers to nodes because only they will be meshed
+- structured mesh volumes will hold the nodes and elements in multidimensional arrays
+- swept volumes will hold the element faces to be swept in a 2D array
+- unstructured volumes will simply have a 1D vector of nodes and elements
+- volumes will be distinguished by whether each type of storage item is empty or full
+- the mesh method must be provided a global vector of node pointers
+eg
+void Mesh(std::vector<Node*> n, ...);
+
+within the mesh method, new nodes will be created and the pointers will be stored in the vector.
+these vectors will be responsible for deleting these pointers when the program ends.

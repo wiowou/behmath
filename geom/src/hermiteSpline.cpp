@@ -62,6 +62,8 @@ void HermiteSpline::Clear()
 	m_ratio.clear();
 	m_point.clear();
 	m_slope.clear();
+  
+  m_id[0] = m_id[1] = nullptr;
 }
 
 void HermiteSpline::PointWithRatio(std::vector<double> &ratio, std::vector<Point> &point)
@@ -120,7 +122,7 @@ void HermiteSpline::PointAtTargetLengthOnSegment(unsigned long long idx, double 
 	double tlow = 0.0;
 	double tup = 1.0;
 	double t = 0.0;
-	double tol = 0.01 * targLength;
+	double tol = 0.0001 * targLength;
 	double length = 0.0;
 	do
 	{
@@ -141,17 +143,43 @@ void HermiteSpline::PointAtTargetLengthOnSegment(unsigned long long idx, double 
 	return;
 }
 
-void HermiteSpline::Fit(std::vector<KeyPoint*> pt)
+bool HermiteSpline::Fit(std::vector<KeyPoint*> pt)
 {
-	m_point = pt;
-	for (unsigned long long i = 0; i < m_point.size(); ++i)
+	unsigned long long npts = pt.size();
+  if (npts < 1) return true;
+  m_point = pt;
+  if (pt.back() == pt.front() ) return true; //it's a loop
+  if (pt.back() < pt.front() )
+  {
+    m_id[0] = pt.back();
+    m_id[1] = pt.front();
+  }
+  else
+  {
+    m_id[1] = pt.back();
+    m_id[0] = pt.front();
+  }
+  std::vector<double> deltat;
+  //Vect vlenNorm(m_point.back(), m_point.front());
+  
+  Vect vfirst(m_point[1], m_point[0]);
+  deltat.push_back(vfirst.Mag());
+  m_point[0]->Associate(this);
+  for (unsigned long long i = 1; i < npts - 1; ++i)
 	{
-		m_point[i]->Associate(this);
+    Vect v(m_point[i+1], m_point[i-1]);
+    deltat.push_back(v.Mag());
+    m_point[i]->Associate(this);
 	}
-	Update();
+  Vect vlast(m_point[npts-1], m_point[npts-2]);
+  deltat.push_back(vfirst.Mag());
+  m_point[npts-1]->Associate(this);
+  
+	Update(deltat);
+  return false;
 }
 
-void HermiteSpline::Update()
+void HermiteSpline::Update(std::vector<double> &deltat)
 {
 	unsigned long long npts = m_point.size();
 	if (npts < 1) return;
@@ -172,14 +200,16 @@ void HermiteSpline::Update()
 	for (int i = 0; i < 3; ++i)
 	{
 		m_slope[0][i] = (*m_point[1])[i] - (*m_point[0])[i];
+    m_slope[0][i] /= deltat[0];
 		m_slope[npts-1][i] = (*m_point[npts-1])[i] - (*m_point[npts-2])[i];
+    m_slope[npts-1][i] /= deltat[npts-1];
 	}
 	//calculate slopes for points in between
 	for (unsigned long long n = 1; n < npts - 1; ++n)
 	{
 		for (int i = 0; i < 3; ++i)
 		{
-			m_slope[n][i] = ((*m_point[n+1])[i] - (*m_point[n-1])[i]) / 2.0;
+			m_slope[n][i] = ((*m_point[n+1])[i] - (*m_point[n-1])[i]) / deltat[n];
 		}
 	}
 	//calculate segment distances
@@ -243,6 +273,25 @@ bool HermiteSpline::Empty()
 double HermiteSpline::Length()
 {
 	return m_length;
+}
+
+bool operator<(const HermiteSpline &lhs, const HermiteSpline &rhs)
+{
+  for (int i = 0; i < 2; ++i)
+  {
+    if (lhs.m_id[i] == rhs.m_id[i]) continue;
+    else return lhs.m_id[i] < rhs.m_id[i];
+  }
+  return false;
+}
+
+bool operator==(const HermiteSpline &lhs, const HermiteSpline &rhs)
+{
+  for (int i = 0; i < 2; ++i)
+  {
+    if (lhs.m_id[i] != rhs.m_id[i]) return false;
+  }
+  return true;
 }
 
 }/*geom*/ }/*math*/ 

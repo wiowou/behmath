@@ -32,6 +32,7 @@ namespace math{
 namespace geom{
 
 class HermiteSpline;
+class Node;
 
 #ifdef MYDEBUG
   class KeyPointTest;
@@ -41,6 +42,8 @@ class KeyPoint : public Point
 {
 
 public:
+  KeyPoint() : Point(), m_node(nullptr) {}
+  KeyPoint(double x, double y, double z) : Point(x,y,z), m_node(nullptr){}
 	unsigned long long ID() const
 	{
 		return m_id.ID();
@@ -60,6 +63,11 @@ public:
 	{
 		m_spline.erase(p);
 	}
+  
+  friend bool operator<(const KeyPoint &lhs, const KeyPoint &rhs)
+  {
+    return lhs.m_id < rhs.m_id;
+  }
 	
 protected:
 
