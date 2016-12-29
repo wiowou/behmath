@@ -23,47 +23,69 @@
 #define _MATH_GEOM_HERMITESPLINE_h
 
 #include <vector>
+#include <set>
 
+#include "curve.h"
+#include "surface.h"
 #include "point.h"
+#include "node.h"
 #include "vect.h"
 
 namespace math{
 namespace geom{
 
-class KeyPoint;
-
 #ifdef MYDEBUG
   class HermiteSplineTest;
 #endif //MYDEBUG
 
-class HermiteSpline
+class HermiteSpline : public Curve
 {
 public:
 	HermiteSpline();
-	//! Returns a point on the curve that splits curve into curve of length t and 1-t
-	void PointWithRatio(double ratio, Point &point); //ratio ranges from 0 to 1.
-	void PointWithRatio(std::vector<double> &ratio, std::vector<Point> &point);
+  HermiteSpline(const HermiteSpline &other) = delete;
+  HermiteSpline& operator=(HermiteSpline other) = delete;
+  ~HermiteSpline();
+  void Clear();
+  bool IsMeshed();
+  void Mesh();
+  void MeshRatio(std::vector<double> *meshRatio);
+  void UnMesh(bool below = false);
+	bool Empty();
+  KeyPoint** Endpoint();
+	double Length();
+  void Associate(Surface* p);
+	void Disassociate(Surface* p);
+  std::vector<Node*>& GetNode();
+  
 	//! returns true on error, false otherwise
   bool Fit(std::vector<KeyPoint*> pt);
-	void Clear();
-	//! slope and ratio are recalculated
-	void Update(std::vector<double> &deltat);
-	bool Empty();
-	double Length();
+	
+	
   friend bool operator<(const HermiteSpline &lhs, const HermiteSpline &rhs);
   friend bool operator==(const HermiteSpline &lhs, const HermiteSpline &rhs);
+  
 private:
+  //! Returns a point on the curve that splits curve into curve of length t and 1-t
+	void PointWithRatio(double ratio, Point &point); //ratio ranges from 0 to 1.
+	void PointWithRatio(std::vector<double> &ratio, std::vector<Point> &point);
 	void PointAtTargetLengthOnSegment(unsigned long long idx, double targLength, Point &p);
 	void PointOnSegment(unsigned long long idx, double t, Point &p);
 	void DerivOnSegment(unsigned long long idx, double t, Vect &v);
 	double LengthOnSegment(unsigned long long idx, double t);
-	
+  //! slope and ratio are recalculated
+	void Update(std::vector<double> &deltat);
+	void UnMeshEndPoints();
+  
 	std::vector<KeyPoint*> m_point;
 	std::vector<Point> m_slope;
 	std::vector<double> m_ratio;
+  std::vector<Node*> m_node;
+  //! provides a way to store the desired mesh points along the spline
+  std::vector<double> *m_meshRatio;
 	double m_length;
-  
+  std::set<Surface*> m_surface;
   KeyPoint* m_id[2];
+  KeyPoint* m_endpoint[2];
 #ifdef MYDEBUG
   friend class HermiteSplineTest;
 #endif //MYDEBUG

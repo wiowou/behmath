@@ -1,3 +1,5 @@
+#define MYDEBUG
+
 #include "../src/hermiteSpline.h"
 #include "../src/keyPoint.h"
 #include <iostream>
@@ -48,6 +50,11 @@ public:
     hs.Fit(pt);
     Point p;
     hs.PointWithRatio(0.5, p);
+    
+    std::vector<double> ratio = {0.0, 0.25, 0.5, 0.75, 1.0};
+    std::vector<Point> pv;
+    hs.PointWithRatio(ratio, pv);
+    
     return i;
   }
 

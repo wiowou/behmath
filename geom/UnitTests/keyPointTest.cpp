@@ -1,3 +1,5 @@
+#define MYDEBUG
+
 #include "../src/keyPoint.h"
 #include <iostream>
 #include <set>
@@ -17,6 +19,7 @@ public:
     KeyPoint kp2;
     KeyPoint kp3;
     kp3.X(2.3);
+    KeyPoint kp4 = kp3;
     kp = kp3;
 		
 		kp2.X(1.2);

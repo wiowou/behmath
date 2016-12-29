@@ -25,14 +25,14 @@
 #include <set>
 
 #include "point.h"
+#include "node.h"
 #include "UID.h"
 
 
 namespace math{
 namespace geom{
 
-class HermiteSpline;
-class Node;
+class Curve;
 
 #ifdef MYDEBUG
   class KeyPointTest;
@@ -42,28 +42,23 @@ class KeyPoint : public Point
 {
 
 public:
-  KeyPoint() : Point(), m_node(nullptr) {}
-  KeyPoint(double x, double y, double z) : Point(x,y,z), m_node(nullptr){}
-	unsigned long long ID() const
-	{
-		return m_id.ID();
-	}
-	
-	void ID( unsigned long long id )
-	{
-		m_id.ID(id);
-	}
-	
-	void Associate(HermiteSpline* p)
-	{
-		m_spline.insert(p);
-	}
-	
-	void Disassociate(HermiteSpline* p)
-	{
-		m_spline.erase(p);
-	}
+  KeyPoint();
+  KeyPoint(double x, double y, double z);
+  KeyPoint(const KeyPoint &other);
+  KeyPoint& operator=(KeyPoint other);
+  KeyPoint& operator=(Point other);
+  ~KeyPoint();
   
+  void Swap(KeyPoint &other);
+	unsigned long long ID() const;
+	void ID( unsigned long long id );
+	void Associate(Curve* p);
+	void Disassociate(Curve* p);
+  std::set<Curve*> AssociatedCurve();
+  bool IsMeshed();
+  void Mesh();
+  void UnMesh();
+  Node* GetNode();
   friend bool operator<(const KeyPoint &lhs, const KeyPoint &rhs)
   {
     return lhs.m_id < rhs.m_id;
@@ -73,8 +68,9 @@ protected:
 
 private:
 	UID<KeyPoint> m_id;
-	std::set<HermiteSpline*> m_spline;
-
+	std::set<Curve*> m_curve;
+  Node* m_node;
+  
 #ifdef MYDEBUG
   friend class KeyPointTest;
 #endif //MYDEBUG

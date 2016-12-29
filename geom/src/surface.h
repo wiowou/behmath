@@ -19,58 +19,31 @@
 
 //</license>
 
-#ifndef _MATH_GEOM_NODE_h
-#define _MATH_GEOM_NODE_h
-
-#include "point.h"
-#include "UID.h"
+#ifndef _MATH_GEOM_SURFACE_h
+#define _MATH_GEOM_SURFACE_h
 
 namespace math{
 namespace geom{
 
 #ifdef MYDEBUG
-  class NodeTest;
+  class SurfaceTest;
 #endif //MYDEBUG
 
-class Node : public Point
+class Surface
 {
 
 public:
-  Node() : Point() {}
-  Node(Point& p) : Point(p) {}
-  Node(double x, double y, double z) : Point(x,y,z){}
-	Node& operator=(Point other)
-  {
-    X(other.X());
-    Y(other.Y());
-    Z(other.Z());
-    return *this;
-  }
-  unsigned long long ID() const
-	{
-		return m_id.ID();
-	}
-	
-	void ID( unsigned long long id )
-	{
-		m_id.ID(id);
-	}
-  
-  
-  friend bool operator<(const Node &lhs, const Node &rhs)
-  {
-    return lhs.m_id < rhs.m_id;
-  }
+
 protected:
 
 private:
-  UID<Node> m_id;
+
 
 #ifdef MYDEBUG
-  friend class NodeTest;
+  friend class SurfaceTest;
 #endif //MYDEBUG
 };
 
 }/*geom*/ }/*math*/ 
 
-#endif /*_MATH_GEOM_NODE_h */
+#endif /*_MATH_GEOM_SURFACE_h */

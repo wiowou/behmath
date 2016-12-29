@@ -19,58 +19,44 @@
 
 //</license>
 
-#ifndef _MATH_GEOM_NODE_h
-#define _MATH_GEOM_NODE_h
+#ifndef _MATH_GEOM_CURVE_h
+#define _MATH_GEOM_CURVE_h
 
-#include "point.h"
-#include "UID.h"
+#include "keyPoint.h"
+#include "surface.h"
 
 namespace math{
 namespace geom{
 
 #ifdef MYDEBUG
-  class NodeTest;
+  class CurveTest;
 #endif //MYDEBUG
 
-class Node : public Point
+class Curve
 {
 
 public:
-  Node() : Point() {}
-  Node(Point& p) : Point(p) {}
-  Node(double x, double y, double z) : Point(x,y,z){}
-	Node& operator=(Point other)
-  {
-    X(other.X());
-    Y(other.Y());
-    Z(other.Z());
-    return *this;
-  }
-  unsigned long long ID() const
-	{
-		return m_id.ID();
-	}
-	
-	void ID( unsigned long long id )
-	{
-		m_id.ID(id);
-	}
-  
-  
-  friend bool operator<(const Node &lhs, const Node &rhs)
-  {
-    return lhs.m_id < rhs.m_id;
-  }
+  virtual void Clear() = 0;
+  virtual bool IsMeshed() = 0;
+  virtual void Mesh() = 0;
+  virtual void MeshRatio(std::vector<double> *meshRatio) = 0;
+  virtual void UnMesh(bool below = false) = 0;
+	virtual bool Empty() = 0;
+  virtual KeyPoint** Endpoint() = 0;
+	virtual double Length() = 0;
+  virtual void Associate(Surface* p) = 0;
+	virtual void Disassociate(Surface* p) = 0;
+  virtual std::vector<Node*>& GetNode() = 0;
 protected:
 
 private:
-  UID<Node> m_id;
+
 
 #ifdef MYDEBUG
-  friend class NodeTest;
+  friend class CurveTest;
 #endif //MYDEBUG
 };
 
 }/*geom*/ }/*math*/ 
 
-#endif /*_MATH_GEOM_NODE_h */
+#endif /*_MATH_GEOM_CURVE_h */
