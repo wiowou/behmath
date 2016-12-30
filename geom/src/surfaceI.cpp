@@ -19,7 +19,7 @@
 
 //</license>
 
-#include "curve.h"
+#include "surfaceI.h"
 
 namespace math{
 namespace geom{

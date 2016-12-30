@@ -84,17 +84,17 @@ void KeyPoint::ID( unsigned long long id )
   m_id.ID(id);
 }
 
-void KeyPoint::Associate(Curve* p)
+void KeyPoint::Associate(CurveI* p)
 {
   m_curve.insert(p);
 }
 
-void KeyPoint::Disassociate(Curve* p)
+void KeyPoint::Disassociate(CurveI* p)
 {
   m_curve.erase(p);
 }
 
-std::set<Curve*> KeyPoint::AssociatedCurve()
+std::set<CurveI*> KeyPoint::AssociatedCurve()
 {
   return m_curve;
 }

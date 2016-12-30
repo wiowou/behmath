@@ -19,10 +19,31 @@
 
 //</license>
 
-#include "surface.h"
+#ifndef _MATH_GEOM_SURFACE_h
+#define _MATH_GEOM_SURFACE_h
 
 namespace math{
 namespace geom{
 
+#ifdef MYDEBUG
+  class SurfaceTest;
+#endif //MYDEBUG
+
+class SurfaceI
+{
+
+public:
+
+protected:
+
+private:
+
+
+#ifdef MYDEBUG
+  friend class SurfaceTest;
+#endif //MYDEBUG
+};
 
 }/*geom*/ }/*math*/ 
+
+#endif /*_MATH_GEOM_SURFACE_h */

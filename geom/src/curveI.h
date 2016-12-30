@@ -19,31 +19,50 @@
 
 //</license>
 
-#ifndef _MATH_GEOM_SURFACE_h
-#define _MATH_GEOM_SURFACE_h
+#ifndef _MATH_GEOM_CURVE_h
+#define _MATH_GEOM_CURVE_h
+
+#include <vector>
+
+#include "surfaceI.h"
 
 namespace math{
 namespace geom{
 
+class KeyPoint;
+class Node;
+
 #ifdef MYDEBUG
-  class SurfaceTest;
+  class CurveTest;
 #endif //MYDEBUG
 
-class Surface
+class CurveI
 {
 
 public:
-
+  virtual void Clear() = 0;
+  virtual bool IsMeshed() = 0;
+  virtual void Mesh() = 0;
+  //virtual void MeshRatio(std::vector<double> *meshRatio) = 0;
+  virtual void UnMesh(bool below = false) = 0;
+	virtual bool Empty() = 0;
+  virtual KeyPoint* Endpoint(int i) = 0;
+	virtual double Length() = 0;
+  virtual void Associate(SurfaceI* p) = 0;
+	virtual void Disassociate(SurfaceI* p) = 0;
+  virtual Node* GetNode(unsigned long long i) = 0;
+  virtual double GetMeshRatio(unsigned long long i) = 0;
+  virtual unsigned long long NumNode() = 0;
 protected:
 
 private:
 
 
 #ifdef MYDEBUG
-  friend class SurfaceTest;
+  friend class CurveTest;
 #endif //MYDEBUG
 };
 
 }/*geom*/ }/*math*/ 
 
-#endif /*_MATH_GEOM_SURFACE_h */
+#endif /*_MATH_GEOM_CURVE_h */

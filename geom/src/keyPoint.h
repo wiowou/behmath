@@ -24,6 +24,7 @@
 
 #include <set>
 
+#include "curveI.h"
 #include "point.h"
 #include "node.h"
 #include "UID.h"
@@ -31,8 +32,6 @@
 
 namespace math{
 namespace geom{
-
-class Curve;
 
 #ifdef MYDEBUG
   class KeyPointTest;
@@ -52,9 +51,9 @@ public:
   void Swap(KeyPoint &other);
 	unsigned long long ID() const;
 	void ID( unsigned long long id );
-	void Associate(Curve* p);
-	void Disassociate(Curve* p);
-  std::set<Curve*> AssociatedCurve();
+	void Associate(CurveI* p);
+	void Disassociate(CurveI* p);
+  std::set<CurveI*> AssociatedCurve();
   bool IsMeshed();
   void Mesh();
   void UnMesh();
@@ -68,7 +67,7 @@ protected:
 
 private:
 	UID<KeyPoint> m_id;
-	std::set<Curve*> m_curve;
+	std::set<CurveI*> m_curve;
   Node* m_node;
   
 #ifdef MYDEBUG

@@ -40,11 +40,13 @@ CMAKE_MINIMUM_REQUIRED( VERSION 2.8.4 )
 #make clean_outputs
 #   removes all the files in the UnitTests/outputs folder
 
-PROJECT ( geom )
+PROJECT (geom)
 
-SET ( headerDir geom )
+SET ( headerDir geom)
 
 SET ( staticUsrLibPath /usr/local/lib )
+
+SET ( haveLibs "FALSE" )
 
 SET ( projLibs 
 ${staticUsrLibPath}/libjson.a
@@ -63,7 +65,7 @@ SET ( outType static ) # exe, static, shared, header
 
 SET ( installation "TRUE" )
 
-#CMAKE_POLICY ( SET CMP0049 OLD ) #expansion of source file variables
+CMAKE_POLICY ( SET CMP0049 OLD ) #expansion of source file variables
 
 ################################################
 
@@ -150,9 +152,11 @@ IF ( "${CMAKE_BUILD_TYPE}" STREQUAL "Debug" )
               ENDIF ()
               SET_TARGET_PROPERTIES ( ${fname}_test PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${testDir} )
               TARGET_INCLUDE_DIRECTORIES ( ${fname}_test PUBLIC /usr/local/include )
-              FOREACH( stLib ${projLibs} )
-                  TARGET_LINK_LIBRARIES ( ${fname}_test ${stLib} )
-              ENDFOREACH()
+              IF ( "${haveLibs}" STREQUAL "TRUE" )
+                FOREACH( stLib ${projLibs} )
+                    TARGET_LINK_LIBRARIES ( ${fname}_test ${stLib} )
+                ENDFOREACH()
+              ENDIF()
           #Setting target properties isn't recognized by add_test
               ADD_TEST ( ${fname} ${testDir}/${fname}_test)
               IF( NOT CYGWIN )
@@ -196,9 +200,11 @@ IF ( "${CMAKE_BUILD_TYPE}" STREQUAL "Debug" )
     ENDIF ()
     
     TARGET_INCLUDE_DIRECTORIES (  ${PROJECT_NAME} PUBLIC /usr/local/include )
-    FOREACH( stLib ${projLibs} )
+    IF ( "${haveLibs}" STREQUAL "TRUE" )
+      FOREACH( stLib ${projLibs} )
         TARGET_LINK_LIBRARIES (  ${PROJECT_NAME} ${stLib} )
-    ENDFOREACH()
+      ENDFOREACH()
+    ENDIF()
     
     IF ( EXISTS ${CMAKE_SOURCE_DIR}/build-debug )
         SET_TARGET_PROPERTIES ( ${CMAKE_PROJECT_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build-debug )
@@ -233,9 +239,11 @@ ELSE ( ) #Release code
     ENDFOREACH()
     
     TARGET_INCLUDE_DIRECTORIES (  ${PROJECT_NAME} PUBLIC /usr/local/include )
-    FOREACH( stLib ${projLibs} )
+    IF ( "${haveLibs}" STREQUAL "TRUE" )
+      FOREACH( stLib ${projLibs} )
         TARGET_LINK_LIBRARIES (  ${PROJECT_NAME} ${stLib} )
-    ENDFOREACH ()
+      ENDFOREACH()
+    ENDIF()
     
     IF ( EXISTS ${CMAKE_SOURCE_DIR}/build-release )
         SET_TARGET_PROPERTIES ( ${CMAKE_PROJECT_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/build-release )

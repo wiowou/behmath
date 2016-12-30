@@ -25,8 +25,9 @@
 #include <vector>
 #include <set>
 
-#include "curve.h"
-#include "surface.h"
+#include "curveI.h"
+#include "surfaceI.h"
+#include "keyPoint.h"
 #include "point.h"
 #include "node.h"
 #include "vect.h"
@@ -38,7 +39,7 @@ namespace geom{
   class HermiteSplineTest;
 #endif //MYDEBUG
 
-class HermiteSpline : public Curve
+class HermiteSpline : public CurveI
 {
 public:
 	HermiteSpline();
@@ -51,11 +52,13 @@ public:
   void MeshRatio(std::vector<double> *meshRatio);
   void UnMesh(bool below = false);
 	bool Empty();
-  KeyPoint** Endpoint();
+  KeyPoint* Endpoint(int i);
 	double Length();
-  void Associate(Surface* p);
-	void Disassociate(Surface* p);
-  std::vector<Node*>& GetNode();
+  void Associate(SurfaceI* p);
+	void Disassociate(SurfaceI* p);
+  Node* GetNode(unsigned long long i);
+  double GetMeshRatio(unsigned long long i);
+  unsigned long long NumNode();
   
 	//! returns true on error, false otherwise
   bool Fit(std::vector<KeyPoint*> pt);
@@ -79,11 +82,12 @@ private:
 	std::vector<KeyPoint*> m_point;
 	std::vector<Point> m_slope;
 	std::vector<double> m_ratio;
+  //! doesn't include endpoints
   std::vector<Node*> m_node;
   //! provides a way to store the desired mesh points along the spline
   std::vector<double> *m_meshRatio;
 	double m_length;
-  std::set<Surface*> m_surface;
+  std::set<SurfaceI*> m_surface;
   KeyPoint* m_id[2];
   KeyPoint* m_endpoint[2];
 #ifdef MYDEBUG

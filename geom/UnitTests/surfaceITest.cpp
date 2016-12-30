@@ -1,6 +1,6 @@
 #define MYDEBUG
 
-#include "../src/curve.h"
+#include "../src/surfaceI.h"
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -8,13 +8,12 @@
 namespace math{
 namespace geom{
 
-class CurveTest
+class SurfaceITest
 {
 public:
 
   int Exec()
   {
-    Curve curve;
     int i = 0;
     
     return i;
@@ -26,6 +25,6 @@ public:
 
 int main()
 {
-  math::geom::CurveTest test;
+  math::geom::SurfaceITest test;
   return test.Exec();
 }
