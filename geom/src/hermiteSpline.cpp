@@ -48,6 +48,7 @@ const double quadWt[] =
 
 HermiteSpline::HermiteSpline()
 {
+  m_endpoint[0] = m_endpoint[1] = nullptr;
 	Clear();
 }
 
@@ -58,29 +59,17 @@ HermiteSpline::~HermiteSpline()
 
 void HermiteSpline::Clear()
 {
-	for (KeyPoint* p : m_point)
-  {
-    p->Disassociate(this);
-  }
-	m_length = 0.0;
-	m_ratio.clear();
+  m_ratio.clear();
 	m_point.clear();
-  m_surface.clear();
-	m_slope.clear();
-  m_id[0] = m_id[1] = m_endpoint[0] = m_endpoint[1] = nullptr;
-  m_meshRatio = nullptr;
-}
-
-bool HermiteSpline::IsMeshed()
-{
-  return !m_node.empty();
+  m_slope.clear();
+  Curve::Clear();
 }
 
 void HermiteSpline::Mesh()
 {
   m_node.clear();
-  //if (!m_endpoint[0]->IsMeshed()) m_endpoint[0]->Mesh();
-  //m_node.push_back(m_endpoint[0]->GetNode());
+  if (!m_endpoint[0]->IsMeshed()) m_endpoint[0]->Mesh();
+  m_node.push_back(m_endpoint[0]->GetNode());
   if (m_meshRatio != nullptr)
   {
     std::vector<Point> point;
@@ -91,31 +80,8 @@ void HermiteSpline::Mesh()
       m_node.push_back(n);
     }
   }
-  //if (!m_endpoint[1]->IsMeshed()) m_endpoint[1]->Mesh();
-  //m_node.push_back(m_endpoint[1]->GetNode());
-}
-
-void HermiteSpline::UnMesh(bool below)
-{
-  if (below) UnMeshEndPoints();
-  for (unsigned long long i = 1; i < m_node.size() - 1; ++i)
-  {
-    delete m_node[i];
-  }
-}
-
-void HermiteSpline::UnMeshEndPoints()
-{
-  //unmesh the keypoints if possible
-  for (int i = 0; i < 2; ++i)
-  {
-    unsigned long long meshCount = 0;
-    for (CurveI* p : m_endpoint[i]->AssociatedCurve())
-    {
-      if (p->IsMeshed()) ++meshCount;
-    }
-    if (meshCount == 0) m_endpoint[i]->UnMesh();
-  }  
+  if (!m_endpoint[1]->IsMeshed()) m_endpoint[1]->Mesh();
+  m_node.push_back(m_endpoint[1]->GetNode());
 }
 
 void HermiteSpline::PointWithRatio(std::vector<double> &ratio, std::vector<Point> &point)
@@ -130,7 +96,7 @@ void HermiteSpline::PointWithRatio(std::vector<double> &ratio, std::vector<Point
 	unsigned long long idx = it - m_ratio.begin();
 	while (point.size() != ratio.size() )
 	{
-		if (it == m_ratio.end())
+		if (it == m_ratio.end()) //ratios greater than 1 not allowed
 		{
 			point.push_back(*m_point.back());
 			continue;
@@ -195,39 +161,20 @@ void HermiteSpline::PointAtTargetLengthOnSegment(unsigned long long idx, double 
 	return;
 }
 
-bool HermiteSpline::Fit(std::vector<KeyPoint*> pt)
+bool HermiteSpline::Fit(std::vector<Point*> pt)
 {
 	unsigned long long npts = pt.size();
   if (npts < 1) return true;
   m_point = pt;
   if (pt.back() == pt.front() ) return true; //it's a loop
-  m_endpoint[0] = pt.front();
-  m_endpoint[1] = pt.back();
-  if (m_endpoint[0] < m_endpoint[1])
-  {
-    m_id[0] = m_endpoint[0];
-    m_id[1] = m_endpoint[1];
-  }
-  else
-  {
-    m_id[0] = m_endpoint[1];
-    m_id[1] = m_endpoint[0];
-  }
-  std::vector<double> deltat;
-  //Vect vlenNorm(m_point.back(), m_point.front());
   
-  Vect vfirst(m_point[1], m_point[0]);
-  deltat.push_back(vfirst.Mag());
-  m_point[0]->Associate(this);
+  std::vector<double> deltat;
+  deltat.push_back(Vect(m_point[1], m_point[0]).Mag());
   for (unsigned long long i = 1; i < npts - 1; ++i)
 	{
-    Vect v(m_point[i+1], m_point[i-1]);
-    deltat.push_back(v.Mag());
-    m_point[i]->Associate(this);
+    deltat.push_back(Vect(m_point[i+1], m_point[i-1]).Mag());
 	}
-  Vect vlast(m_point[npts-1], m_point[npts-2]);
-  deltat.push_back(vfirst.Mag());
-  m_point[npts-1]->Associate(this);
+  deltat.push_back(Vect(m_point[npts-1], m_point[npts-2]).Mag());
   
 	Update(deltat);
   return false;
@@ -317,70 +264,6 @@ void HermiteSpline::DerivOnSegment(unsigned long long idx, double t, Vect &v)
 		+ ( 3.0 * t * t - 2.0 * t ) * m_slope[idx][i];
 	}
 	return;
-}
-
-void HermiteSpline::MeshRatio(std::vector<double> *meshRatio)
-{
-  m_meshRatio = meshRatio;
-}
-
-bool HermiteSpline::Empty()
-{
-	return m_point.size() > 1;
-}
-
-KeyPoint* HermiteSpline::Endpoint(int i)
-{
-  return m_endpoint[i];
-}
-
-double HermiteSpline::Length()
-{
-	return m_length;
-}
-
-void HermiteSpline::Associate(SurfaceI* p)
-{
-  m_surface.insert(p);
-}
-
-void HermiteSpline::Disassociate(SurfaceI* p)
-{
-  m_surface.erase(p);
-}
-
-Node* HermiteSpline::GetNode(unsigned long long i)
-{
-  return m_node[i];
-}
-
-double HermiteSpline::GetMeshRatio(unsigned long long i)
-{
-  return m_meshRatio->at(i);
-}
-
-unsigned long long HermiteSpline::NumNode()
-{
-  return m_node.size();
-}
-
-bool operator<(const HermiteSpline &lhs, const HermiteSpline &rhs)
-{
-  for (int i = 0; i < 2; ++i)
-  {
-    if (lhs.m_id[i] == rhs.m_id[i]) continue;
-    else return lhs.m_id[i] < rhs.m_id[i];
-  }
-  return false;
-}
-
-bool operator==(const HermiteSpline &lhs, const HermiteSpline &rhs)
-{
-  for (int i = 0; i < 2; ++i)
-  {
-    if (lhs.m_id[i] != rhs.m_id[i]) return false;
-  }
-  return true;
 }
 
 }/*geom*/ }/*math*/ 

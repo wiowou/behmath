@@ -106,7 +106,7 @@ bool KeyPoint::IsMeshed()
 
 void KeyPoint::Mesh()
 {
-  m_node = new Node();
+  m_node = new Node(X(), Y(), Z());
 }
 
 void KeyPoint::UnMesh()

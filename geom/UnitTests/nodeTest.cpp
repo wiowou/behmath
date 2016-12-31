@@ -1,6 +1,8 @@
 #define MYDEBUG
 
 #include "../src/node.h"
+#include "../src/point.cpp"
+#include "../src/UID.cpp"
 #include <iostream>
 #include <fstream>
 #include <string>

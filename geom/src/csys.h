@@ -49,6 +49,8 @@ public:
 	Csys& OffsetX(double d); //offsets the csys d distance along its x direction
 	Csys& OffsetY(double d); //offsets the csys d distance along its y direction
 	Csys& OffsetZ(double d); //offsets the csys d distance along its z direction
+  Csys& Offset(Point *p); //offset to point
+  Csys& Offset(Point p); //offset to point
 	
   bool IsCyl();
   void IsCyl(bool icyl);

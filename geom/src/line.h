@@ -19,47 +19,45 @@
 
 //</license>
 
-#ifndef _MATH_GEOM_MULTICURVE_h
-#define _MATH_GEOM_MULTICURVE_h
-
-#include <set>
+#ifndef _MATH_GEOM_LINE_h
+#define _MATH_GEOM_LINE_h
 
 #include "curve.h"
-#include "node.h"
+#include "csys.h"
 
 namespace math{
 namespace geom{
 
 #ifdef MYDEBUG
-  class MultiCurveTest;
+  class LineTest;
 #endif //MYDEBUG
 
-class MultiCurve : public Curve
+//! Lines can be of zero length and mesh properly
+class Line : public Curve
 {
 
 public:
+  Line();
   void Clear();
-  bool IsMeshed();
   void Mesh();
-  void UnMesh(bool below = false);
-	bool Empty();
-  void Define(std::vector<CurveI*>& curve);
-  
-private:
-  void CurveDirection();
-  void UpdateNodes();
+  //! keypoints are in global cs
+  void Endpoint(KeyPoint* start, KeyPoint* end);
+  void SetCsys(Csys* csys);
+  Csys* GetCsys();
+  //! Returns a point on the curve that splits curve into curve of length t and 1-t
+	void PointWithRatio(double ratio, Point &point);//ratio ranges from 0 to 1.
+	void PointWithRatio(std::vector<double> &ratio, std::vector<Point> &point);
 
-  std::vector<CurveI*> m_curve;
-  std::vector<double> m_cvMeshRatio;
-  //! set to true for a curve if its second endpoint is shared with
-  //! one of the endpoints from the following curve 
-  std::vector<bool> m_direction;
-  
+private:
+  Csys* m_csys;
+  //! points are in local coordinate system
+  Point m_point[2];
+
 #ifdef MYDEBUG
-  friend class MultiCurveTest;
+  friend class LineTest;
 #endif //MYDEBUG
 };
 
 }/*geom*/ }/*math*/ 
 
-#endif /*_MATH_GEOM_MULTICURVE_h */
+#endif /*_MATH_GEOM_LINE_h */

@@ -194,6 +194,18 @@ Csys& Csys::OffsetZ(double d)
 	return *this;
 }
 
+Csys& Csys::Offset(Point *p)
+{
+  m_origin = *p;
+  return *this;
+}
+
+Csys& Csys::Offset(Point p)
+{
+  m_origin = p;
+  return *this;
+}
+  
 Csys& Csys::RX(Point &p)
 {
   double ct = cos(m_theta[0]);

@@ -27,11 +27,11 @@ namespace geom{
 
 void MultiCurve::Clear()
 {
-  m_length = 0.0;
-  m_meshRatio.clear();
+  m_cvMeshRatio.clear();
   m_curve.clear();
   m_node.clear();
-  m_id[0] = m_id[1] = m_endpoint[0] = m_endpoint[1] = nullptr;
+  m_direction.clear();
+  Curve::Clear();
 }
 
 bool MultiCurve::IsMeshed()
@@ -64,41 +64,6 @@ bool MultiCurve::Empty()
   return m_curve.empty();
 }
 
-KeyPoint* MultiCurve::Endpoint(int i)
-{
-  return m_endpoint[i];
-}
-
-double MultiCurve::Length()
-{
-	return m_length;
-}
-
-void MultiCurve::Associate(SurfaceI* p)
-{
-  m_surface.insert(p);
-}
-
-void MultiCurve::Disassociate(SurfaceI* p)
-{
-  m_surface.erase(p);
-}
-
-Node* MultiCurve::GetNode(unsigned long long i)
-{
-  return m_node[i];
-}
-
-double MultiCurve::GetMeshRatio(unsigned long long i)
-{
-  return m_meshRatio[i];
-}
-
-unsigned long long MultiCurve::NumNode()
-{
-  return m_node.size();
-}
-
 void MultiCurve::Define(std::vector<CurveI*>& curve)
 {
   if (curve.size() < 2) return; 
@@ -109,79 +74,30 @@ void MultiCurve::Define(std::vector<CurveI*>& curve)
     m_length += cv->Length();
   }
   CurveDirection();
-  KeyPoint* ep[2];
-  ep[0] = m_curve.front()->Endpoint(0);
-  ep[1] = m_curve.front()->Endpoint(1);
-  if (m_direction.front() ) m_endpoint[0] = ep[0];
-  else m_endpoint[0] = ep[1];
-  
-  ep[0] = m_curve.back()->Endpoint(0);
-  ep[1] = m_curve.back()->Endpoint(1);
-  if (m_direction.back() ) m_endpoint[1] = ep[0];
-  else m_endpoint[1] = ep[1];
-  
-  if (m_endpoint[0] < m_endpoint[1])
-  {
-    m_id[0] = m_endpoint[0];
-    m_id[1] = m_endpoint[1];
-  }
-  else
-  {
-    m_id[0] = m_endpoint[1];
-    m_id[1] = m_endpoint[0];
-  }
 }
 
 void MultiCurve::UpdateNodes()
 {
   m_node.clear();
-  m_meshRatio.clear();
+  m_cvMeshRatio.clear();
   unsigned long long i = 0;
   double prevSegLength = 0.0;
+  bool rev = !m_direction[i];
+  m_node.push_back(m_curve.front()->GetNode(0, rev));
+  //! don't include 0.0 and 1.0 in m_cvMeshRatio
   for (CurveI* cv : m_curve)
   {
-    if (m_direction[i])
+    rev = !m_direction[i];
+    for (unsigned long long j = 1; j < cv->NumNode(); ++j)
     {
-      if (i != 0) 
-      {
-        m_node.push_back(cv->Endpoint(0)->GetNode());
-        m_meshRatio.push_back( (prevSegLength) / m_length);
-      }
-      for (unsigned long long j = 0; j < cv->NumNode(); ++j)
-      {
-        m_node.push_back(cv->GetNode(j));
-        double lenOnSeg = cv->Length() * cv->GetMeshRatio(j);
-        m_meshRatio.push_back( (prevSegLength + lenOnSeg) / m_length);
-      }
-      if (i != m_curve.size()-1) 
-      {
-        m_node.push_back(cv->Endpoint(1)->GetNode());
-      }
-    }
-    else
-    {
-      if (i != 0) 
-      {
-        m_node.push_back(cv->Endpoint(1)->GetNode());
-        m_meshRatio.push_back( (prevSegLength) / m_length);
-      }
-      for (unsigned long long j = cv->NumNode() - 1; j > 0; --j)
-      {
-        m_node.push_back(cv->GetNode(j));
-        double lenOnSeg = cv->Length() * (1.0 - cv->GetMeshRatio(j));
-        m_meshRatio.push_back( (prevSegLength + lenOnSeg) / m_length);
-      }
-      m_node.push_back(cv->GetNode(0));
-      double lenOnSeg = cv->Length() * (1.0 - cv->GetMeshRatio(0));
-      m_meshRatio.push_back( (prevSegLength + lenOnSeg) / m_length);
-      if (i != m_curve.size()-1) 
-      {
-        m_node.push_back(cv->Endpoint(0)->GetNode());
-      }
+      m_node.push_back(cv->GetNode(j, rev));
+      double lenOnSeg = cv->Length() * cv->GetMeshRatio(j, rev);
+      m_cvMeshRatio.push_back( (prevSegLength + lenOnSeg) / m_length);
     }
     ++i;
     prevSegLength += cv->Length();
   }
+  m_cvMeshRatio.pop_back();
 }
 
 void MultiCurve::CurveDirection()

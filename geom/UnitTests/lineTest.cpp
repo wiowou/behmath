@@ -1,6 +1,11 @@
 #define MYDEBUG
 
-#include "../src/multiCurve.h"
+#include "../src/line.h"
+#include "../src/keyPoint.cpp"
+#include "../src/point.cpp"
+#include "../src/vect.cpp"
+#include "../src/csys.cpp"
+#include "../src/curve.cpp"
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -8,13 +13,13 @@
 namespace math{
 namespace geom{
 
-class MultiCurveTest
+class LineTest
 {
 public:
 
   int Exec()
   {
-    MultiCurve multiCurve;
+    Line line;
     int i = 0;
     
     return i;
@@ -26,6 +31,6 @@ public:
 
 int main()
 {
-  math::geom::MultiCurveTest test;
+  math::geom::LineTest test;
   return test.Exec();
 }
