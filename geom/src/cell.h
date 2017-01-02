@@ -19,64 +19,50 @@
 
 //</license>
 
-#ifndef _MATH_GEOM_KEYPOINT_h
-#define _MATH_GEOM_KEYPOINT_h
+#ifndef _MATH_GEOM_CELL_h
+#define _MATH_GEOM_CELL_h
 
-#include <set>
-
-#include "curveI.h"
 #include "point.h"
-#include "node.h"
-#include "UID.h"
-
+#include "eng/material.h"
+#include "neighbor.h"
+#include <vector>
 
 namespace math{
 namespace geom{
 
+class Attribute;
 #ifdef MYDEBUG
-  class KeyPointTest;
+  class CellTest;
 #endif //MYDEBUG
 
-class KeyPoint : public Point
+class Cell
 {
 
 public:
-  KeyPoint();
-  KeyPoint(double x, double y, double z);
-  KeyPoint(const KeyPoint &other);
-  KeyPoint& operator=(KeyPoint other);
-  KeyPoint& operator=(Point other);
-  ~KeyPoint();
-  
-  void Swap(KeyPoint &other);
-	unsigned long long ID() const;
-	void ID( unsigned long long id );
-	void Associate(CurveI* p);
-	void Disassociate(CurveI* p);
-  std::set<CurveI*> AssociatedCurve();
-  bool IsMeshed();
-  void Mesh();
-  void UnMesh();
-  Node* GetNode();
-  static void Compress();
-  static unsigned long long Count();
-  friend bool operator<(const KeyPoint &lhs, const KeyPoint &rhs)
+  Cell()
   {
-    return lhs.m_id < rhs.m_id;
+    pID = 0;
+    mat = nullptr;
+    vol = 0.0;
   }
-	
+  unsigned long long pID;
+  double vol;
+  Point ctr;
+  std::vector<Neighbor> nbor;
+  std::vector<unsigned long long> pointID;
+  eng::Material* mat;
+  Attribute* att;
+  
 protected:
 
 private:
-	UID<KeyPoint> m_id;
-	std::set<CurveI*> m_curve;
-  Node* m_node;
-  
+
+
 #ifdef MYDEBUG
-  friend class KeyPointTest;
+  friend class CellTest;
 #endif //MYDEBUG
 };
 
 }/*geom*/ }/*math*/ 
 
-#endif /*_MATH_GEOM_KEYPOINT_h */
+#endif /*_MATH_GEOM_CELL_h */

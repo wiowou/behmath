@@ -120,4 +120,14 @@ Node* KeyPoint::GetNode()
   return m_node;
 }
 
+void KeyPoint::Compress()
+{
+  UID<KeyPoint>::Compress();
+}
+
+unsigned long long KeyPoint::Count()
+{
+  return UID<KeyPoint>::Count();
+}
+  
 }/*geom*/ }/*math*/ 

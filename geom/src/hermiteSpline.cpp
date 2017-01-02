@@ -46,17 +46,6 @@ const double quadWt[] =
 	(322. - 13. * sqrt(70.)) / 900.0
 };
 
-HermiteSpline::HermiteSpline()
-{
-  m_endpoint[0] = m_endpoint[1] = nullptr;
-	Clear();
-}
-
-HermiteSpline::~HermiteSpline()
-{
-  UnMesh();
-}
-
 void HermiteSpline::Clear()
 {
   m_ratio.clear();

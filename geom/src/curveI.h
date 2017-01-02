@@ -23,6 +23,7 @@
 #define _MATH_GEOM_CURVEI_h
 
 #include <vector>
+#include <set>
 
 #include "point.h"
 #include "surfaceI.h"
@@ -41,17 +42,19 @@ class CurveI
 {
 
 public:
+  virtual ~CurveI() {};
   virtual void Clear() = 0;
   virtual bool IsMeshed() = 0;
   virtual void Mesh() {};
   virtual void MeshRatio(std::vector<double> *meshRatio) = 0;
-  virtual void UnMesh(bool below = false) = 0;
+  virtual void UnMesh(bool below = true) = 0;
 	virtual bool Empty() = 0;
   virtual KeyPoint* Endpoint(int i, bool reverse = false) = 0;
   virtual void Endpoint(KeyPoint* start, KeyPoint* end) = 0;
 	virtual double Length() = 0;
   virtual void Associate(SurfaceI* p) = 0;
 	virtual void Disassociate(SurfaceI* p) = 0;
+  virtual std::set<SurfaceI*> AssociatedSurface() = 0;
   virtual Node* GetNode(unsigned long long i, bool reverse = false) = 0;
   virtual double GetMeshRatio(unsigned long long i, bool reverse = false) = 0;
   virtual unsigned long long NumNode() = 0;

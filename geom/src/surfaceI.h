@@ -19,8 +19,13 @@
 
 //</license>
 
-#ifndef _MATH_GEOM_SURFACE_h
-#define _MATH_GEOM_SURFACE_h
+#ifndef _MATH_GEOM_SURFACEI_h
+#define _MATH_GEOM_SURFACEI_h
+
+#include <vector>
+
+#include "volumeI.h"
+//#include "curveI.h"
 
 namespace math{
 namespace geom{
@@ -29,11 +34,22 @@ namespace geom{
   class SurfaceTest;
 #endif //MYDEBUG
 
+class CurveI;
+
 class SurfaceI
 {
 
 public:
-
+  virtual ~SurfaceI() {}
+  virtual void PointAt(double u, double v) = 0;
+  virtual void Associate(VolumeI* p) = 0;
+	virtual void Disassociate(VolumeI* p) = 0;
+  virtual VolumeI* AssociatedVolume(int i) = 0;
+  virtual std::vector<CurveI*> AssociatedCurve() = 0;
+  virtual void UnMesh(bool below = true) = 0;
+  virtual bool IsMeshed() = 0;
+  virtual void Clear() = 0;
+  virtual bool Empty() = 0;
 protected:
 
 private:

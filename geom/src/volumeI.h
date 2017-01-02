@@ -19,48 +19,31 @@
 
 //</license>
 
-#ifndef _MATH_GEOM_MULTICURVE_h
-#define _MATH_GEOM_MULTICURVE_h
-
-#include <set>
-
-#include "curve.h"
-#include "node.h"
+#ifndef _MATH_GEOM_VOLUMEI_h
+#define _MATH_GEOM_VOLUMEI_h
 
 namespace math{
 namespace geom{
 
 #ifdef MYDEBUG
-  class MultiCurveTest;
+  class VolumeITest;
 #endif //MYDEBUG
 
-class MultiCurve : public Curve
+class VolumeI
 {
 
 public:
-  MultiCurve() = default;
-  void Clear();
-  bool IsMeshed();
-  void Mesh();
-  void UnMesh(bool below = true);
-	bool Empty();
-  void Define(std::vector<CurveI*>& curve);
-  
-private:
-  void CurveDirection();
-  void UpdateNodes();
 
-  std::vector<CurveI*> m_curve;
-  std::vector<double> m_cvMeshRatio;
-  //! set to true for a curve if its second endpoint is shared with
-  //! one of the endpoints from the following curve 
-  std::vector<bool> m_direction;
-  
+protected:
+
+private:
+
+
 #ifdef MYDEBUG
-  friend class MultiCurveTest;
+  friend class VolumeITest;
 #endif //MYDEBUG
 };
 
 }/*geom*/ }/*math*/ 
 
-#endif /*_MATH_GEOM_MULTICURVE_h */
+#endif /*_MATH_GEOM_VOLUMEI_h */

@@ -27,6 +27,23 @@ public:
 		std::cout << "u1 " << u1.ID() << std::endl;
 		std::cout << "u3 " << u3.ID() << std::endl;
 		
+    if (true)
+    {
+      UID<> u4;
+      UID<> u5;
+      std::cout << "u4 " << u4.ID() << std::endl;
+      std::cout << "u5 " << u5.ID() << std::endl;
+    }
+    
+    UID<> u6;
+    std::cout << "u6 " << u6.ID() << std::endl;
+    
+    UID<void>::Compress();
+    std::cout << "u1 " << u1.ID() << std::endl;
+		std::cout << "u2 " << u2.ID() << std::endl;
+		std::cout << "u3 " << u3.ID() << std::endl;
+		std::cout << "u6 " << u6.ID() << std::endl;
+    
     int i = 0;
     
     return i;

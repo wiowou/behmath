@@ -38,18 +38,18 @@ class Line : public Curve
 
 public:
   Line();
+  Line(Point* start, Point* end, const Csys *csys = &g_csys[0]);
   void Clear();
   void Mesh();
   //! keypoints are in global cs
   void Endpoint(KeyPoint* start, KeyPoint* end);
   void SetCsys(Csys* csys);
-  Csys* GetCsys();
+  unsigned long long CsysID() const;
   //! Returns a point on the curve that splits curve into curve of length t and 1-t
 	void PointWithRatio(double ratio, Point &point);//ratio ranges from 0 to 1.
 	void PointWithRatio(std::vector<double> &ratio, std::vector<Point> &point);
-
 private:
-  Csys* m_csys;
+  const Csys* m_csys;
   //! points are in local coordinate system
   Point m_point[2];
 

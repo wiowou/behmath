@@ -50,13 +50,18 @@ public:
 	{
 		return m_id.ID();
 	}
-	
 	void ID( unsigned long long id )
 	{
 		m_id.ID(id);
 	}
-  
-  
+  static void Compress()
+  {
+    UID<Node>::Compress();
+  }
+  static unsigned long long Count()
+  {
+    return UID<Node>::Count();
+  }
   friend bool operator<(const Node &lhs, const Node &rhs)
   {
     return lhs.m_id < rhs.m_id;

@@ -23,6 +23,7 @@
 #define _MATH_GEOM_CSYS_h
 
 #include "point.h"
+#include "UID.h"
 
 namespace math{
 namespace geom{
@@ -39,10 +40,11 @@ public:
   Csys(Point &o, Point &x, Point &y, bool isCyl = false);
   Csys(Point *o, Point *x, Point *y, bool isCyl = false);
   Csys(Point o, Point x, Point y, bool isCyl = false);
-  void ToGlobal(Point &p); //converts p to csys 0 while assuming it's in local csys
-  void ToGlobal(Point *p); //converts p to csys 0 while assuming it's in local csys
-  void ToLocal(Point &p); //converts p to local csys while assuming it's in global csys
-  void ToLocal(Point *p); //converts p to local csys while assuming it's in global csys
+  void ToGlobal(Point &p) const; //converts p to csys 0 while assuming it's in local csys
+  void ToGlobal(Point *p) const; //converts p to csys 0 while assuming it's in local csys
+  Point ToGlobal(double x, double y, double z); //returns the point in the global csys with local x,y,z coords
+  void ToLocal(Point &p) const; //converts p to local csys while assuming it's in global csys
+  void ToLocal(Point *p) const; //converts p to local csys while assuming it's in global csys
   Csys& RotateX(double deg); //rotates the csys deg about local x axis
   Csys& RotateY(double deg); //rotates the csys deg about local y axis
   Csys& RotateZ(double deg); //rotates the csys deg about local z axis 
@@ -51,18 +53,19 @@ public:
 	Csys& OffsetZ(double d); //offsets the csys d distance along its z direction
   Csys& Offset(Point *p); //offset to point
   Csys& Offset(Point p); //offset to point
-	
-  bool IsCyl();
+	unsigned long long ID() const;
+  bool IsCyl() const;
   void IsCyl(bool icyl);
 protected:
   void Initialize(Point &o, Point &x, Point &y, bool isCyl);
-  Csys& RX(Point &p); //rotate p in csys about X
-  Csys& RY(Point &p); //rotate p in csys about Y
-  Csys& RZ(Point &p); //rotate p in csys about Z
-  Csys& ARX(Point &p); //anti-rotate p in csys about X
-  Csys& ARY(Point &p); //anti-rotate p in csys about Y
-  Csys& ARZ(Point &p); //anti-rotate p in csys about Z
+  Csys const& RX(Point &p) const; //rotate p in csys about X
+  Csys const& RY(Point &p) const; //rotate p in csys about Y
+  Csys const& RZ(Point &p) const; //rotate p in csys about Z
+  Csys const& ARX(Point &p) const; //anti-rotate p in csys about X
+  Csys const& ARY(Point &p) const; //anti-rotate p in csys about Y
+  Csys const& ARZ(Point &p) const; //anti-rotate p in csys about Z
 private:
+  UID<Csys> m_id;
   Point m_origin;
   double m_theta[3]; //theta x,y,z in radians
   bool m_isCyl;
@@ -73,6 +76,7 @@ private:
 };
 
 extern const long double PI;
+extern const Csys g_csys[];
 
 }/*geom*/ }/*math*/ 
 

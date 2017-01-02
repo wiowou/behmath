@@ -24,6 +24,16 @@
 namespace math{
 namespace geom{
 
+Curve::Curve()
+{
+  Initialize();
+}
+
+Curve::~Curve()
+{
+  UnMesh();
+}
+
 void Curve::Clear()
 {
 	if (m_endpoint[0] != nullptr)
@@ -34,10 +44,8 @@ void Curve::Clear()
   {
     m_endpoint[1]->Disassociate(this);
   }
-	m_length = 0.0;
+	Initialize();
   m_surface.clear();
-  m_id[0] = m_id[1] = m_endpoint[0] = m_endpoint[1] = nullptr;
-  m_meshRatio = nullptr;
   UnMesh(true);
 }
 
@@ -53,8 +61,16 @@ void Curve::UnMesh(bool below)
   for (unsigned long long i = 1; i < m_node.size() - 1; ++i)
   {
     if (m_node[i] != nullptr) delete m_node[i];
-    m_node[i] = nullptr;
+    //m_node[i] = nullptr;
   }
+  m_node.clear();
+}
+
+void Curve::Initialize()
+{
+  m_length = 0.0;
+  m_id[0] = m_id[1] = m_endpoint[0] = m_endpoint[1] = nullptr;
+  m_meshRatio = nullptr;
 }
 
 void Curve::UnMeshEndPoints()
@@ -119,6 +135,11 @@ void Curve::Associate(SurfaceI* p)
 void Curve::Disassociate(SurfaceI* p)
 {
   m_surface.erase(p);
+}
+
+std::set<SurfaceI*> Curve::AssociatedSurface()
+{
+  return m_surface;
 }
 
 Node* Curve::GetNode(unsigned long long i, bool reverse)

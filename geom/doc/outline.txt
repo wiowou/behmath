@@ -13,3 +13,5 @@ void Mesh(std::vector<Node*> n, ...);
 
 within the mesh method, new nodes will be created and the pointers will be stored in the vector.
 these vectors will be responsible for deleting these pointers when the program ends.
+
+- 

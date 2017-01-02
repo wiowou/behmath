@@ -69,6 +69,24 @@ Vect& Vect::operator-=( const Vect& rhs )
   return *this;
 }
 
+Vect& Vect::operator*=( const double rhs )
+{
+  for ( int i = 0; i < 3; ++i )
+  {
+    m_crd[i] *= rhs;
+  }
+  return *this;
+}
+
+Vect& Vect::operator/=( const double rhs )
+{
+  for ( int i = 0; i < 3; ++i )
+  {
+    m_crd[i] /= rhs;
+  }
+  return *this;
+}
+
 Vect& Vect::operator=( const Point& rhs )
 {
   m_crd[0] = rhs.X();
@@ -108,6 +126,19 @@ double Vect::Mag() const
   return mag;
 }
 
+double Vect::PerpDistance(Point* p) const
+{
+  PerpDistance(*p);
+}
+
+double Vect::PerpDistance(Point& p) const
+{
+  Vect v(p);
+  Vect bhat = VectorProj(v, *this);
+  Vect d(v,bhat);
+  return d.Mag();
+}
+  
 Vect Cross( const Vect &a, const Vect &b )
 {
   Vect v;
@@ -149,9 +180,47 @@ Vect operator-( const Vect &lhs, const Vect &rhs )
   return v;
 }
 
+Vect operator*( const double lhs, const Vect &rhs )
+{
+  Vect v;
+  for ( int i = 0; i < 3; ++i )
+  {
+    v.m_crd[i] = lhs * rhs.m_crd[i];
+  }
+  return v;
+}
+
+Vect operator*( const Vect &lhs, const double rhs )
+{
+  Vect v;
+  for ( int i = 0; i < 3; ++i )
+  {
+    v.m_crd[i] = lhs.m_crd[i] * rhs;
+  }
+  return v;
+}
+
+Vect operator/( const Vect &lhs, const double rhs )
+{
+  Vect v;
+  for ( int i = 0; i < 3; ++i )
+  {
+    v.m_crd[i] = lhs.m_crd[i] / rhs;
+  }
+  return v;
+}
+
 double ScalarProj( const Vect &a, const Vect &b )
 {
-  return Dot( a, b) / b.Mag();
+  return Dot(a,b) / b.Mag();
+}
+
+Vect VectorProj( const Vect &a, const Vect &b )
+{
+  Vect c = b;
+  double scaleFactor = Dot(a,b) / Dot(b,b);
+  c *= scaleFactor;
+  return c;
 }
 
 }/*geom*/ }/*math*/ 

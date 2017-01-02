@@ -98,6 +98,24 @@ Point& Point::operator+=( const Point &rhs )
   return *this;
 }
 
+Point& Point::operator*=( const double rhs )
+{
+  for ( int i = 0; i < 3; ++i )
+  {
+    m_crd[i] *= rhs;
+  }
+  return *this;
+}
+
+Point& Point::operator/=( const double rhs )
+{
+  for ( int i = 0; i < 3; ++i )
+  {
+    m_crd[i] /= rhs;
+  }
+  return *this;
+}
+
 Point operator-( const Point &lhs, const Point &rhs )
 {
   Point p;
@@ -114,6 +132,36 @@ Point operator+( const Point &lhs, const Point &rhs )
   for ( int i = 0; i < 3; ++i )
   {
     p.m_crd[i] = lhs.m_crd[i] + rhs.m_crd[i];
+  }
+  return p;
+}
+
+Point operator*( const double lhs, const Point &rhs )
+{
+  Point p;
+  for ( int i = 0; i < 3; ++i )
+  {
+    p.m_crd[i] = lhs * rhs.m_crd[i];
+  }
+  return p;
+}
+
+Point operator*( const Point &lhs, const double rhs )
+{
+  Point p;
+  for ( int i = 0; i < 3; ++i )
+  {
+    p.m_crd[i] = lhs.m_crd[i] * rhs;
+  }
+  return p;
+}
+
+Point operator/( const Point &lhs, const double rhs )
+{
+  Point p;
+  for ( int i = 0; i < 3; ++i )
+  {
+    p.m_crd[i] = lhs.m_crd[i] / rhs;
   }
   return p;
 }

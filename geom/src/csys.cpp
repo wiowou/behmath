@@ -29,6 +29,8 @@ namespace geom{
 
 const long double PI = 3.141592653589793238462643383279502884197169399375105820974944592307816406286208998628034825342117067982148L;
 
+const Csys g_csys[] = {0,1,2,3,4,5,6,7,8,9,10};
+
 Csys::Csys()
 {
   m_theta[0] = m_theta[1] = m_theta[2] = 0.0;
@@ -70,6 +72,12 @@ Csys::Csys(int i)
 			Initialize(o,x,y,true);
 			break;
 		}
+    default:
+    {
+      m_theta[0] = m_theta[1] = m_theta[2] = 0.0;
+			m_origin = origin;
+			m_isCyl = false;
+    }
 	}
 }
 
@@ -101,7 +109,7 @@ void Csys::Initialize(Point &o, Point &x, Point &y, bool isCyl)
   m_isCyl = isCyl;
 }
 
-bool Csys::IsCyl()
+bool Csys::IsCyl() const
 {
   return m_isCyl;
 }
@@ -111,7 +119,7 @@ void Csys::IsCyl(bool icyl)
   m_isCyl = icyl;
 }
   
-void Csys::ToGlobal(Point &p)
+void Csys::ToGlobal(Point &p) const
 {
   if (m_isCyl)    //double x = p[0] * cos(theta);
   {
@@ -125,12 +133,19 @@ void Csys::ToGlobal(Point &p)
   p += m_origin;
 }
 
-void Csys::ToGlobal(Point *p)
+void Csys::ToGlobal(Point *p) const
 {
   ToGlobal(*p);
 }
 
-void Csys::ToLocal(Point &p)
+Point Csys::ToGlobal(double x, double y, double z)
+{
+  Point p(x,y,z);
+  ToGlobal(p);
+  return p;
+}
+
+void Csys::ToLocal(Point &p) const
 {
   p -= m_origin;
   ARX(p);
@@ -144,7 +159,7 @@ void Csys::ToLocal(Point &p)
   }
 }
 
-void Csys::ToLocal(Point *p)
+void Csys::ToLocal(Point *p) const
 {
   ToLocal(*p);
 }
@@ -205,8 +220,13 @@ Csys& Csys::Offset(Point p)
   m_origin = p;
   return *this;
 }
+
+unsigned long long Csys::ID() const
+{
+  return m_id.ID();
+}
   
-Csys& Csys::RX(Point &p)
+Csys const& Csys::RX(Point &p) const
 {
   double ct = cos(m_theta[0]);
   double st = sin(m_theta[0]);
@@ -216,7 +236,7 @@ Csys& Csys::RX(Point &p)
   return *this;
 }
 
-Csys& Csys::ARX(Point &p)
+Csys const& Csys::ARX(Point &p) const
 {
   double ct = cos(m_theta[0]);
   double st = sin(m_theta[0]);
@@ -226,7 +246,7 @@ Csys& Csys::ARX(Point &p)
   return *this;
 }
 
-Csys& Csys::RY(Point &p)
+Csys const& Csys::RY(Point &p) const
 {
   double ct = cos(m_theta[1]);
   double st = sin(m_theta[1]);
@@ -236,7 +256,7 @@ Csys& Csys::RY(Point &p)
   return *this;
 }
 
-Csys& Csys::ARY(Point &p)
+Csys const& Csys::ARY(Point &p) const
 {
   double ct = cos(m_theta[1]);
   double st = sin(m_theta[1]);
@@ -246,7 +266,7 @@ Csys& Csys::ARY(Point &p)
   return *this;
 }
 
-Csys& Csys::RZ(Point &p)
+Csys const& Csys::RZ(Point &p) const
 {
   double ct = cos(m_theta[2]);
   double st = sin(m_theta[2]);
@@ -256,7 +276,7 @@ Csys& Csys::RZ(Point &p)
   return *this;
 }
 
-Csys& Csys::ARZ(Point &p)
+Csys const& Csys::ARZ(Point &p) const
 {
   double ct = cos(m_theta[2]);
   double st = sin(m_theta[2]);

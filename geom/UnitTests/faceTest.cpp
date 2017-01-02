@@ -1,8 +1,8 @@
 #define MYDEBUG
 
-#include "../src/node.h"
+#include "../src/face.h"
 #include "../src/point.cpp"
-#include "../src/UID.h"
+#include "../src/vect.cpp"
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -10,13 +10,13 @@
 namespace math{
 namespace geom{
 
-class NodeTest
+class FaceTest
 {
 public:
-
+  Face face;
+  
   int Exec()
   {
-    Node node;
     int i = 0;
     
     return i;
@@ -28,6 +28,6 @@ public:
 
 int main()
 {
-  math::geom::NodeTest test;
+  math::geom::FaceTest test;
   return test.Exec();
 }

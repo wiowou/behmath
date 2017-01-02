@@ -25,9 +25,22 @@
 namespace math{
 namespace geom{
 
-Line::Line()
+Line::Line() : Curve()
 {
-  Clear();
+  m_csys = &g_csys[0];
+}
+
+Line::Line(Point* start, Point* end, const Csys* csys)
+{
+  m_csys = csys;
+  m_point[0] = *start;
+  m_point[1] = *end;
+  if (m_csys->ID() != 0)
+  {
+    m_csys->ToLocal(m_point[0]);
+    m_csys->ToLocal(m_point[1]);
+  }
+  m_length = Vect(end, start).Mag();
 }
 
 void Line::Clear()
@@ -65,8 +78,11 @@ void Line::Endpoint(KeyPoint* start, KeyPoint* end)
 {
   m_point[0] = *start;
   m_point[1] = *end;
-  m_csys->ToLocal(m_point[0]);
-  m_csys->ToLocal(m_point[1]);
+  if (m_csys->ID() != 0)
+  {
+    m_csys->ToLocal(m_point[0]);
+    m_csys->ToLocal(m_point[1]);
+  }
   m_length = Vect(end, start).Mag();
   Curve::Endpoint(start, end);
 }
@@ -76,9 +92,9 @@ void Line::SetCsys(Csys* csys)
   m_csys = csys;
 }
 
-Csys* Line::GetCsys()
+unsigned long long Line::CsysID() const
 {
-  return m_csys;
+  return m_csys->ID();
 }
   
 void Line::PointWithRatio(double ratio, Point &point)

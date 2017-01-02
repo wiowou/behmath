@@ -42,10 +42,9 @@ namespace geom{
 class HermiteSpline : public Curve
 {
 public:
-	HermiteSpline();
+	HermiteSpline() = default;
   HermiteSpline(const HermiteSpline &other) = delete;
   HermiteSpline& operator=(HermiteSpline other) = delete;
-  ~HermiteSpline();
   void Clear();
   void Mesh();
   //! Returns a point on the curve that splits curve into curve of length t and 1-t

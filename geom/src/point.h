@@ -54,10 +54,13 @@ public:
   
   Point& operator-=( const Point &rhs );
   Point& operator+=( const Point &rhs );
-  
+  Point& operator*=( const double rhs );
+  Point& operator/=( const double rhs );
   friend Point operator-( const Point &lhs, const Point &rhs );
   friend Point operator+( const Point &lhs, const Point &rhs );
-  
+  friend Point operator*( const double lhs, const Point &rhs );
+  friend Point operator*( const Point &lhs, const double rhs );
+  friend Point operator/( const Point &lhs, const double rhs );
   //virtual ~Point()
   //{}
 protected:
@@ -73,6 +76,9 @@ private:
 
 extern Point operator-( const Point &lhs, const Point &rhs );
 extern Point operator+( const Point &lhs, const Point &rhs );
+extern Point operator*( const double lhs, const Point &rhs );
+extern Point operator*( const Point &lhs, const double rhs );
+extern Point operator/( const Point &lhs, const double rhs );
 extern double Dist( const Point &lhs, const Point &rhs );
 
 extern const Point origin;

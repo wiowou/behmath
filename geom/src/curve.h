@@ -44,18 +44,20 @@ class Curve : public CurveI
 {
 
 public:
-
+  Curve();
+  virtual ~Curve();
   virtual void Clear();
   virtual bool IsMeshed();
 
   virtual void MeshRatio(std::vector<double> *meshRatio);
-  virtual void UnMesh(bool below = false);
+  virtual void UnMesh(bool below = true);
 	virtual bool Empty();
   virtual KeyPoint* Endpoint(int i, bool reverse = false);
   virtual void Endpoint(KeyPoint* start, KeyPoint* end);
 	virtual double Length();
   virtual void Associate(SurfaceI* p);
 	virtual void Disassociate(SurfaceI* p);
+  virtual std::set<SurfaceI*> AssociatedSurface();
   virtual Node* GetNode(unsigned long long i, bool reverse = false);
   virtual double GetMeshRatio(unsigned long long i, bool reverse = false);
   virtual unsigned long long NumNode();
@@ -64,6 +66,7 @@ public:
   friend bool operator==(const Curve &lhs, const Curve &rhs);
   
 protected:
+  virtual void Initialize();
   virtual void UnMeshEndPoints();
   
 	//! includes endpoints

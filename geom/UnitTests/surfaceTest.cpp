@@ -1,8 +1,6 @@
 #define MYDEBUG
 
-#include "../src/node.h"
-#include "../src/point.cpp"
-#include "../src/UID.h"
+#include "../src/surface.h"
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -10,13 +8,13 @@
 namespace math{
 namespace geom{
 
-class NodeTest
+class SurfaceTest
 {
 public:
 
   int Exec()
   {
-    Node node;
+    Surface surface;
     int i = 0;
     
     return i;
@@ -28,6 +26,6 @@ public:
 
 int main()
 {
-  math::geom::NodeTest test;
+  math::geom::SurfaceTest test;
   return test.Exec();
 }
